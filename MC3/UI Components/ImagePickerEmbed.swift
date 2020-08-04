@@ -5,6 +5,7 @@
 //  Created by Peter Andrew on 04/08/20.
 //  Copyright © 2020 Aghawidya Adipatria. All rights reserved.
 //
+// tutorial can be found at Example/ImagePickerEmbedExample
 
 import SwiftUI
 import AVFoundation
@@ -32,7 +33,7 @@ struct ImagePickerEmbed<Content: View>:View {
                 .buttonStyle(PlainButtonStyle())
             }
         }.actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text("Select Picture"), message: Text("Select from ?"), buttons: [
+            ActionSheet(title: Text("Select Picture"), message: Text("Select Image Source"), buttons: [
                 .default(Text("Photo Library")) {
                     self.sourceType = .photoLibrary
                     self.showImagePicker = true
