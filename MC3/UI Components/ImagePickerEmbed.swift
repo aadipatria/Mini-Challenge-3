@@ -116,6 +116,7 @@ class ImagePickerCordinator : NSObject, UINavigationControllerDelegate, UIImageP
     //Selected Image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let url = info[UIImagePickerController.InfoKey.imageURL] as? URL
         image = Image(uiImage: uiImage)
         isShown = false
     }

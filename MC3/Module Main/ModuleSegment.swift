@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ModuleSegment: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
-    
+    @State var showPicker = false
+    var option = ["honda","suzuki","yamaha"]
+    @State var selectedIndex:Int? = nil
     @State var moduleSegmentIndex = 1
     @State var moduleSegment = ["Overview", "Encounters", "Screen", "Notes"]
     
@@ -38,7 +40,6 @@ struct ModuleSegment: View {
             }
             .padding(.horizontal, 40)
             .padding(.bottom, 30)
-
             Rectangle()
                 .fill(Color.separator)
                 .frame(width: UIScreen.main.bounds.width, height: 2)
