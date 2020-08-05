@@ -10,11 +10,11 @@ import SwiftUI
 
 struct EncounterRAT: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var listRAT: [ReadAloudText]
+    @EnvironmentObject var moduleInfo: ModuleInfo
     
     var body: some View {
         VStack {
-            if listRAT.isEmpty {
+            if self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].readAloudText?.isEmpty ?? true {
                 EncounterRATEdit(editMode: .add)
             } else {
                 EncounterRATList()
@@ -28,6 +28,6 @@ struct EncounterRAT: View {
 
 struct EncounterRAT_Preview: PreviewProvider {
     static var previews: some View {
-        EncounterRAT(listRAT: []).environmentObject(ModuleInfo())
+        EncounterRAT().environmentObject(ModuleInfo())
     }
 }

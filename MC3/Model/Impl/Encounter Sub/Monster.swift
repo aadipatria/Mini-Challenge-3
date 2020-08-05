@@ -19,10 +19,10 @@ struct Monster: Model {
     var hitpoints:Int
     var speed:Int
     var strength:Int
+    var dexterity:Int
     var constitution:Int
-    var wisdom:Int
-    var dexeterity:Int
     var intelligence:Int
+    var wisdom:Int
     var charisma:Int
     var desc:String
 }

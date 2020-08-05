@@ -7,11 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1DB5B724D96F7900E9474A /* EnvironmentOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DB5B624D96F7900E9474A /* EnvironmentOverviewCard.swift */; };
+		BC1DB5B924D9746200E9474A /* EnvironmentDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DB5B824D9746200E9474A /* EnvironmentDetailCard.swift */; };
+		BC1DB5BB24D97EED00E9474A /* PictureContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DB5BA24D97EED00E9474A /* PictureContentCard.swift */; };
 		BC26B10924D2C56600BAD882 /* EncounterRATList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26B10824D2C56600BAD882 /* EncounterRATList.swift */; };
 		BC26B10B24D2CCF500BAD882 /* EncounterRAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26B10A24D2CCF500BAD882 /* EncounterRAT.swift */; };
 		BC26B10D24D2CDD000BAD882 /* EncounterRATDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26B10C24D2CDD000BAD882 /* EncounterRATDetail.swift */; };
 		BC26B10F24D2D3DE00BAD882 /* EncounterRATEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26B10E24D2D3DE00BAD882 /* EncounterRATEdit.swift */; };
 		BC26B11224D2D69C00BAD882 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26B11124D2D69C00BAD882 /* MultilineTextField.swift */; };
+		BC3B8DBE24DA6431008E3DB9 /* EncounterNPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DBD24DA6431008E3DB9 /* EncounterNPC.swift */; };
+		BC3B8DC024DA6438008E3DB9 /* EncounterNPCEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DBF24DA6438008E3DB9 /* EncounterNPCEdit.swift */; };
+		BC3B8DC224DA6440008E3DB9 /* EncounterNPCList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DC124DA6440008E3DB9 /* EncounterNPCList.swift */; };
+		BC3B8DC424DA6448008E3DB9 /* EncounterNPCDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DC324DA6448008E3DB9 /* EncounterNPCDetail.swift */; };
+		BC3B8DC724DA6D91008E3DB9 /* EncounterMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DC624DA6D91008E3DB9 /* EncounterMonsters.swift */; };
+		BC3B8DC924DA6D97008E3DB9 /* EncounterMonstersEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DC824DA6D97008E3DB9 /* EncounterMonstersEdit.swift */; };
+		BC3B8DCB24DA6DA2008E3DB9 /* EncounterMonstersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DCA24DA6DA2008E3DB9 /* EncounterMonstersList.swift */; };
+		BC3B8DCD24DA6DA9008E3DB9 /* EncounterMonstersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DCC24DA6DA9008E3DB9 /* EncounterMonstersDetail.swift */; };
+		BC3B8DD024DA8954008E3DB9 /* EncounterNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DCF24DA8954008E3DB9 /* EncounterNotes.swift */; };
+		BC3B8DD224DA8960008E3DB9 /* EncounterNotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DD124DA8960008E3DB9 /* EncounterNotesEdit.swift */; };
+		BC3B8DD424DA8968008E3DB9 /* EncounterNotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3B8DD324DA8968008E3DB9 /* EncounterNotesDetail.swift */; };
+		BC5E761E24DA900400A52E70 /* EncounterTraps.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E761D24DA900400A52E70 /* EncounterTraps.swift */; };
+		BC5E762024DA900C00A52E70 /* EncounterTrapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E761F24DA900C00A52E70 /* EncounterTrapsEdit.swift */; };
+		BC5E762224DA901100A52E70 /* EncounterTrapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762124DA901100A52E70 /* EncounterTrapsList.swift */; };
+		BC5E762424DA901900A52E70 /* EncounterTrapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762324DA901900A52E70 /* EncounterTrapsDetail.swift */; };
+		BC5E762624DA924700A52E70 /* TrapContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762524DA924700A52E70 /* TrapContentCard.swift */; };
+		BC5E762924DA9DC100A52E70 /* EncounterTreasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762824DA9DC100A52E70 /* EncounterTreasure.swift */; };
+		BC5E762B24DA9DCA00A52E70 /* EncounterTreasureEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762A24DA9DCA00A52E70 /* EncounterTreasureEdit.swift */; };
+		BC5E762D24DA9DDC00A52E70 /* EncounterTreasureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762C24DA9DDC00A52E70 /* EncounterTreasureList.swift */; };
+		BC5E762F24DA9DE200A52E70 /* EncounterTreasureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E762E24DA9DE200A52E70 /* EncounterTreasureDetail.swift */; };
+		BC5E763124DAA2AC00A52E70 /* TreasureDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E763024DAA2AC00A52E70 /* TreasureDetailCard.swift */; };
+		BC5E763324DAC2E700A52E70 /* TreasureEditForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5E763224DAC2E700A52E70 /* TreasureEditForms.swift */; };
 		BC72D4BE24D6CDAE00498ECE /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72D4BD24D6CDAE00498ECE /* DetailCard.swift */; };
 		BC72D4C024D7157400498ECE /* EditorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72D4BF24D7157400498ECE /* EditorButtons.swift */; };
 		BC72D4C224D72F7600498ECE /* EncounterSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72D4C124D72F7600498ECE /* EncounterSectionCard.swift */; };
@@ -27,6 +52,7 @@
 		BC95C54224D1FB540087E503 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95C54124D1FB540087E503 /* ModuleHeader.swift */; };
 		BC95C54424D1FF170087E503 /* NotesMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95C54324D1FF170087E503 /* NotesMain.swift */; };
 		BC95C54624D2013F0087E503 /* OverviewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95C54524D2013F0087E503 /* OverviewMain.swift */; };
+		BCB01C2B24D9419C00D6F4D2 /* EncounterMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB01C2A24D9419C00D6F4D2 /* EncounterMaps.swift */; };
 		BCB36AD724D01FB70088321A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB36AD624D01FB70088321A /* AppDelegate.swift */; };
 		BCB36AD924D01FB70088321A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB36AD824D01FB70088321A /* SceneDelegate.swift */; };
 		BCB36ADB24D01FB70088321A /* ModuleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB36ADA24D01FB70088321A /* ModuleSegment.swift */; };
@@ -34,6 +60,13 @@
 		BCB36AE024D01FB80088321A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB36ADF24D01FB80088321A /* Preview Assets.xcassets */; };
 		BCB36AE324D01FB80088321A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB36AE124D01FB80088321A /* LaunchScreen.storyboard */; };
 		BCB36AEB24D044FD0088321A /* EncounterExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB36AEA24D044FD0088321A /* EncounterExpanded.swift */; };
+		BCC3229424D9449C009C8894 /* EncounterMapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229324D9449C009C8894 /* EncounterMapsList.swift */; };
+		BCC3229624D9456B009C8894 /* EncounterMapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229524D9456B009C8894 /* EncounterMapsEdit.swift */; };
+		BCC3229824D945A8009C8894 /* EncounterMapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229724D945A8009C8894 /* EncounterMapsDetail.swift */; };
+		BCC3229E24D95015009C8894 /* EncounterPOIEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229A24D95015009C8894 /* EncounterPOIEdit.swift */; };
+		BCC3229F24D95015009C8894 /* EncounterPOIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229B24D95015009C8894 /* EncounterPOIList.swift */; };
+		BCC322A024D95015009C8894 /* EncounterPOIDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229C24D95015009C8894 /* EncounterPOIDetail.swift */; };
+		BCC322A124D95015009C8894 /* EncounterPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC3229D24D95015009C8894 /* EncounterPOI.swift */; };
 		BCF5439B24D6862C0017FDC9 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438224D6862C0017FDC9 /* Monster.swift */; };
 		BCF5439C24D6862C0017FDC9 /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438324D6862C0017FDC9 /* Treasure.swift */; };
 		BCF5439D24D6862C0017FDC9 /* ReadAloudText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438424D6862C0017FDC9 /* ReadAloudText.swift */; };
@@ -41,9 +74,9 @@
 		BCF5439F24D6862C0017FDC9 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438624D6862C0017FDC9 /* NPC.swift */; };
 		BCF543A024D6862C0017FDC9 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438724D6862C0017FDC9 /* POI.swift */; };
 		BCF543A124D6862C0017FDC9 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438824D6862C0017FDC9 /* Maps.swift */; };
-		BCF543A224D6862C0017FDC9 /* EncounterNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438924D6862C0017FDC9 /* EncounterNotes.swift */; };
+		BCF543A224D6862C0017FDC9 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438924D6862C0017FDC9 /* Notes.swift */; };
 		BCF543A324D6862C0017FDC9 /* ModuleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438A24D6862C0017FDC9 /* ModuleContent.swift */; };
-		BCF543A424D6862C0017FDC9 /* EncounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438B24D6862C0017FDC9 /* EncounterEnvironment.swift */; };
+		BCF543A424D6862C0017FDC9 /* EnvironmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438B24D6862C0017FDC9 /* EnvironmentModel.swift */; };
 		BCF543A524D6862C0017FDC9 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438C24D6862C0017FDC9 /* Overview.swift */; };
 		BCF543A624D6862C0017FDC9 /* MainNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438D24D6862C0017FDC9 /* MainNotes.swift */; };
 		BCF543A724D6862C0017FDC9 /* Encounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5438E24D6862C0017FDC9 /* Encounter.swift */; };
@@ -57,14 +90,43 @@
 		BCF543AF24D6862C0017FDC9 /* ModulesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5439824D6862C0017FDC9 /* ModulesStub.swift */; };
 		BCF543B024D6862C0017FDC9 /* AppsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5439924D6862C0017FDC9 /* AppsTime.swift */; };
 		BCF543B124D6862C0017FDC9 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF5439A24D6862C0017FDC9 /* DataCenter.swift */; };
+		BCFE014724D95DBC00423D47 /* EncounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE014624D95DBC00423D47 /* EncounterEnvironment.swift */; };
+		BCFE014924D9646800423D47 /* EncounterEnvironmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE014824D9646800423D47 /* EncounterEnvironmentList.swift */; };
+		BCFE014B24D965A200423D47 /* EncounterEnvironmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE014A24D965A200423D47 /* EncounterEnvironmentDetail.swift */; };
+		BCFE014D24D9697B00423D47 /* EncounterEnvironmentEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE014C24D9697B00423D47 /* EncounterEnvironmentEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC1DB5B624D96F7900E9474A /* EnvironmentOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentOverviewCard.swift; sourceTree = "<group>"; };
+		BC1DB5B824D9746200E9474A /* EnvironmentDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDetailCard.swift; sourceTree = "<group>"; };
+		BC1DB5BA24D97EED00E9474A /* PictureContentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureContentCard.swift; sourceTree = "<group>"; };
 		BC26B10824D2C56600BAD882 /* EncounterRATList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterRATList.swift; sourceTree = "<group>"; };
 		BC26B10A24D2CCF500BAD882 /* EncounterRAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterRAT.swift; sourceTree = "<group>"; };
 		BC26B10C24D2CDD000BAD882 /* EncounterRATDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterRATDetail.swift; sourceTree = "<group>"; };
 		BC26B10E24D2D3DE00BAD882 /* EncounterRATEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterRATEdit.swift; sourceTree = "<group>"; };
 		BC26B11124D2D69C00BAD882 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		BC3B8DBD24DA6431008E3DB9 /* EncounterNPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNPC.swift; sourceTree = "<group>"; };
+		BC3B8DBF24DA6438008E3DB9 /* EncounterNPCEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNPCEdit.swift; sourceTree = "<group>"; };
+		BC3B8DC124DA6440008E3DB9 /* EncounterNPCList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNPCList.swift; sourceTree = "<group>"; };
+		BC3B8DC324DA6448008E3DB9 /* EncounterNPCDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNPCDetail.swift; sourceTree = "<group>"; };
+		BC3B8DC624DA6D91008E3DB9 /* EncounterMonsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMonsters.swift; sourceTree = "<group>"; };
+		BC3B8DC824DA6D97008E3DB9 /* EncounterMonstersEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMonstersEdit.swift; sourceTree = "<group>"; };
+		BC3B8DCA24DA6DA2008E3DB9 /* EncounterMonstersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMonstersList.swift; sourceTree = "<group>"; };
+		BC3B8DCC24DA6DA9008E3DB9 /* EncounterMonstersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMonstersDetail.swift; sourceTree = "<group>"; };
+		BC3B8DCF24DA8954008E3DB9 /* EncounterNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNotes.swift; sourceTree = "<group>"; };
+		BC3B8DD124DA8960008E3DB9 /* EncounterNotesEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNotesEdit.swift; sourceTree = "<group>"; };
+		BC3B8DD324DA8968008E3DB9 /* EncounterNotesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterNotesDetail.swift; sourceTree = "<group>"; };
+		BC5E761D24DA900400A52E70 /* EncounterTraps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTraps.swift; sourceTree = "<group>"; };
+		BC5E761F24DA900C00A52E70 /* EncounterTrapsEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTrapsEdit.swift; sourceTree = "<group>"; };
+		BC5E762124DA901100A52E70 /* EncounterTrapsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTrapsList.swift; sourceTree = "<group>"; };
+		BC5E762324DA901900A52E70 /* EncounterTrapsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTrapsDetail.swift; sourceTree = "<group>"; };
+		BC5E762524DA924700A52E70 /* TrapContentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapContentCard.swift; sourceTree = "<group>"; };
+		BC5E762824DA9DC100A52E70 /* EncounterTreasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTreasure.swift; sourceTree = "<group>"; };
+		BC5E762A24DA9DCA00A52E70 /* EncounterTreasureEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTreasureEdit.swift; sourceTree = "<group>"; };
+		BC5E762C24DA9DDC00A52E70 /* EncounterTreasureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTreasureList.swift; sourceTree = "<group>"; };
+		BC5E762E24DA9DE200A52E70 /* EncounterTreasureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterTreasureDetail.swift; sourceTree = "<group>"; };
+		BC5E763024DAA2AC00A52E70 /* TreasureDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureDetailCard.swift; sourceTree = "<group>"; };
+		BC5E763224DAC2E700A52E70 /* TreasureEditForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureEditForms.swift; sourceTree = "<group>"; };
 		BC72D4BD24D6CDAE00498ECE /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
 		BC72D4BF24D7157400498ECE /* EditorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorButtons.swift; sourceTree = "<group>"; };
 		BC72D4C124D72F7600498ECE /* EncounterSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterSectionCard.swift; sourceTree = "<group>"; };
@@ -80,6 +142,7 @@
 		BC95C54124D1FB540087E503 /* ModuleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHeader.swift; sourceTree = "<group>"; };
 		BC95C54324D1FF170087E503 /* NotesMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMain.swift; sourceTree = "<group>"; };
 		BC95C54524D2013F0087E503 /* OverviewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewMain.swift; sourceTree = "<group>"; };
+		BCB01C2A24D9419C00D6F4D2 /* EncounterMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMaps.swift; sourceTree = "<group>"; };
 		BCB36AD324D01FB70088321A /* MC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB36AD624D01FB70088321A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCB36AD824D01FB70088321A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +152,13 @@
 		BCB36AE224D01FB80088321A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCB36AE424D01FB80088321A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCB36AEA24D044FD0088321A /* EncounterExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterExpanded.swift; sourceTree = "<group>"; };
+		BCC3229324D9449C009C8894 /* EncounterMapsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMapsList.swift; sourceTree = "<group>"; };
+		BCC3229524D9456B009C8894 /* EncounterMapsEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMapsEdit.swift; sourceTree = "<group>"; };
+		BCC3229724D945A8009C8894 /* EncounterMapsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterMapsDetail.swift; sourceTree = "<group>"; };
+		BCC3229A24D95015009C8894 /* EncounterPOIEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIEdit.swift; sourceTree = "<group>"; };
+		BCC3229B24D95015009C8894 /* EncounterPOIList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIList.swift; sourceTree = "<group>"; };
+		BCC3229C24D95015009C8894 /* EncounterPOIDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIDetail.swift; sourceTree = "<group>"; };
+		BCC3229D24D95015009C8894 /* EncounterPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOI.swift; sourceTree = "<group>"; };
 		BCF5438224D6862C0017FDC9 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		BCF5438324D6862C0017FDC9 /* Treasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
 		BCF5438424D6862C0017FDC9 /* ReadAloudText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadAloudText.swift; sourceTree = "<group>"; };
@@ -96,9 +166,9 @@
 		BCF5438624D6862C0017FDC9 /* NPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NPC.swift; sourceTree = "<group>"; };
 		BCF5438724D6862C0017FDC9 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		BCF5438824D6862C0017FDC9 /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
-		BCF5438924D6862C0017FDC9 /* EncounterNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNotes.swift; sourceTree = "<group>"; };
+		BCF5438924D6862C0017FDC9 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		BCF5438A24D6862C0017FDC9 /* ModuleContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleContent.swift; sourceTree = "<group>"; };
-		BCF5438B24D6862C0017FDC9 /* EncounterEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEnvironment.swift; sourceTree = "<group>"; };
+		BCF5438B24D6862C0017FDC9 /* EnvironmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentModel.swift; sourceTree = "<group>"; };
 		BCF5438C24D6862C0017FDC9 /* Overview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		BCF5438D24D6862C0017FDC9 /* MainNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNotes.swift; sourceTree = "<group>"; };
 		BCF5438E24D6862C0017FDC9 /* Encounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encounter.swift; sourceTree = "<group>"; };
@@ -112,6 +182,10 @@
 		BCF5439824D6862C0017FDC9 /* ModulesStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesStub.swift; sourceTree = "<group>"; };
 		BCF5439924D6862C0017FDC9 /* AppsTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsTime.swift; sourceTree = "<group>"; };
 		BCF5439A24D6862C0017FDC9 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		BCFE014624D95DBC00423D47 /* EncounterEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterEnvironment.swift; sourceTree = "<group>"; };
+		BCFE014824D9646800423D47 /* EncounterEnvironmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentList.swift; sourceTree = "<group>"; };
+		BCFE014A24D965A200423D47 /* EncounterEnvironmentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentDetail.swift; sourceTree = "<group>"; };
+		BCFE014C24D9697B00423D47 /* EncounterEnvironmentEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,12 +215,70 @@
 			children = (
 				BC8AAA4A24D2072900F46D37 /* BackgroundCard.swift */,
 				BC8AAA4C24D20C7900F46D37 /* ContentCard.swift */,
+				BC1DB5BA24D97EED00E9474A /* PictureContentCard.swift */,
 				BC72D4BD24D6CDAE00498ECE /* DetailCard.swift */,
 				BC95C53824D10EBD0087E503 /* Editor.swift */,
 				BC72D4BF24D7157400498ECE /* EditorButtons.swift */,
 				BC26B11124D2D69C00BAD882 /* MultilineTextField.swift */,
 			);
 			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		BC3B8DBC24DA6409008E3DB9 /* 5 - NPC */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B8DBD24DA6431008E3DB9 /* EncounterNPC.swift */,
+				BC3B8DBF24DA6438008E3DB9 /* EncounterNPCEdit.swift */,
+				BC3B8DC124DA6440008E3DB9 /* EncounterNPCList.swift */,
+				BC3B8DC324DA6448008E3DB9 /* EncounterNPCDetail.swift */,
+			);
+			path = "5 - NPC";
+			sourceTree = "<group>";
+		};
+		BC3B8DC524DA6D73008E3DB9 /* 6 - Monsters */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B8DC624DA6D91008E3DB9 /* EncounterMonsters.swift */,
+				BC3B8DC824DA6D97008E3DB9 /* EncounterMonstersEdit.swift */,
+				BC3B8DCA24DA6DA2008E3DB9 /* EncounterMonstersList.swift */,
+				BC3B8DCC24DA6DA9008E3DB9 /* EncounterMonstersDetail.swift */,
+			);
+			path = "6 - Monsters";
+			sourceTree = "<group>";
+		};
+		BC3B8DCE24DA893E008E3DB9 /* 9 - Notes */ = {
+			isa = PBXGroup;
+			children = (
+				BC3B8DCF24DA8954008E3DB9 /* EncounterNotes.swift */,
+				BC3B8DD124DA8960008E3DB9 /* EncounterNotesEdit.swift */,
+				BC3B8DD324DA8968008E3DB9 /* EncounterNotesDetail.swift */,
+			);
+			path = "9 - Notes";
+			sourceTree = "<group>";
+		};
+		BC5E761C24DA8FE300A52E70 /* 2 - Traps */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E761D24DA900400A52E70 /* EncounterTraps.swift */,
+				BC5E761F24DA900C00A52E70 /* EncounterTrapsEdit.swift */,
+				BC5E762124DA901100A52E70 /* EncounterTrapsList.swift */,
+				BC5E762324DA901900A52E70 /* EncounterTrapsDetail.swift */,
+				BC5E762524DA924700A52E70 /* TrapContentCard.swift */,
+			);
+			path = "2 - Traps";
+			sourceTree = "<group>";
+		};
+		BC5E762724DA9DA400A52E70 /* 8 - Treasure */ = {
+			isa = PBXGroup;
+			children = (
+				BC5E762824DA9DC100A52E70 /* EncounterTreasure.swift */,
+				BC5E762A24DA9DCA00A52E70 /* EncounterTreasureEdit.swift */,
+				BC5E762C24DA9DDC00A52E70 /* EncounterTreasureList.swift */,
+				BC5E762E24DA9DE200A52E70 /* EncounterTreasureDetail.swift */,
+				BC5E763024DAA2AC00A52E70 /* TreasureDetailCard.swift */,
+				BC5E763224DAC2E700A52E70 /* TreasureEditForms.swift */,
+			);
+			path = "8 - Treasure";
 			sourceTree = "<group>";
 		};
 		BC95C53C24D1F9900087E503 /* Module Main */ = {
@@ -169,9 +301,28 @@
 				BCB36AEA24D044FD0088321A /* EncounterExpanded.swift */,
 				BC8AAA4E24D2C0C500F46D37 /* EncounterHeader.swift */,
 				BC72D4C124D72F7600498ECE /* EncounterSectionCard.swift */,
+				BC5E762724DA9DA400A52E70 /* 8 - Treasure */,
+				BC5E761C24DA8FE300A52E70 /* 2 - Traps */,
+				BC3B8DCE24DA893E008E3DB9 /* 9 - Notes */,
+				BC3B8DC524DA6D73008E3DB9 /* 6 - Monsters */,
+				BC3B8DBC24DA6409008E3DB9 /* 5 - NPC */,
+				BCFE014524D9572300423D47 /* 1 - Environment */,
+				BCB01C2924D929DF00D6F4D2 /* 3 - Maps */,
+				BCC3229924D95015009C8894 /* 4 - POI */,
 				BC26B11024D2D3F400BAD882 /* 7 - RAT */,
 			);
 			path = Encounter;
+			sourceTree = "<group>";
+		};
+		BCB01C2924D929DF00D6F4D2 /* 3 - Maps */ = {
+			isa = PBXGroup;
+			children = (
+				BCB01C2A24D9419C00D6F4D2 /* EncounterMaps.swift */,
+				BCC3229524D9456B009C8894 /* EncounterMapsEdit.swift */,
+				BCC3229324D9449C009C8894 /* EncounterMapsList.swift */,
+				BCC3229724D945A8009C8894 /* EncounterMapsDetail.swift */,
+			);
+			path = "3 - Maps";
 			sourceTree = "<group>";
 		};
 		BCB36ACA24D01FB70088321A = {
@@ -218,6 +369,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BCC3229924D95015009C8894 /* 4 - POI */ = {
+			isa = PBXGroup;
+			children = (
+				BCC3229D24D95015009C8894 /* EncounterPOI.swift */,
+				BCC3229A24D95015009C8894 /* EncounterPOIEdit.swift */,
+				BCC3229B24D95015009C8894 /* EncounterPOIList.swift */,
+				BCC3229C24D95015009C8894 /* EncounterPOIDetail.swift */,
+			);
+			path = "4 - POI";
+			sourceTree = "<group>";
+		};
 		BCF5437F24D6862C0017FDC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +396,7 @@
 			children = (
 				BCF5438124D6862C0017FDC9 /* Encounter Sub */,
 				BCF5438A24D6862C0017FDC9 /* ModuleContent.swift */,
-				BCF5438B24D6862C0017FDC9 /* EncounterEnvironment.swift */,
+				BCF5438B24D6862C0017FDC9 /* EnvironmentModel.swift */,
 				BCF5438C24D6862C0017FDC9 /* Overview.swift */,
 				BCF5438D24D6862C0017FDC9 /* MainNotes.swift */,
 				BCF5438E24D6862C0017FDC9 /* Encounter.swift */,
@@ -252,7 +414,7 @@
 				BCF5438624D6862C0017FDC9 /* NPC.swift */,
 				BCF5438724D6862C0017FDC9 /* POI.swift */,
 				BCF5438824D6862C0017FDC9 /* Maps.swift */,
-				BCF5438924D6862C0017FDC9 /* EncounterNotes.swift */,
+				BCF5438924D6862C0017FDC9 /* Notes.swift */,
 			);
 			path = "Encounter Sub";
 			sourceTree = "<group>";
@@ -277,6 +439,19 @@
 				BCF5439824D6862C0017FDC9 /* ModulesStub.swift */,
 			);
 			path = Stub;
+			sourceTree = "<group>";
+		};
+		BCFE014524D9572300423D47 /* 1 - Environment */ = {
+			isa = PBXGroup;
+			children = (
+				BCFE014624D95DBC00423D47 /* EncounterEnvironment.swift */,
+				BCFE014C24D9697B00423D47 /* EncounterEnvironmentEdit.swift */,
+				BCFE014824D9646800423D47 /* EncounterEnvironmentList.swift */,
+				BCFE014A24D965A200423D47 /* EncounterEnvironmentDetail.swift */,
+				BC1DB5B624D96F7900E9474A /* EnvironmentOverviewCard.swift */,
+				BC1DB5B824D9746200E9474A /* EnvironmentDetailCard.swift */,
+			);
+			path = "1 - Environment";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,43 +526,78 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF543A824D6862C0017FDC9 /* Model.swift in Sources */,
+				BCFE014924D9646800423D47 /* EncounterEnvironmentList.swift in Sources */,
+				BC5E762D24DA9DDC00A52E70 /* EncounterTreasureList.swift in Sources */,
 				BCF543A524D6862C0017FDC9 /* Overview.swift in Sources */,
+				BCB01C2B24D9419C00D6F4D2 /* EncounterMaps.swift in Sources */,
+				BC5E762224DA901100A52E70 /* EncounterTrapsList.swift in Sources */,
 				BCF543B124D6862C0017FDC9 /* DataCenter.swift in Sources */,
+				BC1DB5B924D9746200E9474A /* EnvironmentDetailCard.swift in Sources */,
 				BCB36AD724D01FB70088321A /* AppDelegate.swift in Sources */,
+				BC5E762F24DA9DE200A52E70 /* EncounterTreasureDetail.swift in Sources */,
 				BC26B10F24D2D3DE00BAD882 /* EncounterRATEdit.swift in Sources */,
 				BC8AAA4B24D2072900F46D37 /* BackgroundCard.swift in Sources */,
 				BC72D4C024D7157400498ECE /* EditorButtons.swift in Sources */,
 				BCB36AD924D01FB70088321A /* SceneDelegate.swift in Sources */,
+				BC3B8DC024DA6438008E3DB9 /* EncounterNPCEdit.swift in Sources */,
 				BC8A140F24D4A2A5007B07A7 /* ModuleInfo.swift in Sources */,
 				BCF543AB24D6862C0017FDC9 /* ModuleRepository.swift in Sources */,
+				BC3B8DC224DA6440008E3DB9 /* EncounterNPCList.swift in Sources */,
+				BC5E763124DAA2AC00A52E70 /* TreasureDetailCard.swift in Sources */,
 				BCF5439E24D6862C0017FDC9 /* Trap.swift in Sources */,
 				BCF5439C24D6862C0017FDC9 /* Treasure.swift in Sources */,
+				BC1DB5B724D96F7900E9474A /* EnvironmentOverviewCard.swift in Sources */,
+				BCFE014B24D965A200423D47 /* EncounterEnvironmentDetail.swift in Sources */,
 				BCB36AEB24D044FD0088321A /* EncounterExpanded.swift in Sources */,
 				BC95C54624D2013F0087E503 /* OverviewMain.swift in Sources */,
+				BC3B8DC724DA6D91008E3DB9 /* EncounterMonsters.swift in Sources */,
 				BC95C54224D1FB540087E503 /* ModuleHeader.swift in Sources */,
+				BCC3229624D9456B009C8894 /* EncounterMapsEdit.swift in Sources */,
+				BC5E761E24DA900400A52E70 /* EncounterTraps.swift in Sources */,
+				BC5E762B24DA9DCA00A52E70 /* EncounterTreasureEdit.swift in Sources */,
 				BCF543A024D6862C0017FDC9 /* POI.swift in Sources */,
-				BCF543A224D6862C0017FDC9 /* EncounterNotes.swift in Sources */,
+				BCF543A224D6862C0017FDC9 /* Notes.swift in Sources */,
 				BC26B10D24D2CDD000BAD882 /* EncounterRATDetail.swift in Sources */,
 				BCF543A324D6862C0017FDC9 /* ModuleContent.swift in Sources */,
+				BC5E762424DA901900A52E70 /* EncounterTrapsDetail.swift in Sources */,
+				BCC3229424D9449C009C8894 /* EncounterMapsList.swift in Sources */,
+				BCC3229E24D95015009C8894 /* EncounterPOIEdit.swift in Sources */,
+				BC5E762024DA900C00A52E70 /* EncounterTrapsEdit.swift in Sources */,
 				BCF543B024D6862C0017FDC9 /* AppsTime.swift in Sources */,
 				BC26B11224D2D69C00BAD882 /* MultilineTextField.swift in Sources */,
 				BC8AAA4D24D20C7900F46D37 /* ContentCard.swift in Sources */,
+				BC3B8DC424DA6448008E3DB9 /* EncounterNPCDetail.swift in Sources */,
+				BC3B8DD024DA8954008E3DB9 /* EncounterNotes.swift in Sources */,
+				BCFE014D24D9697B00423D47 /* EncounterEnvironmentEdit.swift in Sources */,
 				BCF543A724D6862C0017FDC9 /* Encounter.swift in Sources */,
 				BCF5439D24D6862C0017FDC9 /* ReadAloudText.swift in Sources */,
 				BC26B10B24D2CCF500BAD882 /* EncounterRAT.swift in Sources */,
+				BCFE014724D95DBC00423D47 /* EncounterEnvironment.swift in Sources */,
+				BC3B8DCD24DA6DA9008E3DB9 /* EncounterMonstersDetail.swift in Sources */,
 				BCB36ADB24D01FB70088321A /* ModuleSegment.swift in Sources */,
 				BCF543AF24D6862C0017FDC9 /* ModulesStub.swift in Sources */,
-				BCF543A424D6862C0017FDC9 /* EncounterEnvironment.swift in Sources */,
+				BC3B8DCB24DA6DA2008E3DB9 /* EncounterMonstersList.swift in Sources */,
+				BCF543A424D6862C0017FDC9 /* EnvironmentModel.swift in Sources */,
+				BC3B8DD224DA8960008E3DB9 /* EncounterNotesEdit.swift in Sources */,
 				BCF543A124D6862C0017FDC9 /* Maps.swift in Sources */,
 				BCF543AC24D6862C0017FDC9 /* AuthorRepository.swift in Sources */,
 				BC26B10924D2C56600BAD882 /* EncounterRATList.swift in Sources */,
+				BCC322A024D95015009C8894 /* EncounterPOIDetail.swift in Sources */,
+				BC5E763324DAC2E700A52E70 /* TreasureEditForms.swift in Sources */,
 				BC72D4BE24D6CDAE00498ECE /* DetailCard.swift in Sources */,
 				BC8AAA4F24D2C0C500F46D37 /* EncounterHeader.swift in Sources */,
+				BCC3229824D945A8009C8894 /* EncounterMapsDetail.swift in Sources */,
+				BC5E762924DA9DC100A52E70 /* EncounterTreasure.swift in Sources */,
 				BCF543AD24D6862C0017FDC9 /* ExampleUI.swift in Sources */,
+				BCC322A124D95015009C8894 /* EncounterPOI.swift in Sources */,
 				BC95C53E24D1F9F00087E503 /* EncounterMain.swift in Sources */,
+				BC1DB5BB24D97EED00E9474A /* PictureContentCard.swift in Sources */,
+				BC3B8DD424DA8968008E3DB9 /* EncounterNotesDetail.swift in Sources */,
 				BCF5439F24D6862C0017FDC9 /* NPC.swift in Sources */,
 				BCF543A924D6862C0017FDC9 /* AuthorModel.swift in Sources */,
+				BC5E762624DA924700A52E70 /* TrapContentCard.swift in Sources */,
 				BC95C54424D1FF170087E503 /* NotesMain.swift in Sources */,
+				BCC3229F24D95015009C8894 /* EncounterPOIList.swift in Sources */,
 				BCF543AA24D6862C0017FDC9 /* ModuleModel.swift in Sources */,
 				BC72D4C424D80D2700498ECE /* EncounterEdit.swift in Sources */,
 				BC72D4C224D72F7600498ECE /* EncounterSectionCard.swift in Sources */,
@@ -395,7 +605,9 @@
 				BCF5439B24D6862C0017FDC9 /* Monster.swift in Sources */,
 				BCF543A624D6862C0017FDC9 /* MainNotes.swift in Sources */,
 				BC95C54024D1FB440087E503 /* ModuleMain.swift in Sources */,
+				BC3B8DBE24DA6431008E3DB9 /* EncounterNPC.swift in Sources */,
 				BC95C53B24D112190087E503 /* Color Presets.swift in Sources */,
+				BC3B8DC924DA6D97008E3DB9 /* EncounterMonstersEdit.swift in Sources */,
 				BCF543AE24D6862C0017FDC9 /* AuthorStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

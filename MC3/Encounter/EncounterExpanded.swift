@@ -14,15 +14,10 @@ struct EncounterExpanded: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            ModuleHeader(
-                module: moduleInfo.currentModule.name,
-                author: moduleInfo.currentModule.author.name,
-                image: moduleInfo.currentModule.author.image,
-                action: {self.presentationMode.wrappedValue.dismiss()})
+            ModuleHeader(action: {self.presentationMode.wrappedValue.dismiss()})
             
             ZStack {
                 BackgroundCard()
-//                EncounterSectionList(encounter: moduleInfo.encounter)
                 EncounterSectionList()
             }
         }
@@ -35,9 +30,7 @@ struct EncounterExpanded: View {
 
 struct EncounterSectionList: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
-    
     @State var encounter: Encounter = Encounter(name: "", location: "")
-//    var readAloudText : [ReadAloudText]?
     
     var body: some View {
         VStack(spacing: 0) {
@@ -56,73 +49,9 @@ struct EncounterSectionList: View {
             
             ScrollView {
                 VStack(spacing: 0) {
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.environment ?? []).isEmpty,
-                            section: .Environment)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.traps ?? []).isEmpty,
-                            section: .Traps)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.maps ?? []).isEmpty,
-                            section: .Maps)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.pois ?? []).isEmpty,
-                            section: .POI)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.npcs ?? []).isEmpty,
-                            section: .NPC)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.monsters ?? []).isEmpty,
-                            section: .Monsters)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    getLink(
-                        destination: AnyView(EncounterRATList()),
-                        section: .ReadAloudText)
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.treasure ?? []).isEmpty,
-                            section: .Treasure)
-                    }.buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(
-                        destination: ModuleMain()
-                    ) {
-                        EncounterSectionCard(
-                            isEmpty: (encounter.notes ?? []).isEmpty,
-                            section: .Notes)
-                    }.buttonStyle(PlainButtonStyle())
+                    ForEach(EncounterSection.allCases, id: \.self) {(sections) in
+                        self.getLink(section: sections)
+                    }
                 }
             }
         }
@@ -135,34 +64,44 @@ struct EncounterSectionList: View {
             self.encounter = self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex]
         })
     }
-    
-    func getLink(destination: AnyView, section: EncounterSection) -> some View {
+
+    func getLink(section: EncounterSection) -> some View {
         let index = self.moduleInfo.encounterIndex
         let encounter = self.moduleInfo.currentModule.content.encounters[index]
+        
+        var destination: AnyView
         var isEmpty: Bool
         
         switch section {
         case .Environment:
+            destination = AnyView(EncounterEnvironment())
             isEmpty = (encounter.environment == nil)
         case .Traps:
+            destination = AnyView(EncounterTraps())
             isEmpty = (encounter.traps == nil)
         case .Maps:
+            destination = AnyView(EncounterMaps())
             isEmpty = (encounter.maps == nil)
         case .POI:
+            destination = AnyView(EncounterPOI())
             isEmpty = (encounter.pois == nil)
         case .NPC:
+            destination = AnyView(EncounterNPC())
             isEmpty = (encounter.npcs == nil)
         case .Monsters:
+            destination = AnyView(EncounterMonsters())
             isEmpty = (encounter.monsters == nil)
         case .ReadAloudText:
+            destination = AnyView(EncounterRAT())
             isEmpty = (encounter.readAloudText == nil)
         case .Treasure:
+            destination = AnyView(EncounterTreasure())
             isEmpty = (encounter.treasure == nil)
         case .Notes:
+            destination = AnyView(EncounterNotes())
             isEmpty = (encounter.notes == nil)
         }
         
-        //let navLink =
         return NavigationLink(destination: destination) {
             EncounterSectionCard(isEmpty: isEmpty, section: section)
         }.buttonStyle(PlainButtonStyle())

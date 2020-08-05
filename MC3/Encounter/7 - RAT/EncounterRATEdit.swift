@@ -13,23 +13,20 @@ struct EncounterRATEdit: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
     @ObservedObject var dataCenter = DataCenter()
     
+    @State var initial: Bool = false
     @State var ratName: String = ""
     @State var ratDescription: String = ""
     var editMode: EditMode
-    var RAT: ReadAloudText?
     
     var body: some View {
         VStack(spacing: 0) {
-            ModuleHeader(module: moduleInfo.currentModule.name,
-                         author: moduleInfo.currentModule.author.name,
-                         image: moduleInfo.currentModule.author.image,
-                         action: {self.presentationMode.wrappedValue.dismiss()})
+            ModuleHeader(action: {self.presentationMode.wrappedValue.dismiss()})
             
             ZStack {
                 BackgroundCard()
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    EncounterHeader(section: .ReadAloudText, isEditable: false, action: {})
+                    EncounterHeader(section: .ReadAloudText, isEditable: false)
                     
                     ZStack {
                         Rectangle()
@@ -45,7 +42,10 @@ struct EncounterRATEdit: View {
                             )
                                 .padding(.top, 20)
 
-                            MultiLineField(description: "Description")
+                            MultiLineField(
+                                description: "Description",
+                                inputText: $ratDescription
+                            )
                                 .padding(.bottom, 10)
 
                             HStack(spacing: 30) {
@@ -58,6 +58,10 @@ struct EncounterRATEdit: View {
                                     let ratIndex = self.moduleInfo.ratIndex
                                     
                                     if self.editMode == .add {
+                                        if self.initial {
+                                            self.moduleInfo.currentModule.content.encounters[encounterIndex].readAloudText = []
+                                        }
+                                        
                                         self.moduleInfo.currentModule.content.encounters[encounterIndex].readAloudText?.append(
                                             ReadAloudText(
                                                 name: self.ratName,
@@ -71,7 +75,9 @@ struct EncounterRATEdit: View {
                                     }
                                     
                                     self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
-                                    self.presentationMode.wrappedValue.dismiss()
+                                    if !self.initial {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    }
                                 })
                             }
                             .padding(.horizontal, 30)
@@ -89,9 +95,14 @@ struct EncounterRATEdit: View {
         .navigationBarBackButtonHidden(true)
         
         .onAppear(perform: {
+            let encounterIndex = self.moduleInfo.encounterIndex
+            let ratIndex = self.moduleInfo.ratIndex
+            
+            if self.moduleInfo.currentModule.content.encounters[encounterIndex].readAloudText?.count ?? 0 == 0 {
+                    self.initial = true
+            }
+            
             if self.editMode == .edit {
-                let encounterIndex = self.moduleInfo.encounterIndex
-                let ratIndex = self.moduleInfo.ratIndex
                 if let rat = self.moduleInfo.currentModule.content.encounters[encounterIndex].readAloudText?[ratIndex] {
                     self.ratName = rat.name
                     self.ratDescription = rat.desc

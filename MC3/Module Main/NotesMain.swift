@@ -11,6 +11,10 @@ import SwiftUI
 struct NotesMain: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
+            ModuleSegmentHeader(
+                title: "Notes",
+                action: {})
+            
             VStack(spacing: 0) {
                 ForEach(0..<3) {_ in 
                     ContentCard(
