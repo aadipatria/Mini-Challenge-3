@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentCard: View {
     var title: String
     var description: String
-    
     var actionDelete: () -> ()
     var actionEdit: () -> ()
     

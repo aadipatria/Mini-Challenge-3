@@ -32,4 +32,8 @@ extension Color {
     public static var separator: Color {
         return Color(UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1))
     }
+    
+    public static var chevronNext: Color {
+        return Color(UIColor(red: 114/255, green: 114/255, blue: 114/255, alpha: 1))
+    }
 }

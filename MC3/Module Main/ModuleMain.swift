@@ -16,11 +16,7 @@ struct ModuleMain: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                ModuleHeader(
-                    module: moduleInfo.currentModule.name,
-                    author: moduleInfo.currentModule.author.name,
-                    image: moduleInfo.currentModule.author.image,
-                    action: {})
+                ModuleHeader(action: {self.presentationMode.wrappedValue.dismiss()})
                 
                 ZStack {
                     BackgroundCard()

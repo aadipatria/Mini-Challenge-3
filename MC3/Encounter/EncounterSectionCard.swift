@@ -52,7 +52,7 @@ struct EncounterSectionCard: View {
     }
 }
 
-enum EncounterSection {
+enum EncounterSection: CaseIterable {
     case Environment
     case Traps
     case Maps
