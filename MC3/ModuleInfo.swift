@@ -16,7 +16,8 @@ class ModuleInfo: ObservableObject {
     @Published var currentModule: ModuleModel
     //@Published var encounter: Encounter
     @Published var encounterIndex: Int
-    @Published var noteIndex: Int
+    @Published var mainNoteIndex: Int
+    @Published var environmentIndex: Int
     @Published var trapIndex: Int
     @Published var mapsIndex: Int
     @Published var poiIndex: Int
@@ -24,6 +25,7 @@ class ModuleInfo: ObservableObject {
     @Published var monsterIndex: Int
     @Published var ratIndex: Int
     @Published var treasureIndex: Int
+    @Published var noteIndex: Int
     
     init() {
         self.currentModule = ModulesStub.modulModel.last ?? ModuleModel(
@@ -67,7 +69,8 @@ class ModuleInfo: ObservableObject {
             )
         
         self.encounterIndex = 0
-        self.noteIndex = 0
+        self.mainNoteIndex = 0
+        self.environmentIndex = 0
         self.trapIndex = 0
         self.mapsIndex = 0
         self.poiIndex = 0
@@ -75,6 +78,7 @@ class ModuleInfo: ObservableObject {
         self.monsterIndex = 0
         self.ratIndex = 0
         self.treasureIndex = 0
+        self.noteIndex = 0
     }
     
 //    environments: [EncounterEnvironment(

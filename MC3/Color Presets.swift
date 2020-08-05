@@ -46,4 +46,9 @@ extension Color {
     public static var screenLightBlue = Color.init(red: 134/255, green: 239/255, blue: 234/255)
     
     public static var screenlightGreen = Color.init(red: 172/255, green: 239/255, blue: 134/255)
+
+    public static var chevronNext: Color {
+        return Color(UIColor(red: 114/255, green: 114/255, blue: 114/255, alpha: 1))
+    }
+
 }

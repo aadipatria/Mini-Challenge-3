@@ -1,5 +1,5 @@
 //
-//  Notes.swift
+//  Environment.swift
 //  MC3ProgMe
 //
 //  Created by Peter Andrew on 02/08/20.
@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct EncounterNotes:Model {
+struct EnvironmentModel: Model {
     var id: UUID = UUID.init()
-    var desc: String
+    var weather:String
+    var terrain:String
+    var image:String
+    var desc:String
 }

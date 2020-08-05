@@ -12,7 +12,7 @@ struct Encounter: Model {
     var id: UUID = UUID.init()
     var name: String
     var location: String
-    var environment:[EncounterEnvironment]?
+    var environment:[EnvironmentModel]?
     var traps:[Trap]?
     var maps: [Maps]?
     var pois:[POI]?
@@ -20,5 +20,5 @@ struct Encounter: Model {
     var monsters:[Monster]?
     var readAloudText:[ReadAloudText]?
     var treasure:[Treasure]?
-    var notes:[EncounterNotes]?
+    var notes:[Notes]?
 }

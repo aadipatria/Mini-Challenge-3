@@ -14,7 +14,7 @@ struct EncounterHeader: View {
     
     var section: EncounterSection
     var isEditable: Bool
-    var action: () -> Void
+    var action: () -> Void = {}
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -24,30 +24,31 @@ struct EncounterHeader: View {
                 
                 Spacer()
                 VStack {
-                    //if isEditable {
                     if dataCenter.getAllAuthors()[4].name == moduleInfo.currentModule.author.name {
                         if isEditable {
                             AddButton(action: action)
                         } else {
-                            AddButtonDisabled()
+                            EmptyView()
                         }
                     }
                 }
                 
             }
             //.frame(width: UIScreen.main.bounds.width, height: 21, alignment: .leading)
-            .padding(.top, 40)
+            .padding(.top, 30)
             .padding(.bottom, 9)
             .padding(.horizontal, 40)
             
             Text(EncounterSectionDescription.desc[section]?[2] ?? "Desc")
                 .font(.system(size: 13, weight: .regular, design: .rounded))
-                .padding(.bottom, 30)
+                //.padding(.bottom, 30)
                 .padding(.leading, 40)
                 .padding(.trailing, 90)
+            
+            Spacer()
         }
         //.frame(width: UIScreen.main.bounds.width, height: 134)
-        .frame(height: 152)
+        .frame(height: 134)
     }
 }
 

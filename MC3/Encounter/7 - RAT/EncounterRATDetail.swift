@@ -11,6 +11,7 @@ import SwiftUI
 struct EncounterRATDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var moduleInfo: ModuleInfo
+    @ObservedObject var dataCenter = DataCenter()
     @State private var ratEditing: Int?
     @State private var title: String = ""
     @State private var description: String = ""
@@ -23,12 +24,7 @@ struct EncounterRATDetail: View {
                 selection: $ratEditing
             ){ EmptyView() }
             
-            ModuleHeader(
-                module: moduleInfo.currentModule.name,
-                author: moduleInfo.currentModule.author.name,
-                image: moduleInfo.currentModule.author.image,
-                action: {self.presentationMode.wrappedValue.dismiss()}
-            )
+            ModuleHeader(action: {self.presentationMode.wrappedValue.dismiss()})
             
             ZStack {
                 BackgroundCard()
@@ -37,7 +33,12 @@ struct EncounterRATDetail: View {
                     DetailCard(
                         title: title,
                         description: description,
-                        actionDelete: {},
+                        actionDelete: {
+                            self.presentationMode.wrappedValue.dismiss()
+                            self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].readAloudText?.remove(at: self.moduleInfo.ratIndex)
+                            self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+//                            self.presentationMode.wrappedValue.dismiss()
+                        },
                         actionEdit: {self.ratEditing = -1}
                     )
                         .padding(.top, 32)

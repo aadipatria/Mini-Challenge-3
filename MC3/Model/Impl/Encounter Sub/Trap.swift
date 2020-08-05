@@ -12,7 +12,7 @@ struct Trap: Model {
     var id: UUID = UUID.init()
     var name:String
     var desc:String
-    var level:Int
+    var level:String
     var threat:String
     var trigger:String
     var effect:String
