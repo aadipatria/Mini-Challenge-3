@@ -10,10 +10,10 @@ import SwiftUI
 
 struct DMScreenMain: View {
     @State var travelPaceExpand:Bool = false
-    @State var coverExpand:Bool = false
+    @State var coverExpand:Bool = true
     @State var lightExpand:Bool = false
     @State var typicalDifficultyClassesExpand:Bool = false
-    @State var exhaustionExpand:Bool = true
+    @State var exhaustionExpand:Bool = false
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 30) {
@@ -78,7 +78,7 @@ struct DMScreenCard<Content:View>: View {
                     
                 }
             }
-        }
+        }.fixedSize(horizontal: false, vertical: true)
         .cornerRadius(10)
     }
 }
@@ -281,10 +281,13 @@ struct ExhaustionSub: View {
                     .foregroundColor(data.levelColor)
                     .fontWeight(.semibold)
             }
-            HStack{
+            HStack(alignment: .top){
                 Text("Effect")
                 Text(data.effect)
-                    .fontWeight(.semibold)
+                .fontWeight(.semibold)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
+                    
             }
             if underline{
                 Divider().padding(.top, 10)
@@ -311,6 +314,7 @@ struct ScreenTravelPace: View {
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 27)
                 .padding(.top, 10)
+                .fixedSize(horizontal: false, vertical: true)
             TravelSub(data: TravelSubData(pace: "Fast", paceColor: .screenGreen, minute: "400 feet", hour: "4 miles", day: "30 miles", effect: "-5 penalty to passive Wisdom (Perception) scores"))
             TravelSub(data: TravelSubData(pace: "Normal", paceColor: .screenBlue, minute: "300 feet", hour: "3 miles", day: "24 miles", effect: "---"))
             TravelSub(data: TravelSubData(pace: "Slow", paceColor: .screenRed, minute: "200 feet", hour: "2 miles", day: "18 miles", effect: "Able to use stealth"), underline: false)
@@ -323,7 +327,7 @@ struct ScreenCover: View {
     var body: some View {
         DMScreenCard(title: "Cover", expandState: $expand){
             Text("Walls, trees, creatures, and other obstacles can provide cover during combat, making a target more difficult to harm.")
-                .font(.system(size: 13, weight: .regular, design: .rounded))
+                .font(.system(size: 0, weight: .regular, design: .rounded))
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 27)
                 .padding(.top, 10)
@@ -366,11 +370,11 @@ struct ScreenExhaustion: View {
     var body: some View {
         DMScreenCard(title: "Exhaustion", expandState: $expand){
             ExhaustionSub(data: ExhaustionSubData(level: "1", levelColor: .screenGreen, effect: "Disadvantage on ability checks"))
-            ExhaustionSub(data: ExhaustionSubData(level: "2", levelColor: .screenlightGreen, effect: "Disadvantage on ability checks"))
-            ExhaustionSub(data: ExhaustionSubData(level: "3", levelColor: .screenBlue, effect: "Disadvantage on ability checks"))
-            ExhaustionSub(data: ExhaustionSubData(level: "4", levelColor: .screenYellow, effect: "Disadvantage on ability checks"))
-            ExhaustionSub(data: ExhaustionSubData(level: "5", levelColor: .screenOrange, effect: "Disadvantage on ability checks"))
-            ExhaustionSub(data: ExhaustionSubData(level: "6", levelColor: .screenRed, effect: "Disadvantage on ability checks"))
+            ExhaustionSub(data: ExhaustionSubData(level: "2", levelColor: .screenlightGreen, effect: "Speed halved"))
+            ExhaustionSub(data: ExhaustionSubData(level: "3", levelColor: .screenBlue, effect: "Disadvantage on attack rolls and saving throws"))
+            ExhaustionSub(data: ExhaustionSubData(level: "4", levelColor: .screenYellow, effect: "Hit point maximum halved"))
+            ExhaustionSub(data: ExhaustionSubData(level: "5", levelColor: .screenOrange, effect: "Speed reduced to 0"))
+            ExhaustionSub(data: ExhaustionSubData(level: "6", levelColor: .screenRed, effect: "Death"))
         }
     }
 }
