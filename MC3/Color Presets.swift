@@ -33,7 +33,22 @@ extension Color {
         return Color(UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1))
     }
     
+    public static var screenRed = Color.init(red: 239/255, green: 134/255, blue: 134/255)
+    
+    public static var screenGreen = Color.init(red: 134/255, green: 239/255, blue: 140/255)
+    
+    public static var screenOrange = Color.init(red: 239/255, green: 189/255, blue: 134/255)
+    
+    public static var screenBlue = Color.init(red: 134/255, green: 206/255, blue: 239/255)
+    
+    public static var screenYellow = Color.init(red: 239/255, green: 223/255, blue: 134/255)
+    
+    public static var screenLightBlue = Color.init(red: 134/255, green: 239/255, blue: 234/255)
+    
+    public static var screenlightGreen = Color.init(red: 172/255, green: 239/255, blue: 134/255)
+
     public static var chevronNext: Color {
         return Color(UIColor(red: 114/255, green: 114/255, blue: 114/255, alpha: 1))
     }
+
 }

@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ModuleSegment: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
-    
+    @State var showPicker = false
+    var option = ["honda","suzuki","yamaha"]
+    @State var selectedIndex:Int? = nil
     @State var moduleSegmentIndex = 1
     @State var moduleSegment = ["Overview", "Encounters", "Screen", "Notes"]
     
@@ -23,7 +25,6 @@ struct ModuleSegment: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.all, 30)
-            
             getMainContent(index: moduleSegmentIndex)
         }
     }
