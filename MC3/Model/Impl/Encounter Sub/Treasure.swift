@@ -25,12 +25,12 @@ struct Weapon: Treasure {
     var treasureType:TreasureType = .weapon
     var id:UUID = UUID.init()
     var name:String
-    var damage:Int
+    var damage:String
     var magicModifier:String
     var type:String
     var handedness:String
     var proficiency:String
-    var price:Int
+    var price:String
     var weight:Int
     var range:Int
     var damageType:String
@@ -56,9 +56,8 @@ struct Item: Treasure {
     var name: String
     var weight: Int
     var quantity: Int
-    var desc: String
-
-    
+    var cost: String
+    var desc: String    
 }
 
 struct Coin: Treasure {
@@ -68,7 +67,7 @@ struct Coin: Treasure {
     var gold: Int
     var emerald: Int
     var silver: Int
-    var cooper: Int
+    var copper: Int
 }
 
 struct Armor: Treasure {
@@ -76,10 +75,10 @@ struct Armor: Treasure {
     var treasureType: TreasureType = .armor
     var name :String
     var type :String
-    var magicmodifier :String
-    var price :Int
+    var magicModifier :String
+    var price :String
     var weight :Int
-    var armorclass :String
+    var armorClass :String
     var stealth :Int
     var desc :String
 }

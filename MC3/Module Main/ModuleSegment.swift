@@ -25,25 +25,6 @@ struct ModuleSegment: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.all, 30)
-            
-            HStack {
-                Text(moduleSegment[moduleSegmentIndex])
-                    .font(.system(size: 21, weight: .medium, design: .rounded))
-                Spacer()
-                Button(action: {
-                    print("nothing")
-                }) {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
-                        .font(.system(size: 21, weight: .heavy, design: .rounded))
-                }
-            }
-            .padding(.horizontal, 40)
-            .padding(.bottom, 30)
-            Rectangle()
-                .fill(Color.separator)
-                .frame(width: UIScreen.main.bounds.width, height: 2)
-            
             getMainContent(index: moduleSegmentIndex)
         }
     }

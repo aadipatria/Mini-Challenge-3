@@ -10,6 +10,7 @@ import SwiftUI
 
 struct EncounterMain: View {
     @EnvironmentObject var moduleInfo : ModuleInfo
+    @ObservedObject var dataCenter = DataCenter()
     @State private var encounterID: Int?
     @State private var encounterEditing: Int?
     @State private var editMode: EditMode = .add
@@ -21,23 +22,13 @@ struct EncounterMain: View {
                 tag: -1,
                 selection: $encounterEditing
             ) {EmptyView()}
-            
-            HStack {
-                Text("Encounter")
-                    .font(.system(size: 21, weight: .medium, design: .rounded))
-                Spacer()
-                Button(action: {
+
+            ModuleSegmentHeader(
+                title: "Encounter",
+                action: {
                     self.editMode = .add
                     self.encounterEditing = -1
-                }) {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
-                        .font(.system(size: 21, weight: .heavy, design: .rounded))
-                        .frame(width: 25, height: 25, alignment: .trailing)
-                }
-            }
-            .padding(.horizontal, 40)
-            .padding(.bottom, 30)
+            })
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 0) {
@@ -70,7 +61,10 @@ struct EncounterMain: View {
         return ContentCard(
             title: encounter.name,
             description: encounter.location,
-            actionDelete: {},
+            actionDelete: {
+                self.moduleInfo.currentModule.content.encounters.remove(at: index)
+                self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+            },
             actionEdit: {
                 self.moduleInfo.encounterIndex = index
                 self.editMode = .edit

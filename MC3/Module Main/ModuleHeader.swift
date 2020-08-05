@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct ModuleHeader: View {
-    var module: String
-    var author: String
-    var image: String
+    @EnvironmentObject var moduleInfo: ModuleInfo
+    
+    @State var name: String = ""
+    @State var author: String = ""
+    @State var image: String = "RealBrad"
     var action: () -> ()
     
     var body: some View {
@@ -20,7 +22,7 @@ struct ModuleHeader: View {
             Spacer()
             
             VStack(alignment: .trailing, spacing: 5) {
-                Text(module)
+                Text(name)
                     .font(.system(size: 24, weight: .semibold))
                     .foregroundColor(.white)
                 Text(author)
@@ -35,10 +37,15 @@ struct ModuleHeader: View {
                     .renderingMode(.original)
             }
         }
-        //.frame(width: UIScreen.main.bounds.width, height: 100)
         .frame(height: 100)
         .padding(.horizontal, 30)
         .background(Color.black)
+        
+        .onAppear(perform: {
+            self.name = self.moduleInfo.currentModule.name
+            self.author = self.moduleInfo.currentModule.author.name
+            self.image = self.moduleInfo.currentModule.author.image
+        })
     }
 }
 
@@ -55,8 +62,36 @@ struct ModuleBackButton: View {
     }
 }
 
+struct ModuleSegmentHeader: View {
+    var title: String
+    var action: () -> ()
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text(title)
+                    .font(.system(size: 21, weight: .medium, design: .rounded))
+                Spacer()
+                Button(action: action) {
+                    Image(systemName: "plus")
+                        .foregroundColor(.black)
+                        .font(.system(size: 21, weight: .heavy, design: .rounded))
+                        .frame(width: 25, height: 25, alignment: .trailing)
+                }
+            }
+            .padding(.horizontal, 40)
+            .padding(.bottom, 30)
+            
+            Rectangle()
+                .fill(Color.separator)
+                .frame(width: UIScreen.main.bounds.width, height: 2)
+        }
+    }
+}
+
 struct ModuleHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleHeader(module: "Legacy of Blood", author: "Real Brad", image: "RealBrad", action: {})
+        //ModuleHeader(module: "Legacy of Blood", author: "Real Brad", image: "RealBrad", action: {})
+        ModuleSegmentHeader(title: "Encounter", action: {})
     }
 }
