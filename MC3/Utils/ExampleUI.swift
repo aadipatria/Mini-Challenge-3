@@ -19,7 +19,7 @@ struct ExampleUI: View {
                 // disini kita akan membuat module
                 //let moduleContent = ModuleContent(overviews: [], encounters: [], environments: [], notes: [])
                 let moduleContent = ModuleContent(overviews: [], encounters: [], notes: [])
-                let module = ModuleModel(name: "Lorem", author: self.dataCenter.getActiveUser(), coverImageName: "people", addDate: Date.init(), level: .easy, genre: .horror, content: moduleContent)
+                let module = ModuleModel(name: "Lorem", author: self.dataCenter.getActiveUser()!, coverImageName: "people", addDate: Date.init(), level: .easy, genre: .horror, content: moduleContent)
                 // dataCenter.getActiveUser adalah function untuk dapatin data user yang lagi login
                 // disini kita akan nambahin module ke DB
                 self.dataCenter.addModules(module: module)

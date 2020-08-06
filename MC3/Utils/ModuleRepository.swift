@@ -33,6 +33,12 @@ class ModuleRepository {
         }
     }
     
+    func getModuleByAuthor(authorID:UUID)->[ModuleModel] {
+        return ModuleRepository.repo.filter { module in
+            return module.author.id == authorID
+        }
+    }
+    
     func patchModule(module:ModuleModel) {
         ModuleRepository.repo = ModuleRepository.repo.map{ oldModule in
             return oldModule.id == module.id ? module : oldModule

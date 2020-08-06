@@ -9,6 +9,7 @@
 import Foundation
 
 class AuthorRepository {
+    var localDB = UserDefaults.standard
     static var instance:AuthorRepository?
     static private var repo:[AuthorModel] = AuthorStub.getAllAuthor()
     
@@ -19,8 +20,11 @@ class AuthorRepository {
         return instance!
     }
     
-    func getActiveuser()->AuthorModel{
-        return AuthorStub.getActiveUser()
+    func getActiveuser()->AuthorModel?{
+        if localDB.bool(forKey: UserConstant.IS_REGISTER) {
+            return AuthorRepository.repo[0] // suppose to fetch user
+        }
+        return nil // suppose to be nil in production
     }
     
     func getAuthor()->[AuthorModel] {
@@ -41,5 +45,9 @@ class AuthorRepository {
         AuthorRepository.repo = AuthorRepository.repo.map{ oldAuthor in
             return oldAuthor.id == author.id ? author : oldAuthor
         }
+    }
+    
+    func login(author:AuthorModel) {
+        localDB.set(true, forKey: UserConstant.IS_REGISTER)
     }
 }

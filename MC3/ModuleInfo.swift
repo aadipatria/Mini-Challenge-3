@@ -32,8 +32,7 @@ class ModuleInfo: ObservableObject {
                     name: "Legacy of Blood",
                     author: AuthorModel(
                         name: "Real Brad",
-                        image: "RealBrad",
-                        username: "",
+                        username: "", profileImage: "Real Brad",
                         password: "",
                         email: "",
                         phone: ""),
