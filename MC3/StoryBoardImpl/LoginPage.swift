@@ -10,12 +10,14 @@ import SwiftUI
 
 struct LoginPage: View {
     @Binding var isActive:Bool
-    @ObservedObject var dataCenter = DataCenter()
+    var dataCenter:DataCenter
     var body: some View {
         ZStack{
             Color.nightSky.edgesIgnoringSafeArea(.all)
-            LoginViewControllerUI(backFunction: {user in
+            LoginViewControllerUI(saveFunction: {user in
                 self.dataCenter.userLogin(user: user)
+                self.isActive = false
+            }, backFunc: {
                 self.isActive = false
             })
         }
@@ -25,16 +27,18 @@ struct LoginPage: View {
 
 struct LoginPage_Previews: PreviewProvider {
     static var previews: some View {
-        LoginPage(isActive: .constant(true))
+        LoginPage(isActive: .constant(true), dataCenter: DataCenter())
     }
 }
 
 struct LoginViewControllerUI:UIViewControllerRepresentable {
-    var backFunction:(_ user:AuthorModel)->Void
+    var saveFunction:(_ user:AuthorModel)->Void
+    var backFunc:()->Void
     func makeUIViewController(context: UIViewControllerRepresentableContext<LoginViewControllerUI>) -> UIViewController {
         let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
         let controller = storyboard.instantiateViewController(identifier: "login") as loginViewController
-        controller.backFunc = self.backFunction
+        controller.saveFunc = self.saveFunction
+        controller.backFunc = self.backFunc
         return controller
     }
     

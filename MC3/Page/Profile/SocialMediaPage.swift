@@ -11,7 +11,7 @@ import SwiftUI
 struct SocialMediaPage: View {
     @Binding var isActive:Bool
     @Binding var user:AuthorModel
-    @ObservedObject var dataCenter = DataCenter()
+    @ObservedObject var dataCenter = DataCenter.getInstance()
     var body: some View {
         NavigationModalTemplate(title: "Social Media", backButtonFunc: {
             self.isActive.toggle()

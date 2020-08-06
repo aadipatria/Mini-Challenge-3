@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EditProfilePage: View {
-    @ObservedObject var dataCenter:DataCenter = DataCenter()
+    @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     @Binding var user:AuthorModel
     @Binding var isActive:Bool
     @State var disable:Bool = true

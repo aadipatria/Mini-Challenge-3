@@ -11,6 +11,7 @@ import Foundation
 class DataCenter : ObservableObject {
     let authorRepo:AuthorRepository = AuthorRepository.getInstance()
     let moduleRepo:ModuleRepository = ModuleRepository.getInstance()
+    static var instance:DataCenter? = nil
     @Published var modules:[ModuleModel] = []
     @Published var authors:[AuthorModel] = []
     @Published var activeUser:AuthorModel?
@@ -19,6 +20,14 @@ class DataCenter : ObservableObject {
         modules = moduleRepo.getModule()
         authors = authorRepo.getAuthor()
         activeUser = authorRepo.getActiveuser()
+    }
+    
+    static func getInstance()->DataCenter {
+        if self.instance != nil {
+            return self.instance!
+        }
+        self.instance = DataCenter()
+        return self.getInstance()
     }
     
     func getAllModules()->[ModuleModel] {
@@ -33,6 +42,13 @@ class DataCenter : ObservableObject {
     
     func getModuleWithUser(author:AuthorModel) -> [ModuleModel] {
         return moduleRepo.getModuleByAuthor(authorID: author.id)
+    }
+    
+    func getCurrentUserModule()->[ModuleModel] {
+        if let user = activeUser {
+            return moduleRepo.getModuleByAuthor(authorID: user.id)
+        }
+        return []
     }
     
     func saveModule(module:ModuleModel) -> Void {
@@ -58,6 +74,7 @@ class DataCenter : ObservableObject {
         authorRepo.patchAuthor(author: user)
         self.syncAuthor()
     }
+    
     
     func userLogin(user:AuthorModel)->Void {
         authorRepo.login(author: user)
