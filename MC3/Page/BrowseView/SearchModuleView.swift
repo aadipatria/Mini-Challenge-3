@@ -12,12 +12,19 @@ struct SearchModuleView: View {
     @Binding var isActive:Bool
     @State var input:String = ""
     @State var modules:[ModuleModel] = ModulesStub.getModules()
+    @ObservedObject var dataCenter = DataCenter.getInstance()
+    @State var isLogin = false
     var body: some View {
-        NavigationModalTemplate(title: "", modalColor: .white, heading: false){
-            searchBar(inputBinding: $input, withCancel: true, cancelFunction: {
-                self.isActive = false
-            })
-            ModuleListScroll(modules: modules)
+        ZStack{
+            NavigationModalTemplate(title: "", modalColor: .white, heading: false){
+                searchBar(inputBinding: $input, withCancel: true, cancelFunction: {
+                    self.isActive = false
+                })
+                ModuleListScroll(modules: modules, dataCenter: self.dataCenter, isLogin: $isLogin)
+            }
+            if isLogin {
+                LoginPage(isActive: self.$isLogin, dataCenter: self.dataCenter).zIndex(2)
+            }
         }
     }
 }

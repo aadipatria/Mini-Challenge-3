@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BrowseView: View {
-    @ObservedObject var dataCenter:DataCenter = DataCenter()
+    @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     @State var isLogin:Bool
     @State var isLoginPage:Bool = false
     @Binding var tabBarVisible:Bool
@@ -69,7 +69,7 @@ struct BrowseView: View {
                 // later recent view
             }
             else if isLoginPage {
-                LoginPage(isActive: $isLoginPage)
+                LoginPage(isActive: $isLoginPage, dataCenter: self.dataCenter)
                     .modifier(PageTransitionModifier())
                 .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible))
             }

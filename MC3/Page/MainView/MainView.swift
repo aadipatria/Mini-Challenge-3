@@ -17,28 +17,27 @@ enum TabBarChoice {
 struct MainView: View {
     @State var choice:TabBarChoice = .browse
     @State var tabBarVisible:Bool = true
-    @State var isLoginPage:Bool = false
-    @ObservedObject var dataCenter = DataCenter()
+    @ObservedObject var dataCenter = DataCenter.getInstance()
     @State var activeUser:AuthorModel? = nil
     var body: some View {
         ZStack(alignment: .bottom){
             if choice == .browse{
                 BrowseView( isLogin: self.dataCenter.getActiveUser() != nil, tabBarVisible: $tabBarVisible).zIndex(1)
-            } else if self.dataCenter.getActiveUser() == nil {
-                LoginPage(isActive: $isLoginPage)
-                    .modifier(PageTransitionModifier())
-                .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible)).zIndex(2)
             } else if choice == .saved{
                 SavedModuleView(tabBarVisible: $tabBarVisible).zIndex(1)
             } else if choice == .mymodule{
                 MyModuleView(tabBarVisible: $tabBarVisible).zIndex(1)
             }
+            
             if tabBarVisible {
                 HStack(spacing: 40){
                     TabBarIcon(action: { self.choice = .browse }, isActive: choice == .browse, iconName: "globe", content: "Browse")
-                    
-                    TabBarIcon(action: { self.choice = .mymodule }, isActive: choice == .mymodule, iconName: "book", content: "MyModule")
-                    TabBarIcon(action: { self.choice = .saved }, isActive: choice == .saved, iconName: "bookmark", content: "Saved Module")
+                    TabBarIcon(action: {
+                        self.choice = .mymodule
+                    }, isActive: choice == .mymodule, iconName: "book", content: "MyModule")
+                    TabBarIcon(action: {
+                        self.choice = .saved
+                    }, isActive: choice == .saved, iconName: "bookmark", content: "Saved Module")
                 }.zIndex(2)
                 .frame(width:screen.width - 60,height:44,alignment: .center)
                 .background(Color.white.cornerRadius(20))

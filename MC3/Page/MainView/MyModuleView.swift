@@ -11,18 +11,19 @@ import SwiftUI
 struct MyModuleView: View {
     @Binding var tabBarVisible:Bool
     @State var input:String = ""
-    @ObservedObject var dataCenter:DataCenter = DataCenter()
+    @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     var body: some View {
         FavouriteBase(title: "My Modules", addFunction: {
-            self.dataCenter.addModules(module: ModuleModel(name: "Hillary", author: self.dataCenter.getActiveUser()!, coverImageName: "people", addDate: Date.init(), level: .easy, genre: .adventure, content: ModulesStub.modulContent[0]))
+            // add module view
         }){
             searchBar(inputBinding: $input, withCancel: false, disabled: false)
             Underline().padding(.top,20)
-            ListOfModules(modules: self.dataCenter.getModuleWithUser(author: dataCenter.getActiveUser()!))
+            ListOfModules(modules: self.filterModule( input: self.input, modules: dataCenter.getCurrentUserModule()))
         }.onAppear{
-//            print(self.mock.getDB())
+
         }
     }
+    
     func filterModule(input:String, modules:[ModuleModel])->[ModuleModel]{
         return modules.filter{ module in
             return
