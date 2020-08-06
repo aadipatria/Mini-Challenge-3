@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct AuthorModel {
+struct AuthorModel:Identifiable {
     let id:UUID = UUID.init()
     var name:String
-    var image: String
     var username:String
+    var profileImage:String
     var password:String
     var email:String
     var phone:String

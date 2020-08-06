@@ -44,7 +44,7 @@ struct ModuleHeader: View {
         .onAppear(perform: {
             self.name = self.moduleInfo.currentModule.name
             self.author = self.moduleInfo.currentModule.author.name
-            self.image = self.moduleInfo.currentModule.author.image
+            self.image = self.moduleInfo.currentModule.author.profileImage
         })
     }
 }

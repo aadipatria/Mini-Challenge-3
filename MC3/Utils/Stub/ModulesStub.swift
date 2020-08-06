@@ -87,8 +87,7 @@ class ModulesStub {
             name: "Legacy of Blood",
             author: AuthorModel(
                 name: "Real Brad",
-                image: "RealBrad",
-                username: "",
+                username: "", profileImage: "RealBrad",
                 password: "",
                 email: "",
                 phone: ""),
