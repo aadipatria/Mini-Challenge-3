@@ -36,21 +36,29 @@ struct EncounterNPCList: View {
                         action: {self.npcEditing = -1})
                     
                     ScrollView {
-                        VStack(spacing: 0) {
+                        ZStack {
                             Rectangle()
-                                .fill(Color.separator)
-                                .frame(width: UIScreen.main.bounds.width, height: 1)
+                                .fill(Color.white)
+                                .cornerRadius(10)
+                                .frame(height: CGFloat((self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].npcs?.count ?? 0) * 134 + 30))
                             
-                            ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].npcs?.count ?? 1), id: \.self) { (index) in
-                                NavigationLink(
-                                    destination: EncounterNPCDetail(),
-                                    tag: index,
-                                    selection: self.npcBinding(index)
-                                ) {
-                                    self.getContentCard(index)
-                                    }.buttonStyle(PlainButtonStyle())
-                                .foregroundColor(Color.black)
+                            VStack(spacing: 0) {
+                                Rectangle()
+                                    .fill(Color.separator)
+                                    .frame(width: UIScreen.main.bounds.width, height: 1)
+                                
+                                ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].npcs?.count ?? 1), id: \.self) { (index) in
+                                    NavigationLink(
+                                        destination: EncounterNPCDetail(),
+                                        tag: index,
+                                        selection: self.npcBinding(index)
+                                    ) {
+                                        self.getContentCard(index)
+                                        }.buttonStyle(PlainButtonStyle())
+                                    .foregroundColor(Color.black)
+                                }
                             }
+                            .padding(.vertical, 20)
                         }
                     }
                 }
@@ -74,9 +82,14 @@ struct EncounterNPCList: View {
     private func getContentCard(_ index: Int) -> PictureContentCard {
         let encounter = self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex]
         if let npc = encounter.npcs?[index] {
+            var race = npc.race
+            if race != "" {
+                race = "(\(npc.race))"
+            }
+            
             return PictureContentCard(
                 title: npc.name,
-                subtitle: "(\(npc.race))",
+                subtitle: race,
                 description: npc.desc,
                 image: npc.image,
                 actionDelete: {

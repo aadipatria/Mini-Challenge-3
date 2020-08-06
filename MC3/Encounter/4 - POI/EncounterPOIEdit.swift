@@ -14,6 +14,8 @@ struct EncounterPOIEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var poiName: String = ""
     @State var poiDescription: String = ""
     @State var poiImage: String = ""
@@ -50,7 +52,7 @@ struct EncounterPOIEdit: View {
                             )
                             
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $poiDescription
                             )
                                 .padding(.bottom, 10)
@@ -116,6 +118,10 @@ struct EncounterPOIEdit: View {
                     self.poiName = poi.name
                     self.poiDescription = poi.desc
                     self.poiImage = poi.image
+                    
+                    if poi.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

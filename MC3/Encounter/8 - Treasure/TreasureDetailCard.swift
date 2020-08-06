@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TreasureDetailCard: View {
+    @State var treasureType: TreasureType = .armor
     @State var title: String = "Coins"
     @State var description: String = ""
     var treasure: Treasure
@@ -23,14 +24,15 @@ struct TreasureDetailCard: View {
                 
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
-                
-                EditButton(action: actionEdit)
+                //EditButton(action: actionEdit)
             }
             .padding(.top, 20)
             .padding(.horizontal, 30)
         
             Text(description)
+                .frame(width: UIScreen.main.bounds.width - 80, alignment: .leading)
                 .font(.system(size: 15, weight: .regular, design: .rounded))
                 .padding(.horizontal, 40)
             
@@ -38,7 +40,9 @@ struct TreasureDetailCard: View {
         }
         .background(Color.white)
         .onAppear(perform: {
-            switch self.treasure.treasureType {
+            self.treasureType = self.treasure.treasureType
+            
+            switch self.treasureType {
             case .weapon:
                 let weapon = self.treasure as! Weapon
                 self.title = weapon.name
@@ -68,7 +72,7 @@ struct TreasureDetailCard: View {
                 """
                 \(magic.rarity)
                 Type: \(magic.type)
-                Weight: \(magic.weight) lbs
+                Weight: \(magic.weight)
                 Max Charges: \(magic.maxCharge)
                 \nDescription\n\(magic.desc)
                 """
@@ -123,6 +127,6 @@ struct TreasureDetailCard: View {
 
 struct TreasureDetailCard_Preview: PreviewProvider {
     static var previews: some View {
-        TreasureDetailCard(treasure: Magic(name: "Amulet of Health", type: "Wondrous Item", rarity: "Legendary", maxCharge: 1, weight: 1, desc: "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher."), actionDelete: {}, actionEdit: {})
+        TreasureDetailCard(treasure: Magic(name: "Amulet of Health", type: "Wondrous Item", rarity: "Legendary", maxCharge: "", weight: "", desc: "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher."), actionDelete: {}, actionEdit: {})
     }
 }

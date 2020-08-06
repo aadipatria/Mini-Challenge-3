@@ -14,6 +14,8 @@ struct EncounterTrapsEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var trapName: String = ""
     @State var trapThreat: String = ""
     @State var trapTrigger: String = ""
@@ -78,7 +80,7 @@ struct EncounterTrapsEdit: View {
                             )
                             
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $trapDescription
                             )
                                 .padding(.bottom, 10)
@@ -158,6 +160,9 @@ struct EncounterTrapsEdit: View {
                     self.trapCountermeasure = trap.counterMeasure
                     self.trapDescription = trap.desc
                     
+                    if trap.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

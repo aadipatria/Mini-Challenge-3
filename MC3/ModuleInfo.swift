@@ -9,14 +9,12 @@
 import SwiftUI
 
 class ModuleInfo: ObservableObject {
-//    @Published var moduleName: String = "Legacy of Blood"
-//    @Published var moduleAuthor: String = "Real Brad"
-//    @Published var authorImage: String = "RealBrad"
-    
     @Published var currentModule: ModuleModel
-    //@Published var encounter: Encounter
+    
+    @Published var overviewIndex: Int
     @Published var encounterIndex: Int
     @Published var mainNoteIndex: Int
+    
     @Published var environmentIndex: Int
     @Published var trapIndex: Int
     @Published var mapsIndex: Int
@@ -67,8 +65,10 @@ class ModuleInfo: ObservableObject {
                         MainNotes(name: "No Rules", desc: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.")])
             )
         
+        self.overviewIndex = 0
         self.encounterIndex = 0
         self.mainNoteIndex = 0
+        
         self.environmentIndex = 0
         self.trapIndex = 0
         self.mapsIndex = 0
@@ -79,12 +79,6 @@ class ModuleInfo: ObservableObject {
         self.treasureIndex = 0
         self.noteIndex = 0
     }
-    
-//    environments: [EncounterEnvironment(
-//    desc: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.\nMost conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.",
-//    weather: "Cloudy",
-//    image: "OverviewLarge",
-//    terrain: "Terraria")],
     
     public static func endEditing() {
         UIApplication.shared.endEditing()

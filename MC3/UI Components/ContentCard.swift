@@ -21,8 +21,8 @@ struct ContentCard: View {
                     .font(.system(size: 23, weight: .medium, design: .rounded))
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
-                
                 EditButton(action: actionEdit)
             }
             .padding(.top, 25)

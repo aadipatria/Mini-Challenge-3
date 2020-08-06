@@ -10,7 +10,7 @@ import Foundation
 
 struct ModuleContent:Model {
     var id: UUID = UUID.init()
-    var overviews:[Overview]
-    var encounters:[Encounter]
-    var notes:[MainNotes]
+    var overviews:[Overview] = []
+    var encounters:[Encounter] = []
+    var notes:[MainNotes] = []
 }

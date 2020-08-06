@@ -23,7 +23,7 @@ struct DMScreenMain: View {
                 ScreenTypeDiffClass(expand: $typicalDifficultyClassesExpand)
                 ScreenExhaustion(expand: $exhaustionExpand)
             }
-        }.background(Color.gray)
+        }.background(Color.clear)
     }
 }
 

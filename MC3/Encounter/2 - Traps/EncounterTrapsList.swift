@@ -36,10 +36,10 @@ struct EncounterTrapsList: View {
                         action: {self.trapEditing = -1})
                     
                     ScrollView {
-                        VStack(spacing: 0) {
-                            Rectangle()
-                                .fill(Color.separator)
-                                .frame(width: UIScreen.main.bounds.width, height: 1)
+                        VStack(spacing: 10) {
+//                            Rectangle()
+//                                .fill(Color.separator)
+//                                .frame(width: UIScreen.main.bounds.width, height: 1)
                             
                             ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].traps?.count ?? 1), id: \.self) { (index) in
                                 NavigationLink(

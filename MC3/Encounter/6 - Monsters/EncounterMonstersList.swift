@@ -36,21 +36,29 @@ struct EncounterMonstersList: View {
                         action: {self.monstersEditing = -1})
                     
                     ScrollView {
-                        VStack(spacing: 0) {
+                        ZStack {
                             Rectangle()
-                                .fill(Color.separator)
-                                .frame(width: UIScreen.main.bounds.width, height: 1)
-                            
-                            ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].monsters?.count ?? 1), id: \.self) { (index) in
-                                NavigationLink(
-                                    destination: EncounterMonstersDetail(),
-                                    tag: index,
-                                    selection: self.monstersBinding(index)
-                                ) {
-                                    self.getContentCard(index)
-                                    }.buttonStyle(PlainButtonStyle())
-                                .foregroundColor(Color.black)
+                                .fill(Color.white)
+                                .cornerRadius(10)
+                                .frame(height: CGFloat((self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].monsters?.count ?? 0) * 134 + 30))
+                                
+                            VStack(spacing: 0) {
+                                Rectangle()
+                                    .fill(Color.separator)
+                                    .frame(width: UIScreen.main.bounds.width, height: 1)
+                                
+                                ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].monsters?.count ?? 1), id: \.self) { (index) in
+                                    NavigationLink(
+                                        destination: EncounterMonstersDetail(),
+                                        tag: index,
+                                        selection: self.monstersBinding(index)
+                                    ) {
+                                        self.getContentCard(index)
+                                        }.buttonStyle(PlainButtonStyle())
+                                    .foregroundColor(Color.black)
+                                }
                             }
+                            .padding(.vertical, 20)
                         }
                     }
                 }

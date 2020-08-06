@@ -14,6 +14,8 @@ struct EncounterMapsEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var mapsName: String = ""
     @State var mapsDescription: String = ""
     @State var mapsImage: String = ""
@@ -50,7 +52,7 @@ struct EncounterMapsEdit: View {
                             )
                             
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $mapsDescription
                             )
                                 .padding(.bottom, 10)
@@ -116,6 +118,10 @@ struct EncounterMapsEdit: View {
                     self.mapsName = maps.name
                     self.mapsDescription = maps.desc
                     self.mapsImage = maps.image
+                    
+                    if maps.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

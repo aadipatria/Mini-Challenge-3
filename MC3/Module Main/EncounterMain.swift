@@ -11,38 +11,73 @@ import SwiftUI
 struct EncounterMain: View {
     @EnvironmentObject var moduleInfo : ModuleInfo
     @ObservedObject var dataCenter = DataCenter()
+    
+    @State private var encounterName: String = ""
+    @State private var encounterLocation: String = ""
+    
     @State private var encounterID: Int?
-    @State private var encounterEditing: Int?
+    @State private var encounterEditing: Bool = false
     @State private var editMode: EditMode = .add
     
     var body: some View {
-        VStack(spacing: 0) {
-            NavigationLink(
-                destination: EncounterEdit(editMode: editMode),
-                tag: -1,
-                selection: $encounterEditing
-            ) {EmptyView()}
-
+        VStack(spacing: 0) {            
             ModuleSegmentHeader(
                 title: "Encounter",
                 action: {
                     self.editMode = .add
-                    self.encounterEditing = -1
-            })
+                    self.encounterName = ""
+                    self.encounterLocation = ""
+                    self.encounterEditing = true},
+                isEditable: !self.encounterEditing)
             
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 0) {
-                    ForEach(0..<moduleInfo.currentModule.content.encounters.count, id: \.self) { (index) in
-                        NavigationLink(
-                            destination: EncounterExpanded(),
-                            tag: index,
-                            selection: self.encounterBinding(index)
-                        ) {
-                            self.getContentCard(index)
-                        }.buttonStyle(PlainButtonStyle())
+            if encounterEditing {
+                EncounterEdit(
+                    encounterName: $encounterName,
+                    encounterLocation: $encounterLocation,
+                    editMode: .add,
+                    actionCancel: {self.encounterEditing = false},
+                    actionNext: {
+                        let index = self.moduleInfo.encounterIndex
+
+                        if self.editMode == .add {
+                            self.moduleInfo.currentModule.content.encounters.append(
+                                Encounter(name: self.encounterName, location: self.encounterLocation))
+                        } else if self.editMode == .edit {
+                            self.moduleInfo.currentModule.content.encounters[index].name = self.encounterName
+                            self.moduleInfo.currentModule.content.encounters[index].location = self.encounterLocation
+                        }
+
+                        self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                        self.encounterEditing = false
+                })
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.white)
+                            .cornerRadius(10)
+                            .frame(height: CGFloat((self.moduleInfo.currentModule.content.encounters.count) * 134 + 30))
+                        
+                        VStack(spacing: 0) {
+                            Rectangle()
+                                .fill(Color.separator)
+                                .frame(width: UIScreen.main.bounds.width, height: 1)
+                            
+                            ForEach(0..<moduleInfo.currentModule.content.encounters.count, id: \.self) { (index) in
+                                NavigationLink(
+                                    destination: EncounterExpanded(),
+                                    tag: index,
+                                    selection: self.encounterBinding(index)
+                                ) {
+                                    self.getContentCard(index)
+                                }.buttonStyle(PlainButtonStyle())
+                            }
+                        }.padding(.vertical, 20)
                     }
                 }
             }
+            
+            Spacer()
         }
     }
     
@@ -64,11 +99,17 @@ struct EncounterMain: View {
             actionDelete: {
                 self.moduleInfo.currentModule.content.encounters.remove(at: index)
                 self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                
+                if self.moduleInfo.currentModule.content.encounters.count < 1 {
+                    self.encounterEditing = true
+                }
             },
             actionEdit: {
                 self.moduleInfo.encounterIndex = index
+                self.encounterName = encounter.name
+                self.encounterLocation = encounter.location
                 self.editMode = .edit
-                self.encounterEditing = -1
+                self.encounterEditing = true
             }
         )
     }

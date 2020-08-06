@@ -41,7 +41,7 @@ struct EncounterTreasureList: View {
                                 Rectangle()
                                     .fill(Color.white)
                                     .cornerRadius(10)
-                                    .frame(height: CGFloat((self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].treasure?.count ?? 0) * 134 + 24))
+                                    .frame(height: CGFloat((self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].treasure?.count ?? 0) * 134 + 30))
                                     //TODO: Programatically edit height
                             }
                             
@@ -61,7 +61,7 @@ struct EncounterTreasureList: View {
                                     .foregroundColor(Color.black)//
                                 }
                             }
-                            .padding(.vertical, 17)
+                            .padding(.vertical, 20)
                         }
                     }
                 }

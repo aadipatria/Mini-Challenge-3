@@ -14,6 +14,8 @@ struct EncounterEnvironmentEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var environmentWeather: String = ""
     @State var environmentTerrain: String = ""
     @State var environmentDescription: String = ""
@@ -128,6 +130,9 @@ struct EncounterEnvironmentEdit: View {
                     self.environmentTerrain = environmentModel.terrain
                     self.environmentDescription = environmentModel.desc
                     
+                    if environmentModel.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })
