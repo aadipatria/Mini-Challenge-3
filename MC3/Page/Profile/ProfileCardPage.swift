@@ -32,7 +32,8 @@ struct ProfileCardPage: View {
                 }.padding(.top,40)
                 .padding(.bottom,25)
                 .onAppear{
-                    self.modules = self.dataCenter.getModuleWithUser(author: self.author)
+                    self.modules = []
+//                    self.dataCenter.getModuleWithUser(author: self.author)
                 }
                 ZStack(alignment: .top){
                     ProfileCardModal(bgColor: Color.init(red: 197/255, green: 211/255, blue: 220/255)){
@@ -69,11 +70,15 @@ struct ProfileCardPage: View {
                             VStack(alignment: .center, spacing: 0){
                                 TitleText(content: " ", type: .h1).padding(30)
                                 Underline()
-                                ScrollView(.vertical){
-                                    if modules.count > 0 {
+                                if modules.count > 0 {
+                                    ScrollView(.vertical){
                                         ForEach(modules){ module in
                                             moduleRow(module: module, last: self.modules.count > 0 ? self.modules[self.modules.count - 1].id == module.id : false)
                                         }
+                                    }
+                                } else {
+                                    ScrollView(.vertical){
+                                        ModuleEmptyState(imageShow: false, title: "No Created Modules", content: "\(author.name) hasn’t created any modules to be shared yet :( \n\nFor the time being, let’s explore other great modules, shall we?")
                                     }
                                 }
                                 Spacer()
@@ -283,8 +288,8 @@ struct NoSosMed: View {
             Text("No known social media :(")
                 .font(.system(size: 27, weight: .semibold, design: .default))
                 .opacity(0.5)
-                .padding(.top,47)
-                .padding(.bottom,30)
+                .padding(.top,20)
+                .padding(.bottom,10)
             Text("Sorry, there are no known social media of Real Brad. In the meantime, you can explore Real Brad’s modules :)")
                 .multilineTextAlignment(.center)
                 .font(.system(size: 14, weight: .regular, design: .default)).opacity(0.5)
