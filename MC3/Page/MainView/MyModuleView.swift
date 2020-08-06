@@ -14,17 +14,20 @@ struct MyModuleView: View {
     @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     var body: some View {
         FavouriteBase(title: "My Modules", addFunction: {
-            // add module view
+            self.dataCenter.addModules(module: ModulesStub.getPlainModule())
         }){
             searchBar(inputBinding: $input, withCancel: false, disabled: false)
             Underline().padding(.top,20)
-            ListOfModules(modules: self.filterModule( input: self.input, modules: dataCenter.getCurrentUserModule()))
-        }.onAppear{
-
+            if self.dataCenter.getCurrentUserModule().count < 1{
+                ModuleEmptyState(title: "No created modules", content: "You haven’t created any modules yet. Try creating one by clicking the “add” button!")
+            } else {
+                ListOfModules(modules: self.filterModule(input: self.input, modules: self.dataCenter.getCurrentUserModule()))
+            }
         }
     }
     
     func filterModule(input:String, modules:[ModuleModel])->[ModuleModel]{
+        if input == "" { return modules}
         return modules.filter{ module in
             return
                 module.name.uppercased().contains(input.uppercased()) ||
@@ -34,6 +37,8 @@ struct MyModuleView: View {
         }
     }
 }
+
+
 
 struct MyModuleView_Previews: PreviewProvider {
     static var previews: some View {
