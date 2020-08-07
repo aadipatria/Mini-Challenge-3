@@ -7,156 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42B23B1D24DC18B700578ED5 /* Color Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A6E24DC18B700578ED5 /* Color Presets.swift */; };
-		42B23B1E24DC18B700578ED5 /* SearchModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7124DC18B700578ED5 /* SearchModuleView.swift */; };
-		42B23B1F24DC18B700578ED5 /* BrowseByGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7224DC18B700578ED5 /* BrowseByGenre.swift */; };
-		42B23B2024DC18B700578ED5 /* FeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7424DC18B700578ED5 /* FeedBackPage.swift */; };
-		42B23B2124DC18B700578ED5 /* SocialMediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7524DC18B700578ED5 /* SocialMediaPage.swift */; };
-		42B23B2224DC18B700578ED5 /* ProfileCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7624DC18B700578ED5 /* ProfileCardPage.swift */; };
-		42B23B2324DC18B700578ED5 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7724DC18B700578ED5 /* ProfilePage.swift */; };
-		42B23B2424DC18B700578ED5 /* ChangePasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7824DC18B700578ED5 /* ChangePasswordPage.swift */; };
-		42B23B2524DC18B700578ED5 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7924DC18B700578ED5 /* EditProfilePage.swift */; };
-		42B23B2624DC18B700578ED5 /* MyModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7B24DC18B700578ED5 /* MyModuleView.swift */; };
-		42B23B2724DC18B700578ED5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7C24DC18B700578ED5 /* BrowseView.swift */; };
-		42B23B2824DC18B700578ED5 /* SavedModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7D24DC18B700578ED5 /* SavedModuleView.swift */; };
-		42B23B2924DC18B700578ED5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7E24DC18B700578ED5 /* MainView.swift */; };
-		42B23B2A24DC18B700578ED5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7F24DC18B700578ED5 /* ContentView.swift */; };
-		42B23B2B24DC18B700578ED5 /* OverviewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8124DC18B700578ED5 /* OverviewMain.swift */; };
-		42B23B2C24DC18B700578ED5 /* NotesMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8224DC18B700578ED5 /* NotesMain.swift */; };
-		42B23B2D24DC18B700578ED5 /* DMScreenMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8324DC18B700578ED5 /* DMScreenMain.swift */; };
-		42B23B2E24DC18B800578ED5 /* ModuleMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8424DC18B700578ED5 /* ModuleMain.swift */; };
-		42B23B2F24DC18B800578ED5 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8524DC18B700578ED5 /* ModuleHeader.swift */; };
-		42B23B3024DC18B800578ED5 /* ModuleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8624DC18B700578ED5 /* ModuleSegment.swift */; };
-		42B23B3124DC18B800578ED5 /* EncounterMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8724DC18B700578ED5 /* EncounterMain.swift */; };
-		42B23B3224DC18B800578ED5 /* PageTransitionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8924DC18B700578ED5 /* PageTransitionModifier.swift */; };
-		42B23B3324DC18B800578ED5 /* DropdownPickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8B24DC18B700578ED5 /* DropdownPickerExample.swift */; };
-		42B23B3424DC18B800578ED5 /* ImagePickerEmbedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8C24DC18B700578ED5 /* ImagePickerEmbedExample.swift */; };
-		42B23B3524DC18B800578ED5 /* EditorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8E24DC18B700578ED5 /* EditorButtons.swift */; };
-		42B23B3624DC18B800578ED5 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */; };
-		42B23B3724DC18B800578ED5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9024DC18B700578ED5 /* DropdownPicker.swift */; };
-		42B23B3824DC18B800578ED5 /* BackgroundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9124DC18B700578ED5 /* BackgroundCard.swift */; };
-		42B23B3924DC18B800578ED5 /* ImagePickerEmbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9224DC18B700578ED5 /* ImagePickerEmbed.swift */; };
-		42B23B3A24DC18B800578ED5 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9324DC18B700578ED5 /* DetailCard.swift */; };
-		42B23B3B24DC18B800578ED5 /* ContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9424DC18B700578ED5 /* ContentCard.swift */; };
-		42B23B3C24DC18B800578ED5 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9524DC18B700578ED5 /* Editor.swift */; };
-		42B23B3D24DC18B800578ED5 /* PictureContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9624DC18B700578ED5 /* PictureContentCard.swift */; };
+		426B359024DD4DF200F7CC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1324DC18B700578ED5 /* AppDelegate.swift */; };
+		426B359124DD4E3E00F7CC4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1C24DC18B700578ED5 /* SceneDelegate.swift */; };
+		426B359224DD4E6700F7CC4A /* Color Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A6E24DC18B700578ED5 /* Color Presets.swift */; };
+		426B359324DD4E6700F7CC4A /* AddModuleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */; };
+		426B359424DD4E6700F7CC4A /* AddModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23BA924DC26B100578ED5 /* AddModule.swift */; };
+		426B359524DD4E6700F7CC4A /* SearchModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7124DC18B700578ED5 /* SearchModuleView.swift */; };
+		426B359624DD4E6700F7CC4A /* BrowseByGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7224DC18B700578ED5 /* BrowseByGenre.swift */; };
+		426B359724DD4E6700F7CC4A /* FeedBackPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7424DC18B700578ED5 /* FeedBackPage.swift */; };
+		426B359824DD4E6700F7CC4A /* SocialMediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7524DC18B700578ED5 /* SocialMediaPage.swift */; };
+		426B359924DD4E6700F7CC4A /* ProfileCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7624DC18B700578ED5 /* ProfileCardPage.swift */; };
+		426B359A24DD4E6700F7CC4A /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7724DC18B700578ED5 /* ProfilePage.swift */; };
+		426B359B24DD4E6700F7CC4A /* ChangePasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7824DC18B700578ED5 /* ChangePasswordPage.swift */; };
+		426B359C24DD4E6700F7CC4A /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7924DC18B700578ED5 /* EditProfilePage.swift */; };
+		426B359D24DD4E6700F7CC4A /* MyModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7B24DC18B700578ED5 /* MyModuleView.swift */; };
+		426B359E24DD4E6700F7CC4A /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7C24DC18B700578ED5 /* BrowseView.swift */; };
+		426B359F24DD4E6700F7CC4A /* SavedModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7D24DC18B700578ED5 /* SavedModuleView.swift */; };
+		426B35A024DD4E6700F7CC4A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7E24DC18B700578ED5 /* MainView.swift */; };
+		426B35A124DD4E6700F7CC4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A7F24DC18B700578ED5 /* ContentView.swift */; };
+		426B35A224DD4E6700F7CC4A /* OverviewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8124DC18B700578ED5 /* OverviewMain.swift */; };
+		426B35A324DD4E6700F7CC4A /* NotesMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8224DC18B700578ED5 /* NotesMain.swift */; };
+		426B35A424DD4E6700F7CC4A /* DMScreenMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8324DC18B700578ED5 /* DMScreenMain.swift */; };
+		426B35A524DD4E6700F7CC4A /* ModuleMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8424DC18B700578ED5 /* ModuleMain.swift */; };
+		426B35A624DD4E6700F7CC4A /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8524DC18B700578ED5 /* ModuleHeader.swift */; };
+		426B35A724DD4E6700F7CC4A /* ModuleSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8624DC18B700578ED5 /* ModuleSegment.swift */; };
+		426B35A824DD4E6700F7CC4A /* EncounterMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8724DC18B700578ED5 /* EncounterMain.swift */; };
+		426B35A924DD4E6700F7CC4A /* PageTransitionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8924DC18B700578ED5 /* PageTransitionModifier.swift */; };
+		426B35AA24DD4E6700F7CC4A /* DropdownPickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8B24DC18B700578ED5 /* DropdownPickerExample.swift */; };
+		426B35AB24DD4E6700F7CC4A /* ImagePickerEmbedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8C24DC18B700578ED5 /* ImagePickerEmbedExample.swift */; };
+		426B35AC24DD4E6700F7CC4A /* OverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A424DC31D700B156F8 /* OverviewCard.swift */; };
+		426B35AD24DD4E6700F7CC4A /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536AA24DC453A00B156F8 /* UploadImage.swift */; };
+		426B35AE24DD4E6700F7CC4A /* EditorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8E24DC18B700578ED5 /* EditorButtons.swift */; };
+		426B35AF24DD4E6700F7CC4A /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */; };
+		426B35B024DD4E6700F7CC4A /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9024DC18B700578ED5 /* DropdownPicker.swift */; };
+		426B35B124DD4E6700F7CC4A /* BackgroundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9124DC18B700578ED5 /* BackgroundCard.swift */; };
+		426B35B224DD4E6700F7CC4A /* ImagePickerEmbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9224DC18B700578ED5 /* ImagePickerEmbed.swift */; };
+		426B35B324DD4E6700F7CC4A /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9324DC18B700578ED5 /* DetailCard.swift */; };
+		426B35B424DD4E6700F7CC4A /* ContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9424DC18B700578ED5 /* ContentCard.swift */; };
+		426B35B524DD4E6700F7CC4A /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9524DC18B700578ED5 /* Editor.swift */; };
+		426B35B624DD4E6700F7CC4A /* PictureContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9624DC18B700578ED5 /* PictureContentCard.swift */; };
+		426B35B824DD4E6700F7CC4A /* ModuleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9924DC18B700578ED5 /* ModuleRepository.swift */; };
+		426B35B924DD4E6700F7CC4A /* AuthorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9A24DC18B700578ED5 /* AuthorRepository.swift */; };
+		426B35BA24DD4E6700F7CC4A /* ExampleUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9B24DC18B700578ED5 /* ExampleUI.swift */; };
+		426B35BB24DD4E6700F7CC4A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9D24DC18B700578ED5 /* File.swift */; };
+		426B35BC24DD4E6700F7CC4A /* AuthorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9F24DC18B700578ED5 /* AuthorStub.swift */; };
+		426B35BD24DD4E6700F7CC4A /* ModulesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA024DC18B700578ED5 /* ModulesStub.swift */; };
+		426B35BE24DD4E6700F7CC4A /* AppsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA124DC18B700578ED5 /* AppsTime.swift */; };
+		426B35BF24DD4E6700F7CC4A /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA224DC18B700578ED5 /* DataCenter.swift */; };
+		426B35C524DD4E6700F7CC4A /* ApplicationActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE324DC18B700578ED5 /* ApplicationActionButton.swift */; };
+		426B35C624DD4E6700F7CC4A /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE524DC18B700578ED5 /* ProfileSection.swift */; };
+		426B35C724DD4E6700F7CC4A /* HeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE724DC18B700578ED5 /* HeaderName.swift */; };
+		426B35C824DD4E6700F7CC4A /* CategoryIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE824DC18B700578ED5 /* CategoryIcon.swift */; };
+		426B35C924DD4E6700F7CC4A /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE924DC18B700578ED5 /* searchBar.swift */; };
+		426B35CA24DD4E6700F7CC4A /* PopularCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEA24DC18B700578ED5 /* PopularCarousel.swift */; };
+		426B35CB24DD4E6700F7CC4A /* TestingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEB24DC18B700578ED5 /* TestingCard.swift */; };
+		426B35CC24DD4E6700F7CC4A /* ListOfModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEC24DC18B700578ED5 /* ListOfModules.swift */; };
+		426B35CD24DD4E6700F7CC4A /* ModuleGenreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AED24DC18B700578ED5 /* ModuleGenreCard.swift */; };
+		426B35CE24DD4E6700F7CC4A /* RecentCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEE24DC18B700578ED5 /* RecentCarousel.swift */; };
+		426B35CF24DD4E6700F7CC4A /* ModuleListScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEF24DC18B700578ED5 /* ModuleListScroll.swift */; };
+		426B35D024DD4E6700F7CC4A /* GenreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF024DC18B700578ED5 /* GenreSection.swift */; };
+		426B35D124DD4E6700F7CC4A /* ModuleEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF124DC18B700578ED5 /* ModuleEmptyState.swift */; };
+		426B35D224DD4E6700F7CC4A /* ContentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF324DC18B700578ED5 /* ContentText.swift */; };
+		426B35D324DD4E6700F7CC4A /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF424DC18B700578ED5 /* TimeText.swift */; };
+		426B35D424DD4E6700F7CC4A /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF524DC18B700578ED5 /* TitleText.swift */; };
+		426B35D524DD4E6700F7CC4A /* FavouriteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF724DC18B700578ED5 /* FavouriteBase.swift */; };
+		426B35D624DD4E6700F7CC4A /* ModalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF824DC18B700578ED5 /* ModalCard.swift */; };
+		426B35D724DD4E6700F7CC4A /* NavigationModalTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF924DC18B700578ED5 /* NavigationModalTemplate.swift */; };
+		426B35D824DD4E6700F7CC4A /* ModalHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AFA24DC18B700578ED5 /* ModalHeading.swift */; };
+		426B35D924DD4E6700F7CC4A /* BrowseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AFB24DC18B700578ED5 /* BrowseBase.swift */; };
+		426B35DB24DD4E6700F7CC4A /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0024DC18B700578ED5 /* Monster.swift */; };
+		426B35DC24DD4E6700F7CC4A /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0124DC18B700578ED5 /* Treasure.swift */; };
+		426B35DD24DD4E6700F7CC4A /* ReadAloudText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0224DC18B700578ED5 /* ReadAloudText.swift */; };
+		426B35DE24DD4E6700F7CC4A /* Trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0324DC18B700578ED5 /* Trap.swift */; };
+		426B35DF24DD4E6700F7CC4A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0424DC18B700578ED5 /* Notes.swift */; };
+		426B35E024DD4E6700F7CC4A /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0524DC18B700578ED5 /* Maps.swift */; };
+		426B35E124DD4E6700F7CC4A /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0624DC18B700578ED5 /* NPC.swift */; };
+		426B35E224DD4E6700F7CC4A /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0724DC18B700578ED5 /* POI.swift */; };
+		426B35E324DD4E6700F7CC4A /* ModuleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0824DC18B700578ED5 /* ModuleContent.swift */; };
+		426B35E424DD4E6700F7CC4A /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0924DC18B700578ED5 /* Overview.swift */; };
+		426B35E524DD4E6700F7CC4A /* EnvironmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0A24DC18B700578ED5 /* EnvironmentModel.swift */; };
+		426B35E624DD4E6700F7CC4A /* Encounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0B24DC18B700578ED5 /* Encounter.swift */; };
+		426B35E724DD4E6700F7CC4A /* MainNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0C24DC18B700578ED5 /* MainNotes.swift */; };
+		426B35E824DD4E6700F7CC4A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0D24DC18B700578ED5 /* Model.swift */; };
+		426B35E924DD4E6700F7CC4A /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0E24DC18B700578ED5 /* AuthorModel.swift */; };
+		426B35EA24DD4E6700F7CC4A /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0F24DC18B700578ED5 /* ModuleModel.swift */; };
+		426B35EB24DD4E6800F7CC4A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1124DC18B700578ED5 /* LoginPage.swift */; };
+		426B35EC24DD4E6800F7CC4A /* ModuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1224DC18B700578ED5 /* ModuleInfo.swift */; };
+		426B35ED24DD4E6800F7CC4A /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1424DC18B700578ED5 /* HostingController.swift */; };
+		426B35F024DD4E6800F7CC4A /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1824DC18B700578ED5 /* loginViewController.swift */; };
+		426B35F124DD4E6800F7CC4A /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1924DC18B700578ED5 /* TextFieldCustom.swift */; };
+		426B35F224DD4E6800F7CC4A /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1A24DC18B700578ED5 /* registerViewController.swift */; };
+		426B35F424DD4EEB00F7CC4A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE224DC18B700578ED5 /* BackButton.swift */; };
+		426B35F924DD4F5B00F7CC4A /* NotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B35F524DD4F5B00F7CC4A /* NotesDetail.swift */; };
+		426B35FA24DD4F5B00F7CC4A /* OverviewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B35F624DD4F5B00F7CC4A /* OverviewDetail.swift */; };
+		426B35FB24DD4F5B00F7CC4A /* NotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B35F724DD4F5B00F7CC4A /* NotesEdit.swift */; };
+		426B35FC24DD4F5B00F7CC4A /* OverviewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B35F824DD4F5B00F7CC4A /* OverviewEdit.swift */; };
+		426B363324DD4FA200F7CC4A /* EncounterSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B35FE24DD4FA200F7CC4A /* EncounterSectionCard.swift */; };
+		426B363424DD4FA200F7CC4A /* EnvironmentDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360024DD4FA200F7CC4A /* EnvironmentDetailCard.swift */; };
+		426B363524DD4FA200F7CC4A /* EncounterEnvironmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360124DD4FA200F7CC4A /* EncounterEnvironmentDetail.swift */; };
+		426B363624DD4FA200F7CC4A /* EncounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360224DD4FA200F7CC4A /* EncounterEnvironment.swift */; };
+		426B363724DD4FA200F7CC4A /* EncounterEnvironmentEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360324DD4FA200F7CC4A /* EncounterEnvironmentEdit.swift */; };
+		426B363824DD4FA200F7CC4A /* EnvironmentOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360424DD4FA200F7CC4A /* EnvironmentOverviewCard.swift */; };
+		426B363924DD4FA200F7CC4A /* EncounterEnvironmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360524DD4FA200F7CC4A /* EncounterEnvironmentList.swift */; };
+		426B363A24DD4FA200F7CC4A /* EncounterNotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360724DD4FA200F7CC4A /* EncounterNotesDetail.swift */; };
+		426B363B24DD4FA200F7CC4A /* EncounterNotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360824DD4FA200F7CC4A /* EncounterNotesEdit.swift */; };
+		426B363C24DD4FA200F7CC4A /* EncounterNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360924DD4FA200F7CC4A /* EncounterNotes.swift */; };
+		426B363D24DD4FA200F7CC4A /* EncounterTreasureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360B24DD4FA200F7CC4A /* EncounterTreasureDetail.swift */; };
+		426B363E24DD4FA200F7CC4A /* EncounterTreasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360C24DD4FA200F7CC4A /* EncounterTreasure.swift */; };
+		426B363F24DD4FA200F7CC4A /* TreasureEditForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360D24DD4FA200F7CC4A /* TreasureEditForms.swift */; };
+		426B364024DD4FA200F7CC4A /* TreasureDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360E24DD4FA200F7CC4A /* TreasureDetailCard.swift */; };
+		426B364124DD4FA200F7CC4A /* EncounterTreasureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B360F24DD4FA200F7CC4A /* EncounterTreasureList.swift */; };
+		426B364224DD4FA200F7CC4A /* EncounterTreasureEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361024DD4FA200F7CC4A /* EncounterTreasureEdit.swift */; };
+		426B364324DD4FA200F7CC4A /* EncounterRAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361224DD4FA200F7CC4A /* EncounterRAT.swift */; };
+		426B364424DD4FA200F7CC4A /* EncounterRATList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361324DD4FA200F7CC4A /* EncounterRATList.swift */; };
+		426B364524DD4FA200F7CC4A /* EncounterRATDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361424DD4FA200F7CC4A /* EncounterRATDetail.swift */; };
+		426B364624DD4FA200F7CC4A /* EncounterRATEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361524DD4FA200F7CC4A /* EncounterRATEdit.swift */; };
+		426B364724DD4FA200F7CC4A /* EncounterTraps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361724DD4FA200F7CC4A /* EncounterTraps.swift */; };
+		426B364824DD4FA200F7CC4A /* EncounterTrapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361824DD4FA200F7CC4A /* EncounterTrapsList.swift */; };
+		426B364924DD4FA200F7CC4A /* EncounterTrapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361924DD4FA200F7CC4A /* EncounterTrapsDetail.swift */; };
+		426B364A24DD4FA200F7CC4A /* TrapContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361A24DD4FA200F7CC4A /* TrapContentCard.swift */; };
+		426B364B24DD4FA200F7CC4A /* EncounterTrapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361B24DD4FA200F7CC4A /* EncounterTrapsEdit.swift */; };
+		426B364C24DD4FA200F7CC4A /* EncounterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361C24DD4FA200F7CC4A /* EncounterHeader.swift */; };
+		426B364D24DD4FA200F7CC4A /* EncounterMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361E24DD4FA200F7CC4A /* EncounterMaps.swift */; };
+		426B364E24DD4FA200F7CC4A /* EncounterMapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B361F24DD4FA200F7CC4A /* EncounterMapsList.swift */; };
+		426B364F24DD4FA200F7CC4A /* EncounterMapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362024DD4FA200F7CC4A /* EncounterMapsDetail.swift */; };
+		426B365024DD4FA200F7CC4A /* EncounterMapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362124DD4FA200F7CC4A /* EncounterMapsEdit.swift */; };
+		426B365124DD4FA200F7CC4A /* EncounterNPCList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362324DD4FA200F7CC4A /* EncounterNPCList.swift */; };
+		426B365224DD4FA200F7CC4A /* EncounterNPCEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362424DD4FA200F7CC4A /* EncounterNPCEdit.swift */; };
+		426B365324DD4FA200F7CC4A /* EncounterNPCDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362524DD4FA200F7CC4A /* EncounterNPCDetail.swift */; };
+		426B365424DD4FA200F7CC4A /* EncounterNPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362624DD4FA200F7CC4A /* EncounterNPC.swift */; };
+		426B365524DD4FA200F7CC4A /* EncounterExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362724DD4FA200F7CC4A /* EncounterExpanded.swift */; };
+		426B365624DD4FA200F7CC4A /* EncounterMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362924DD4FA200F7CC4A /* EncounterMonsters.swift */; };
+		426B365724DD4FA200F7CC4A /* EncounterMonstersEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362A24DD4FA200F7CC4A /* EncounterMonstersEdit.swift */; };
+		426B365824DD4FA200F7CC4A /* EncounterMonstersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362B24DD4FA200F7CC4A /* EncounterMonstersDetail.swift */; };
+		426B365924DD4FA200F7CC4A /* EncounterMonstersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362C24DD4FA200F7CC4A /* EncounterMonstersList.swift */; };
+		426B365A24DD4FA200F7CC4A /* EncounterEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362D24DD4FA200F7CC4A /* EncounterEdit.swift */; };
+		426B365B24DD4FA200F7CC4A /* EncounterPOIEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B362F24DD4FA200F7CC4A /* EncounterPOIEdit.swift */; };
+		426B365C24DD4FA200F7CC4A /* EncounterPOIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B363024DD4FA200F7CC4A /* EncounterPOIList.swift */; };
+		426B365D24DD4FA200F7CC4A /* EncounterPOIDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B363124DD4FA200F7CC4A /* EncounterPOIDetail.swift */; };
+		426B365E24DD4FA200F7CC4A /* EncounterPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B363224DD4FA200F7CC4A /* EncounterPOI.swift */; };
+		426B365F24DD504100F7CC4A /* Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ADE24DC18B700578ED5 /* Underline.swift */; };
+		426B366024DD504D00F7CC4A /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE024DC18B700578ED5 /* ProfilePicture.swift */; };
 		42B23B3E24DC18B800578ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B23A9724DC18B700578ED5 /* Assets.xcassets */; };
-		42B23B3F24DC18B800578ED5 /* ModuleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9924DC18B700578ED5 /* ModuleRepository.swift */; };
-		42B23B4024DC18B800578ED5 /* AuthorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9A24DC18B700578ED5 /* AuthorRepository.swift */; };
-		42B23B4124DC18B800578ED5 /* ExampleUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9B24DC18B700578ED5 /* ExampleUI.swift */; };
-		42B23B4224DC18B800578ED5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9D24DC18B700578ED5 /* File.swift */; };
-		42B23B4324DC18B800578ED5 /* AuthorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9F24DC18B700578ED5 /* AuthorStub.swift */; };
-		42B23B4424DC18B800578ED5 /* ModulesStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA024DC18B700578ED5 /* ModulesStub.swift */; };
-		42B23B4524DC18B800578ED5 /* AppsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA124DC18B700578ED5 /* AppsTime.swift */; };
-		42B23B4624DC18B800578ED5 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA224DC18B700578ED5 /* DataCenter.swift */; };
 		42B23B4724DC18B800578ED5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B23AA424DC18B700578ED5 /* Preview Assets.xcassets */; };
 		42B23B4824DC18B800578ED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B23AA524DC18B700578ED5 /* LaunchScreen.storyboard */; };
-		42B23B4924DC18B800578ED5 /* EncounterSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AA824DC18B700578ED5 /* EncounterSectionCard.swift */; };
-		42B23B4A24DC18B800578ED5 /* EnvironmentDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAA24DC18B700578ED5 /* EnvironmentDetailCard.swift */; };
-		42B23B4B24DC18B800578ED5 /* EncounterEnvironmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAB24DC18B700578ED5 /* EncounterEnvironmentDetail.swift */; };
-		42B23B4C24DC18B800578ED5 /* EncounterEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAC24DC18B700578ED5 /* EncounterEnvironment.swift */; };
-		42B23B4D24DC18B800578ED5 /* EncounterEnvironmentEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAD24DC18B700578ED5 /* EncounterEnvironmentEdit.swift */; };
-		42B23B4E24DC18B800578ED5 /* EnvironmentOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAE24DC18B700578ED5 /* EnvironmentOverviewCard.swift */; };
-		42B23B4F24DC18B800578ED5 /* EncounterEnvironmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AAF24DC18B700578ED5 /* EncounterEnvironmentList.swift */; };
-		42B23B5024DC18B800578ED5 /* EncounterNotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB124DC18B700578ED5 /* EncounterNotesDetail.swift */; };
-		42B23B5124DC18B800578ED5 /* EncounterNotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB224DC18B700578ED5 /* EncounterNotesEdit.swift */; };
-		42B23B5224DC18B800578ED5 /* EncounterNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB324DC18B700578ED5 /* EncounterNotes.swift */; };
-		42B23B5324DC18B800578ED5 /* EncounterTreasureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB524DC18B700578ED5 /* EncounterTreasureDetail.swift */; };
-		42B23B5424DC18B800578ED5 /* EncounterTreasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB624DC18B700578ED5 /* EncounterTreasure.swift */; };
-		42B23B5524DC18B800578ED5 /* TreasureEditForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB724DC18B700578ED5 /* TreasureEditForms.swift */; };
-		42B23B5624DC18B800578ED5 /* TreasureDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB824DC18B700578ED5 /* TreasureDetailCard.swift */; };
-		42B23B5724DC18B800578ED5 /* EncounterTreasureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AB924DC18B700578ED5 /* EncounterTreasureList.swift */; };
-		42B23B5824DC18B800578ED5 /* EncounterTreasureEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ABA24DC18B700578ED5 /* EncounterTreasureEdit.swift */; };
-		42B23B5924DC18B800578ED5 /* EncounterRAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ABC24DC18B700578ED5 /* EncounterRAT.swift */; };
-		42B23B5A24DC18B800578ED5 /* EncounterRATList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ABD24DC18B700578ED5 /* EncounterRATList.swift */; };
-		42B23B5B24DC18B800578ED5 /* EncounterRATDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ABE24DC18B700578ED5 /* EncounterRATDetail.swift */; };
-		42B23B5C24DC18B800578ED5 /* EncounterRATEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ABF24DC18B700578ED5 /* EncounterRATEdit.swift */; };
-		42B23B5D24DC18B800578ED5 /* EncounterTraps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC124DC18B700578ED5 /* EncounterTraps.swift */; };
-		42B23B5E24DC18B800578ED5 /* EncounterTrapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC224DC18B700578ED5 /* EncounterTrapsList.swift */; };
-		42B23B5F24DC18B800578ED5 /* EncounterTrapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC324DC18B700578ED5 /* EncounterTrapsDetail.swift */; };
-		42B23B6024DC18B800578ED5 /* TrapContentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC424DC18B700578ED5 /* TrapContentCard.swift */; };
-		42B23B6124DC18B800578ED5 /* EncounterTrapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC524DC18B700578ED5 /* EncounterTrapsEdit.swift */; };
-		42B23B6224DC18B800578ED5 /* EncounterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC624DC18B700578ED5 /* EncounterHeader.swift */; };
-		42B23B6324DC18B800578ED5 /* EncounterMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC824DC18B700578ED5 /* EncounterMaps.swift */; };
-		42B23B6424DC18B800578ED5 /* EncounterMapsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AC924DC18B700578ED5 /* EncounterMapsList.swift */; };
-		42B23B6524DC18B800578ED5 /* EncounterMapsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ACA24DC18B700578ED5 /* EncounterMapsDetail.swift */; };
-		42B23B6624DC18B800578ED5 /* EncounterMapsEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ACB24DC18B700578ED5 /* EncounterMapsEdit.swift */; };
-		42B23B6724DC18B800578ED5 /* EncounterNPCList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ACD24DC18B700578ED5 /* EncounterNPCList.swift */; };
-		42B23B6824DC18B800578ED5 /* EncounterNPCEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ACE24DC18B700578ED5 /* EncounterNPCEdit.swift */; };
-		42B23B6924DC18B800578ED5 /* EncounterNPCDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ACF24DC18B700578ED5 /* EncounterNPCDetail.swift */; };
-		42B23B6A24DC18B800578ED5 /* EncounterNPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD024DC18B700578ED5 /* EncounterNPC.swift */; };
-		42B23B6B24DC18B800578ED5 /* EncounterExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD124DC18B700578ED5 /* EncounterExpanded.swift */; };
-		42B23B6C24DC18B800578ED5 /* EncounterMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD324DC18B700578ED5 /* EncounterMonsters.swift */; };
-		42B23B6D24DC18B800578ED5 /* EncounterMonstersEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD424DC18B700578ED5 /* EncounterMonstersEdit.swift */; };
-		42B23B6E24DC18B800578ED5 /* EncounterMonstersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD524DC18B700578ED5 /* EncounterMonstersDetail.swift */; };
-		42B23B6F24DC18B800578ED5 /* EncounterMonstersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD624DC18B700578ED5 /* EncounterMonstersList.swift */; };
-		42B23B7024DC18B800578ED5 /* EncounterEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD724DC18B700578ED5 /* EncounterEdit.swift */; };
-		42B23B7124DC18B800578ED5 /* EncounterPOIEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AD924DC18B700578ED5 /* EncounterPOIEdit.swift */; };
-		42B23B7224DC18B800578ED5 /* EncounterPOIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ADA24DC18B700578ED5 /* EncounterPOIList.swift */; };
-		42B23B7324DC18B800578ED5 /* EncounterPOIDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ADB24DC18B700578ED5 /* EncounterPOIDetail.swift */; };
-		42B23B7424DC18B800578ED5 /* EncounterPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ADC24DC18B700578ED5 /* EncounterPOI.swift */; };
-		42B23B7524DC18B800578ED5 /* Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23ADE24DC18B700578ED5 /* Underline.swift */; };
-		42B23B7624DC18B800578ED5 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE024DC18B700578ED5 /* ProfilePicture.swift */; };
-		42B23B7724DC18B800578ED5 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE224DC18B700578ED5 /* BackButton.swift */; };
-		42B23B7824DC18B800578ED5 /* ApplicationActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE324DC18B700578ED5 /* ApplicationActionButton.swift */; };
-		42B23B7924DC18B800578ED5 /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE524DC18B700578ED5 /* ProfileSection.swift */; };
-		42B23B7A24DC18B800578ED5 /* HeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE724DC18B700578ED5 /* HeaderName.swift */; };
-		42B23B7B24DC18B800578ED5 /* CategoryIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE824DC18B700578ED5 /* CategoryIcon.swift */; };
-		42B23B7C24DC18B800578ED5 /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AE924DC18B700578ED5 /* searchBar.swift */; };
-		42B23B7D24DC18B800578ED5 /* PopularCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEA24DC18B700578ED5 /* PopularCarousel.swift */; };
-		42B23B7E24DC18B800578ED5 /* TestingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEB24DC18B700578ED5 /* TestingCard.swift */; };
-		42B23B7F24DC18B800578ED5 /* ListOfModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEC24DC18B700578ED5 /* ListOfModules.swift */; };
-		42B23B8024DC18B800578ED5 /* ModuleGenreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AED24DC18B700578ED5 /* ModuleGenreCard.swift */; };
-		42B23B8124DC18B800578ED5 /* RecentCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEE24DC18B700578ED5 /* RecentCarousel.swift */; };
-		42B23B8224DC18B800578ED5 /* ModuleListScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AEF24DC18B700578ED5 /* ModuleListScroll.swift */; };
-		42B23B8324DC18B800578ED5 /* GenreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF024DC18B700578ED5 /* GenreSection.swift */; };
-		42B23B8424DC18B800578ED5 /* ModuleEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF124DC18B700578ED5 /* ModuleEmptyState.swift */; };
-		42B23B8524DC18B800578ED5 /* ContentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF324DC18B700578ED5 /* ContentText.swift */; };
-		42B23B8624DC18B800578ED5 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF424DC18B700578ED5 /* TimeText.swift */; };
-		42B23B8724DC18B800578ED5 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF524DC18B700578ED5 /* TitleText.swift */; };
-		42B23B8824DC18B800578ED5 /* FavouriteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF724DC18B700578ED5 /* FavouriteBase.swift */; };
-		42B23B8924DC18B800578ED5 /* ModalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF824DC18B700578ED5 /* ModalCard.swift */; };
-		42B23B8A24DC18B800578ED5 /* NavigationModalTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AF924DC18B700578ED5 /* NavigationModalTemplate.swift */; };
-		42B23B8B24DC18B800578ED5 /* ModalHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AFA24DC18B700578ED5 /* ModalHeading.swift */; };
-		42B23B8C24DC18B800578ED5 /* BrowseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23AFB24DC18B700578ED5 /* BrowseBase.swift */; };
-		42B23B8D24DC18B800578ED5 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0024DC18B700578ED5 /* Monster.swift */; };
-		42B23B8E24DC18B800578ED5 /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0124DC18B700578ED5 /* Treasure.swift */; };
-		42B23B8F24DC18B800578ED5 /* ReadAloudText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0224DC18B700578ED5 /* ReadAloudText.swift */; };
-		42B23B9024DC18B800578ED5 /* Trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0324DC18B700578ED5 /* Trap.swift */; };
-		42B23B9124DC18B800578ED5 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0424DC18B700578ED5 /* Notes.swift */; };
-		42B23B9224DC18B800578ED5 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0524DC18B700578ED5 /* Maps.swift */; };
-		42B23B9324DC18B800578ED5 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0624DC18B700578ED5 /* NPC.swift */; };
-		42B23B9424DC18B800578ED5 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0724DC18B700578ED5 /* POI.swift */; };
-		42B23B9524DC18B800578ED5 /* ModuleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0824DC18B700578ED5 /* ModuleContent.swift */; };
-		42B23B9624DC18B800578ED5 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0924DC18B700578ED5 /* Overview.swift */; };
-		42B23B9724DC18B800578ED5 /* EnvironmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0A24DC18B700578ED5 /* EnvironmentModel.swift */; };
-		42B23B9824DC18B800578ED5 /* Encounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0B24DC18B700578ED5 /* Encounter.swift */; };
-		42B23B9924DC18B800578ED5 /* MainNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0C24DC18B700578ED5 /* MainNotes.swift */; };
-		42B23B9A24DC18B800578ED5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0D24DC18B700578ED5 /* Model.swift */; };
-		42B23B9B24DC18B800578ED5 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0E24DC18B700578ED5 /* AuthorModel.swift */; };
-		42B23B9C24DC18B800578ED5 /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B0F24DC18B700578ED5 /* ModuleModel.swift */; };
-		42B23B9D24DC18B800578ED5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1124DC18B700578ED5 /* LoginPage.swift */; };
-		42B23B9E24DC18B800578ED5 /* ModuleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1224DC18B700578ED5 /* ModuleInfo.swift */; };
-		42B23B9F24DC18B800578ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1324DC18B700578ED5 /* AppDelegate.swift */; };
-		42B23BA024DC18B800578ED5 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1424DC18B700578ED5 /* HostingController.swift */; };
 		42B23BA124DC18B800578ED5 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B23B1624DC18B700578ED5 /* Register.storyboard */; };
 		42B23BA224DC18B800578ED5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B23B1724DC18B700578ED5 /* Login.storyboard */; };
-		42B23BA324DC18B800578ED5 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1824DC18B700578ED5 /* loginViewController.swift */; };
-		42B23BA424DC18B800578ED5 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1924DC18B700578ED5 /* TextFieldCustom.swift */; };
-		42B23BA524DC18B800578ED5 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1A24DC18B700578ED5 /* registerViewController.swift */; };
-		42B23BA724DC18B800578ED5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23B1C24DC18B700578ED5 /* SceneDelegate.swift */; };
-		42B23BAA24DC26B100578ED5 /* AddModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23BA924DC26B100578ED5 /* AddModule.swift */; };
-		42B5312624DCC6E6002C7F46 /* AddModuleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */; };
 		42E54FF524DB1600008D0E0B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E54FF424DB1600008D0E0B /* CloudKit.framework */; };
-		BCF536A124DC286400B156F8 /* NotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A024DC286400B156F8 /* NotesEdit.swift */; };
-		BCF536A324DC2CAD00B156F8 /* NotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A224DC2CAD00B156F8 /* NotesDetail.swift */; };
-		BCF536A524DC31D700B156F8 /* OverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A424DC31D700B156F8 /* OverviewCard.swift */; };
-		BCF536A724DC350600B156F8 /* OverviewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A624DC350600B156F8 /* OverviewEdit.swift */; };
-		BCF536A924DC37A500B156F8 /* OverviewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A824DC37A500B156F8 /* OverviewDetail.swift */; };
-		BCF536AB24DC453A00B156F8 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536AA24DC453A00B156F8 /* UploadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4241A6C324DD48ED0004B0A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426B35F524DD4F5B00F7CC4A /* NotesDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesDetail.swift; path = "Module Main/NotesDetail.swift"; sourceTree = "<group>"; };
+		426B35F624DD4F5B00F7CC4A /* OverviewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewDetail.swift; path = "Module Main/OverviewDetail.swift"; sourceTree = "<group>"; };
+		426B35F724DD4F5B00F7CC4A /* NotesEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesEdit.swift; path = "Module Main/NotesEdit.swift"; sourceTree = "<group>"; };
+		426B35F824DD4F5B00F7CC4A /* OverviewEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewEdit.swift; path = "Module Main/OverviewEdit.swift"; sourceTree = "<group>"; };
+		426B35FE24DD4FA200F7CC4A /* EncounterSectionCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterSectionCard.swift; sourceTree = "<group>"; };
+		426B360024DD4FA200F7CC4A /* EnvironmentDetailCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentDetailCard.swift; sourceTree = "<group>"; };
+		426B360124DD4FA200F7CC4A /* EncounterEnvironmentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentDetail.swift; sourceTree = "<group>"; };
+		426B360224DD4FA200F7CC4A /* EncounterEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEnvironment.swift; sourceTree = "<group>"; };
+		426B360324DD4FA200F7CC4A /* EncounterEnvironmentEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentEdit.swift; sourceTree = "<group>"; };
+		426B360424DD4FA200F7CC4A /* EnvironmentOverviewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentOverviewCard.swift; sourceTree = "<group>"; };
+		426B360524DD4FA200F7CC4A /* EncounterEnvironmentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEnvironmentList.swift; sourceTree = "<group>"; };
+		426B360724DD4FA200F7CC4A /* EncounterNotesDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNotesDetail.swift; sourceTree = "<group>"; };
+		426B360824DD4FA200F7CC4A /* EncounterNotesEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNotesEdit.swift; sourceTree = "<group>"; };
+		426B360924DD4FA200F7CC4A /* EncounterNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNotes.swift; sourceTree = "<group>"; };
+		426B360B24DD4FA200F7CC4A /* EncounterTreasureDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTreasureDetail.swift; sourceTree = "<group>"; };
+		426B360C24DD4FA200F7CC4A /* EncounterTreasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTreasure.swift; sourceTree = "<group>"; };
+		426B360D24DD4FA200F7CC4A /* TreasureEditForms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreasureEditForms.swift; sourceTree = "<group>"; };
+		426B360E24DD4FA200F7CC4A /* TreasureDetailCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreasureDetailCard.swift; sourceTree = "<group>"; };
+		426B360F24DD4FA200F7CC4A /* EncounterTreasureList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTreasureList.swift; sourceTree = "<group>"; };
+		426B361024DD4FA200F7CC4A /* EncounterTreasureEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTreasureEdit.swift; sourceTree = "<group>"; };
+		426B361224DD4FA200F7CC4A /* EncounterRAT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterRAT.swift; sourceTree = "<group>"; };
+		426B361324DD4FA200F7CC4A /* EncounterRATList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterRATList.swift; sourceTree = "<group>"; };
+		426B361424DD4FA200F7CC4A /* EncounterRATDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterRATDetail.swift; sourceTree = "<group>"; };
+		426B361524DD4FA200F7CC4A /* EncounterRATEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterRATEdit.swift; sourceTree = "<group>"; };
+		426B361724DD4FA200F7CC4A /* EncounterTraps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTraps.swift; sourceTree = "<group>"; };
+		426B361824DD4FA200F7CC4A /* EncounterTrapsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTrapsList.swift; sourceTree = "<group>"; };
+		426B361924DD4FA200F7CC4A /* EncounterTrapsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTrapsDetail.swift; sourceTree = "<group>"; };
+		426B361A24DD4FA200F7CC4A /* TrapContentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapContentCard.swift; sourceTree = "<group>"; };
+		426B361B24DD4FA200F7CC4A /* EncounterTrapsEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterTrapsEdit.swift; sourceTree = "<group>"; };
+		426B361C24DD4FA200F7CC4A /* EncounterHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterHeader.swift; sourceTree = "<group>"; };
+		426B361E24DD4FA200F7CC4A /* EncounterMaps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMaps.swift; sourceTree = "<group>"; };
+		426B361F24DD4FA200F7CC4A /* EncounterMapsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMapsList.swift; sourceTree = "<group>"; };
+		426B362024DD4FA200F7CC4A /* EncounterMapsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMapsDetail.swift; sourceTree = "<group>"; };
+		426B362124DD4FA200F7CC4A /* EncounterMapsEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMapsEdit.swift; sourceTree = "<group>"; };
+		426B362324DD4FA200F7CC4A /* EncounterNPCList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNPCList.swift; sourceTree = "<group>"; };
+		426B362424DD4FA200F7CC4A /* EncounterNPCEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNPCEdit.swift; sourceTree = "<group>"; };
+		426B362524DD4FA200F7CC4A /* EncounterNPCDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNPCDetail.swift; sourceTree = "<group>"; };
+		426B362624DD4FA200F7CC4A /* EncounterNPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterNPC.swift; sourceTree = "<group>"; };
+		426B362724DD4FA200F7CC4A /* EncounterExpanded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterExpanded.swift; sourceTree = "<group>"; };
+		426B362924DD4FA200F7CC4A /* EncounterMonsters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMonsters.swift; sourceTree = "<group>"; };
+		426B362A24DD4FA200F7CC4A /* EncounterMonstersEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMonstersEdit.swift; sourceTree = "<group>"; };
+		426B362B24DD4FA200F7CC4A /* EncounterMonstersDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMonstersDetail.swift; sourceTree = "<group>"; };
+		426B362C24DD4FA200F7CC4A /* EncounterMonstersList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterMonstersList.swift; sourceTree = "<group>"; };
+		426B362D24DD4FA200F7CC4A /* EncounterEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterEdit.swift; sourceTree = "<group>"; };
+		426B362F24DD4FA200F7CC4A /* EncounterPOIEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIEdit.swift; sourceTree = "<group>"; };
+		426B363024DD4FA200F7CC4A /* EncounterPOIList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIList.swift; sourceTree = "<group>"; };
+		426B363124DD4FA200F7CC4A /* EncounterPOIDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOIDetail.swift; sourceTree = "<group>"; };
+		426B363224DD4FA200F7CC4A /* EncounterPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterPOI.swift; sourceTree = "<group>"; };
 		42B23A6E24DC18B700578ED5 /* Color Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color Presets.swift"; sourceTree = "<group>"; };
 		42B23A7124DC18B700578ED5 /* SearchModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModuleView.swift; sourceTree = "<group>"; };
 		42B23A7224DC18B700578ED5 /* BrowseByGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseByGenre.swift; sourceTree = "<group>"; };
@@ -295,17 +344,12 @@
 		42B23B1824DC18B700578ED5 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		42B23B1924DC18B700578ED5 /* TextFieldCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
 		42B23B1A24DC18B700578ED5 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
-		42B23B1B24DC18B700578ED5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B23B1C24DC18B700578ED5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		42B23BA924DC26B100578ED5 /* AddModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModule.swift; sourceTree = "<group>"; };
 		42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModuleVM.swift; sourceTree = "<group>"; };
 		42E54FF424DB1600008D0E0B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BCB36AD324D01FB70088321A /* MC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCF536A024DC286400B156F8 /* NotesEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEdit.swift; sourceTree = "<group>"; };
-		BCF536A224DC2CAD00B156F8 /* NotesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetail.swift; sourceTree = "<group>"; };
 		BCF536A424DC31D700B156F8 /* OverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCard.swift; sourceTree = "<group>"; };
-		BCF536A624DC350600B156F8 /* OverviewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewEdit.swift; sourceTree = "<group>"; };
-		BCF536A824DC37A500B156F8 /* OverviewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewDetail.swift; sourceTree = "<group>"; };
 		BCF536AA24DC453A00B156F8 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,9 +365,188 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4241A6C124DD433D0004B0A5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				42B23AAE24DC18B700578ED5 /* EnvironmentOverviewCard.swift */,
+				42B23AC924DC18B700578ED5 /* EncounterMapsList.swift */,
+				42B23AC824DC18B700578ED5 /* EncounterMaps.swift */,
+				42B23AD424DC18B700578ED5 /* EncounterMonstersEdit.swift */,
+				42B23AB124DC18B700578ED5 /* EncounterNotesDetail.swift */,
+				42B23AD724DC18B700578ED5 /* EncounterEdit.swift */,
+				42B23ACE24DC18B700578ED5 /* EncounterNPCEdit.swift */,
+				42B23AB224DC18B700578ED5 /* EncounterNotesEdit.swift */,
+				42B23AC324DC18B700578ED5 /* EncounterTrapsDetail.swift */,
+				42B23ACF24DC18B700578ED5 /* EncounterNPCDetail.swift */,
+				42B23ABE24DC18B700578ED5 /* EncounterRATDetail.swift */,
+				42B23AA824DC18B700578ED5 /* EncounterSectionCard.swift */,
+				42B23AB524DC18B700578ED5 /* EncounterTreasureDetail.swift */,
+				42B23AB624DC18B700578ED5 /* EncounterTreasure.swift */,
+				42B23AD324DC18B700578ED5 /* EncounterMonsters.swift */,
+				42B23AAF24DC18B700578ED5 /* EncounterEnvironmentList.swift */,
+				42B23ABA24DC18B700578ED5 /* EncounterTreasureEdit.swift */,
+				42B23AB924DC18B700578ED5 /* EncounterTreasureList.swift */,
+				42B23AC524DC18B700578ED5 /* EncounterTrapsEdit.swift */,
+				42B23AB824DC18B700578ED5 /* TreasureDetailCard.swift */,
+				42B23AAA24DC18B700578ED5 /* EnvironmentDetailCard.swift */,
+				42B23ABF24DC18B700578ED5 /* EncounterRATEdit.swift */,
+				42B23ADB24DC18B700578ED5 /* EncounterPOIDetail.swift */,
+				42B23ABD24DC18B700578ED5 /* EncounterRATList.swift */,
+				42B23AD924DC18B700578ED5 /* EncounterPOIEdit.swift */,
+				42B23AC424DC18B700578ED5 /* TrapContentCard.swift */,
+				42B23AAD24DC18B700578ED5 /* EncounterEnvironmentEdit.swift */,
+				42B23ACA24DC18B700578ED5 /* EncounterMapsDetail.swift */,
+				42B23AC124DC18B700578ED5 /* EncounterTraps.swift */,
+				42B23AB724DC18B700578ED5 /* TreasureEditForms.swift */,
+				42B23ACD24DC18B700578ED5 /* EncounterNPCList.swift */,
+				42B23AAB24DC18B700578ED5 /* EncounterEnvironmentDetail.swift */,
+				42B23AAC24DC18B700578ED5 /* EncounterEnvironment.swift */,
+				42B23AD524DC18B700578ED5 /* EncounterMonstersDetail.swift */,
+				42B23AC224DC18B700578ED5 /* EncounterTrapsList.swift */,
+				42B23ADC24DC18B700578ED5 /* EncounterPOI.swift */,
+				42B23ABC24DC18B700578ED5 /* EncounterRAT.swift */,
+				42B23AD624DC18B700578ED5 /* EncounterMonstersList.swift */,
+				42B23AD124DC18B700578ED5 /* EncounterExpanded.swift */,
+				42B23AD024DC18B700578ED5 /* EncounterNPC.swift */,
+				42B23ADA24DC18B700578ED5 /* EncounterPOIList.swift */,
+				42B23AC624DC18B700578ED5 /* EncounterHeader.swift */,
+				42B23AB324DC18B700578ED5 /* EncounterNotes.swift */,
+				42B23ACB24DC18B700578ED5 /* EncounterMapsEdit.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		426B35FD24DD4FA200F7CC4A /* Encounter */ = {
+			isa = PBXGroup;
+			children = (
+				426B35FE24DD4FA200F7CC4A /* EncounterSectionCard.swift */,
+				426B35FF24DD4FA200F7CC4A /* 1 - Environment */,
+				426B360624DD4FA200F7CC4A /* 9 - Notes */,
+				426B360A24DD4FA200F7CC4A /* 8 - Treasure */,
+				426B361124DD4FA200F7CC4A /* 7 - RAT */,
+				426B361624DD4FA200F7CC4A /* 2 - Traps */,
+				426B361C24DD4FA200F7CC4A /* EncounterHeader.swift */,
+				426B361D24DD4FA200F7CC4A /* 3 - Maps */,
+				426B362224DD4FA200F7CC4A /* 5 - NPC */,
+				426B362724DD4FA200F7CC4A /* EncounterExpanded.swift */,
+				426B362824DD4FA200F7CC4A /* 6 - Monsters */,
+				426B362D24DD4FA200F7CC4A /* EncounterEdit.swift */,
+				426B362E24DD4FA200F7CC4A /* 4 - POI */,
+			);
+			path = Encounter;
+			sourceTree = "<group>";
+		};
+		426B35FF24DD4FA200F7CC4A /* 1 - Environment */ = {
+			isa = PBXGroup;
+			children = (
+				426B360024DD4FA200F7CC4A /* EnvironmentDetailCard.swift */,
+				426B360124DD4FA200F7CC4A /* EncounterEnvironmentDetail.swift */,
+				426B360224DD4FA200F7CC4A /* EncounterEnvironment.swift */,
+				426B360324DD4FA200F7CC4A /* EncounterEnvironmentEdit.swift */,
+				426B360424DD4FA200F7CC4A /* EnvironmentOverviewCard.swift */,
+				426B360524DD4FA200F7CC4A /* EncounterEnvironmentList.swift */,
+			);
+			path = "1 - Environment";
+			sourceTree = "<group>";
+		};
+		426B360624DD4FA200F7CC4A /* 9 - Notes */ = {
+			isa = PBXGroup;
+			children = (
+				426B360724DD4FA200F7CC4A /* EncounterNotesDetail.swift */,
+				426B360824DD4FA200F7CC4A /* EncounterNotesEdit.swift */,
+				426B360924DD4FA200F7CC4A /* EncounterNotes.swift */,
+			);
+			path = "9 - Notes";
+			sourceTree = "<group>";
+		};
+		426B360A24DD4FA200F7CC4A /* 8 - Treasure */ = {
+			isa = PBXGroup;
+			children = (
+				426B360B24DD4FA200F7CC4A /* EncounterTreasureDetail.swift */,
+				426B360C24DD4FA200F7CC4A /* EncounterTreasure.swift */,
+				426B360D24DD4FA200F7CC4A /* TreasureEditForms.swift */,
+				426B360E24DD4FA200F7CC4A /* TreasureDetailCard.swift */,
+				426B360F24DD4FA200F7CC4A /* EncounterTreasureList.swift */,
+				426B361024DD4FA200F7CC4A /* EncounterTreasureEdit.swift */,
+			);
+			path = "8 - Treasure";
+			sourceTree = "<group>";
+		};
+		426B361124DD4FA200F7CC4A /* 7 - RAT */ = {
+			isa = PBXGroup;
+			children = (
+				426B361224DD4FA200F7CC4A /* EncounterRAT.swift */,
+				426B361324DD4FA200F7CC4A /* EncounterRATList.swift */,
+				426B361424DD4FA200F7CC4A /* EncounterRATDetail.swift */,
+				426B361524DD4FA200F7CC4A /* EncounterRATEdit.swift */,
+			);
+			path = "7 - RAT";
+			sourceTree = "<group>";
+		};
+		426B361624DD4FA200F7CC4A /* 2 - Traps */ = {
+			isa = PBXGroup;
+			children = (
+				426B361724DD4FA200F7CC4A /* EncounterTraps.swift */,
+				426B361824DD4FA200F7CC4A /* EncounterTrapsList.swift */,
+				426B361924DD4FA200F7CC4A /* EncounterTrapsDetail.swift */,
+				426B361A24DD4FA200F7CC4A /* TrapContentCard.swift */,
+				426B361B24DD4FA200F7CC4A /* EncounterTrapsEdit.swift */,
+			);
+			path = "2 - Traps";
+			sourceTree = "<group>";
+		};
+		426B361D24DD4FA200F7CC4A /* 3 - Maps */ = {
+			isa = PBXGroup;
+			children = (
+				426B361E24DD4FA200F7CC4A /* EncounterMaps.swift */,
+				426B361F24DD4FA200F7CC4A /* EncounterMapsList.swift */,
+				426B362024DD4FA200F7CC4A /* EncounterMapsDetail.swift */,
+				426B362124DD4FA200F7CC4A /* EncounterMapsEdit.swift */,
+			);
+			path = "3 - Maps";
+			sourceTree = "<group>";
+		};
+		426B362224DD4FA200F7CC4A /* 5 - NPC */ = {
+			isa = PBXGroup;
+			children = (
+				426B362324DD4FA200F7CC4A /* EncounterNPCList.swift */,
+				426B362424DD4FA200F7CC4A /* EncounterNPCEdit.swift */,
+				426B362524DD4FA200F7CC4A /* EncounterNPCDetail.swift */,
+				426B362624DD4FA200F7CC4A /* EncounterNPC.swift */,
+			);
+			path = "5 - NPC";
+			sourceTree = "<group>";
+		};
+		426B362824DD4FA200F7CC4A /* 6 - Monsters */ = {
+			isa = PBXGroup;
+			children = (
+				426B362924DD4FA200F7CC4A /* EncounterMonsters.swift */,
+				426B362A24DD4FA200F7CC4A /* EncounterMonstersEdit.swift */,
+				426B362B24DD4FA200F7CC4A /* EncounterMonstersDetail.swift */,
+				426B362C24DD4FA200F7CC4A /* EncounterMonstersList.swift */,
+			);
+			path = "6 - Monsters";
+			sourceTree = "<group>";
+		};
+		426B362E24DD4FA200F7CC4A /* 4 - POI */ = {
+			isa = PBXGroup;
+			children = (
+				426B362F24DD4FA200F7CC4A /* EncounterPOIEdit.swift */,
+				426B363024DD4FA200F7CC4A /* EncounterPOIList.swift */,
+				426B363124DD4FA200F7CC4A /* EncounterPOIDetail.swift */,
+				426B363224DD4FA200F7CC4A /* EncounterPOI.swift */,
+			);
+			path = "4 - POI";
+			sourceTree = "<group>";
+		};
 		42B23A6D24DC18B700578ED5 /* MC3 */ = {
 			isa = PBXGroup;
 			children = (
+				426B35FD24DD4FA200F7CC4A /* Encounter */,
+				426B35F524DD4F5B00F7CC4A /* NotesDetail.swift */,
+				426B35F724DD4F5B00F7CC4A /* NotesEdit.swift */,
+				426B35F624DD4F5B00F7CC4A /* OverviewDetail.swift */,
+				426B35F824DD4F5B00F7CC4A /* OverviewEdit.swift */,
 				42B23A6E24DC18B700578ED5 /* Color Presets.swift */,
 				42B23A6F24DC18B700578ED5 /* Page */,
 				42B23A8024DC18B700578ED5 /* Module Main */,
@@ -334,7 +557,6 @@
 				42B23A9824DC18B700578ED5 /* Utils */,
 				42B23AA324DC18B700578ED5 /* Preview Content */,
 				42B23AA524DC18B700578ED5 /* LaunchScreen.storyboard */,
-				42B23AA724DC18B700578ED5 /* Encounter */,
 				42B23ADD24DC18B700578ED5 /* Components */,
 				42B23AFC24DC18B700578ED5 /* MC3.entitlements */,
 				42B23AFD24DC18B700578ED5 /* Model */,
@@ -343,8 +565,8 @@
 				42B23B1324DC18B700578ED5 /* AppDelegate.swift */,
 				42B23B1424DC18B700578ED5 /* HostingController.swift */,
 				42B23B1524DC18B700578ED5 /* StoryBoardFiles */,
-				42B23B1B24DC18B700578ED5 /* Info.plist */,
 				42B23B1C24DC18B700578ED5 /* SceneDelegate.swift */,
+				4241A6C324DD48ED0004B0A5 /* Info.plist */,
 			);
 			path = MC3;
 			sourceTree = "<group>";
@@ -352,7 +574,6 @@
 		42B23A6F24DC18B700578ED5 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-
 				42B23BA824DC26A400578ED5 /* Module */,
 				42B23A7024DC18B700578ED5 /* BrowseView */,
 				42B23A7324DC18B700578ED5 /* Profile */,
@@ -429,18 +650,8 @@
 		42B23A8D24DC18B700578ED5 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				42E54EC624DB063B008D0E0B /* BackgroundCard.swift */,
-				42E54EC524DB063B008D0E0B /* DropdownPicker.swift */,
-				42E54EC724DB063B008D0E0B /* ImagePickerEmbed.swift */,
-				42E54EC824DB063B008D0E0B /* DetailCard.swift */,
-				42E54EC924DB063B008D0E0B /* ContentCard.swift */,
 				BCF536A424DC31D700B156F8 /* OverviewCard.swift */,
-				42E54ECB24DB063B008D0E0B /* PictureContentCard.swift */,
-				42E54ECA24DB063B008D0E0B /* Editor.swift */,
-				42E54EC324DB063B008D0E0B /* EditorButtons.swift */,
-				42E54EC424DB063B008D0E0B /* MultilineTextField.swift */,
 				BCF536AA24DC453A00B156F8 /* UploadImage.swift */,
-
 				42B23A8E24DC18B700578ED5 /* EditorButtons.swift */,
 				42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */,
 				42B23A9024DC18B700578ED5 /* DropdownPicker.swift */,
@@ -491,132 +702,6 @@
 				42B23AA424DC18B700578ED5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		42B23AA724DC18B700578ED5 /* Encounter */ = {
-			isa = PBXGroup;
-			children = (
-
-				42E54EF924DB063B008D0E0B /* EncounterHeader.swift */,
-				42E54F0424DB063B008D0E0B /* EncounterExpanded.swift */,
-				42E54F0A24DB063B008D0E0B /* EncounterEdit.swift */,
-				42E54EDB24DB063B008D0E0B /* EncounterSectionCard.swift */,
-				42E54EDC24DB063B008D0E0B /* 1 - Environment */,
-				42E54EF324DB063B008D0E0B /* 2 - Traps */,
-				42E54EFA24DB063B008D0E0B /* 3 - Maps */,
-				42E54F0B24DB063B008D0E0B /* 4 - POI */,
-				42E54EFF24DB063B008D0E0B /* 5 - NPC */,
-				42E54F0524DB063B008D0E0B /* 6 - Monsters */,
-				42E54EEE24DB063B008D0E0B /* 7 - RAT */,
-				42E54EE724DB063B008D0E0B /* 8 - Treasure */,
-				42E54EE324DB063B008D0E0B /* 9 - Notes */
-			);
-			path = Encounter;
-			sourceTree = "<group>";
-		};
-		42B23AA924DC18B700578ED5 /* 1 - Environment */ = {
-			isa = PBXGroup;
-			children = (
-				42B23AAA24DC18B700578ED5 /* EnvironmentDetailCard.swift */,
-				42B23AAB24DC18B700578ED5 /* EncounterEnvironmentDetail.swift */,
-				42B23AAC24DC18B700578ED5 /* EncounterEnvironment.swift */,
-				42B23AAD24DC18B700578ED5 /* EncounterEnvironmentEdit.swift */,
-				42B23AAE24DC18B700578ED5 /* EnvironmentOverviewCard.swift */,
-				42B23AAF24DC18B700578ED5 /* EncounterEnvironmentList.swift */,
-			);
-			path = "1 - Environment";
-			sourceTree = "<group>";
-		};
-		42B23AB024DC18B700578ED5 /* 9 - Notes */ = {
-			isa = PBXGroup;
-			children = (
-				42B23AB124DC18B700578ED5 /* EncounterNotesDetail.swift */,
-				42B23AB224DC18B700578ED5 /* EncounterNotesEdit.swift */,
-				42B23AB324DC18B700578ED5 /* EncounterNotes.swift */,
-			);
-			path = "9 - Notes";
-			sourceTree = "<group>";
-		};
-		42B23AB424DC18B700578ED5 /* 8 - Treasure */ = {
-			isa = PBXGroup;
-			children = (
-
-				42E54EE824DB063B008D0E0B /* EncounterTreasureDetail.swift */,
-				42E54EE924DB063B008D0E0B /* EncounterTreasure.swift */,
-				42E54EEB24DB063B008D0E0B /* TreasureDetailCard.swift */,
-				42E54EEC24DB063B008D0E0B /* EncounterTreasureList.swift */,
-				42E54EED24DB063B008D0E0B /* EncounterTreasureEdit.swift */,
-				42E54EEA24DB063B008D0E0B /* TreasureEditForms.swift */,
-			);
-			path = "8 - Treasure";
-			sourceTree = "<group>";
-		};
-		42B23ABB24DC18B700578ED5 /* 7 - RAT */ = {
-			isa = PBXGroup;
-			children = (
-				42B23ABC24DC18B700578ED5 /* EncounterRAT.swift */,
-				42B23ABD24DC18B700578ED5 /* EncounterRATList.swift */,
-				42B23ABE24DC18B700578ED5 /* EncounterRATDetail.swift */,
-				42B23ABF24DC18B700578ED5 /* EncounterRATEdit.swift */,
-			);
-			path = "7 - RAT";
-			sourceTree = "<group>";
-		};
-		42B23AC024DC18B700578ED5 /* 2 - Traps */ = {
-			isa = PBXGroup;
-			children = (
-
-				42E54EF424DB063B008D0E0B /* EncounterTraps.swift */,
-				42E54EF524DB063B008D0E0B /* EncounterTrapsList.swift */,
-				42E54EF624DB063B008D0E0B /* EncounterTrapsDetail.swift */,
-				42E54EF824DB063B008D0E0B /* EncounterTrapsEdit.swift */,
-				42E54EF724DB063B008D0E0B /* TrapContentCard.swift */,
-			);
-			path = "2 - Traps";
-			sourceTree = "<group>";
-		};
-		42B23AC724DC18B700578ED5 /* 3 - Maps */ = {
-			isa = PBXGroup;
-			children = (
-				42B23AC824DC18B700578ED5 /* EncounterMaps.swift */,
-				42B23AC924DC18B700578ED5 /* EncounterMapsList.swift */,
-				42B23ACA24DC18B700578ED5 /* EncounterMapsDetail.swift */,
-				42B23ACB24DC18B700578ED5 /* EncounterMapsEdit.swift */,
-			);
-			path = "3 - Maps";
-			sourceTree = "<group>";
-		};
-		42B23ACC24DC18B700578ED5 /* 5 - NPC */ = {
-			isa = PBXGroup;
-			children = (
-				42B23ACD24DC18B700578ED5 /* EncounterNPCList.swift */,
-				42B23ACE24DC18B700578ED5 /* EncounterNPCEdit.swift */,
-				42B23ACF24DC18B700578ED5 /* EncounterNPCDetail.swift */,
-				42B23AD024DC18B700578ED5 /* EncounterNPC.swift */,
-			);
-			path = "5 - NPC";
-			sourceTree = "<group>";
-		};
-		42B23AD224DC18B700578ED5 /* 6 - Monsters */ = {
-			isa = PBXGroup;
-			children = (
-				42B23AD324DC18B700578ED5 /* EncounterMonsters.swift */,
-				42B23AD424DC18B700578ED5 /* EncounterMonstersEdit.swift */,
-				42B23AD524DC18B700578ED5 /* EncounterMonstersDetail.swift */,
-				42B23AD624DC18B700578ED5 /* EncounterMonstersList.swift */,
-			);
-			path = "6 - Monsters";
-			sourceTree = "<group>";
-		};
-		42B23AD824DC18B700578ED5 /* 4 - POI */ = {
-			isa = PBXGroup;
-			children = (
-				42B23AD924DC18B700578ED5 /* EncounterPOIEdit.swift */,
-				42B23ADA24DC18B700578ED5 /* EncounterPOIList.swift */,
-				42B23ADB24DC18B700578ED5 /* EncounterPOIDetail.swift */,
-				42B23ADC24DC18B700578ED5 /* EncounterPOI.swift */,
-			);
-			path = "4 - POI";
 			sourceTree = "<group>";
 		};
 		42B23ADD24DC18B700578ED5 /* Components */ = {
@@ -788,6 +873,7 @@
 				42B23A6D24DC18B700578ED5 /* MC3 */,
 				BCB36AD424D01FB70088321A /* Products */,
 				42E54FF324DB1600008D0E0B /* Frameworks */,
+				4241A6C124DD433D0004B0A5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -806,9 +892,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCB36AE724D01FB80088321A /* Build configuration list for PBXNativeTarget "MC3" */;
 			buildPhases = (
-				BCB36ACF24D01FB70088321A /* Sources */,
 				BCB36AD024D01FB70088321A /* Frameworks */,
 				BCB36AD124D01FB70088321A /* Resources */,
+				426B358F24DD4DD700F7CC4A /* Sources */,
 			);
 			buildRules = (
 			);
@@ -868,145 +954,151 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BCB36ACF24D01FB70088321A /* Sources */ = {
+		426B358F24DD4DD700F7CC4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B23B4E24DC18B800578ED5 /* EnvironmentOverviewCard.swift in Sources */,
-				42B23B3A24DC18B800578ED5 /* DetailCard.swift in Sources */,
-				42B23B6424DC18B800578ED5 /* EncounterMapsList.swift in Sources */,
-				42B23B6324DC18B800578ED5 /* EncounterMaps.swift in Sources */,
-				42B23B7A24DC18B800578ED5 /* HeaderName.swift in Sources */,
-				42B23B6D24DC18B800578ED5 /* EncounterMonstersEdit.swift in Sources */,
-				42B23B5024DC18B800578ED5 /* EncounterNotesDetail.swift in Sources */,
-				42B23B7024DC18B800578ED5 /* EncounterEdit.swift in Sources */,
-				42B23B8224DC18B800578ED5 /* ModuleListScroll.swift in Sources */,
-				42B23B6824DC18B800578ED5 /* EncounterNPCEdit.swift in Sources */,
-				42B23B5124DC18B800578ED5 /* EncounterNotesEdit.swift in Sources */,
-				42B23B3224DC18B800578ED5 /* PageTransitionModifier.swift in Sources */,
-				42B23BA424DC18B800578ED5 /* TextFieldCustom.swift in Sources */,
-				42B23B7C24DC18B800578ED5 /* searchBar.swift in Sources */,
-				42B23B8C24DC18B800578ED5 /* BrowseBase.swift in Sources */,
-				42B23B9924DC18B800578ED5 /* MainNotes.swift in Sources */,
-				42B23B5F24DC18B800578ED5 /* EncounterTrapsDetail.swift in Sources */,
-				42B23B4624DC18B800578ED5 /* DataCenter.swift in Sources */,
-				42B23B6924DC18B800578ED5 /* EncounterNPCDetail.swift in Sources */,
-				42B23B8524DC18B800578ED5 /* ContentText.swift in Sources */,
-				42B23B4424DC18B800578ED5 /* ModulesStub.swift in Sources */,
-				42B23BAA24DC26B100578ED5 /* AddModule.swift in Sources */,
-				42B23B2824DC18B700578ED5 /* SavedModuleView.swift in Sources */,
-				42B23B2924DC18B700578ED5 /* MainView.swift in Sources */,
-				42B23B3524DC18B800578ED5 /* EditorButtons.swift in Sources */,
-				42B23B2A24DC18B700578ED5 /* ContentView.swift in Sources */,
-				42B23B2224DC18B700578ED5 /* ProfileCardPage.swift in Sources */,
-				42B23B7D24DC18B800578ED5 /* PopularCarousel.swift in Sources */,
-				42B23B8324DC18B800578ED5 /* GenreSection.swift in Sources */,
-				42B23B8724DC18B800578ED5 /* TitleText.swift in Sources */,
-				42B23B5B24DC18B800578ED5 /* EncounterRATDetail.swift in Sources */,
-				42B23B4924DC18B800578ED5 /* EncounterSectionCard.swift in Sources */,
-				42B23B9A24DC18B800578ED5 /* Model.swift in Sources */,
-				42B23B9224DC18B800578ED5 /* Maps.swift in Sources */,
-				42B23B9B24DC18B800578ED5 /* AuthorModel.swift in Sources */,
-				42B23B5324DC18B800578ED5 /* EncounterTreasureDetail.swift in Sources */,
-				42B23B5424DC18B800578ED5 /* EncounterTreasure.swift in Sources */,
-				42B23B6C24DC18B800578ED5 /* EncounterMonsters.swift in Sources */,
-				42B23BA024DC18B800578ED5 /* HostingController.swift in Sources */,
-				42B5312624DCC6E6002C7F46 /* AddModuleVM.swift in Sources */,
-				42B23B7724DC18B800578ED5 /* BackButton.swift in Sources */,
-				42B23BA524DC18B800578ED5 /* registerViewController.swift in Sources */,
-				42B23B3B24DC18B800578ED5 /* ContentCard.swift in Sources */,
-				42B23B4024DC18B800578ED5 /* AuthorRepository.swift in Sources */,
-				42B23B9124DC18B800578ED5 /* Notes.swift in Sources */,
-				42B23B9F24DC18B800578ED5 /* AppDelegate.swift in Sources */,
-				42B23B9424DC18B800578ED5 /* POI.swift in Sources */,
-				42B23B4F24DC18B800578ED5 /* EncounterEnvironmentList.swift in Sources */,
-				42B23B5824DC18B800578ED5 /* EncounterTreasureEdit.swift in Sources */,
-				42B23B3124DC18B800578ED5 /* EncounterMain.swift in Sources */,
-				42B23B9524DC18B800578ED5 /* ModuleContent.swift in Sources */,
-				42B23B2424DC18B700578ED5 /* ChangePasswordPage.swift in Sources */,
-				42B23B9D24DC18B800578ED5 /* LoginPage.swift in Sources */,
-				42B23B4224DC18B800578ED5 /* File.swift in Sources */,
-				42B23B8D24DC18B800578ED5 /* Monster.swift in Sources */,
-				42B23B4324DC18B800578ED5 /* AuthorStub.swift in Sources */,
-				42B23B3924DC18B800578ED5 /* ImagePickerEmbed.swift in Sources */,
-				42B23B3324DC18B800578ED5 /* DropdownPickerExample.swift in Sources */,
-				42B23B5724DC18B800578ED5 /* EncounterTreasureList.swift in Sources */,
-				42B23B6124DC18B800578ED5 /* EncounterTrapsEdit.swift in Sources */,
-				42B23B5624DC18B800578ED5 /* TreasureDetailCard.swift in Sources */,
-				42B23B7624DC18B800578ED5 /* ProfilePicture.swift in Sources */,
-				42B23B4A24DC18B800578ED5 /* EnvironmentDetailCard.swift in Sources */,
-				42B23B1E24DC18B700578ED5 /* SearchModuleView.swift in Sources */,
-				42B23B2124DC18B700578ED5 /* SocialMediaPage.swift in Sources */,
-				42B23B5C24DC18B800578ED5 /* EncounterRATEdit.swift in Sources */,
-				42B23B7324DC18B800578ED5 /* EncounterPOIDetail.swift in Sources */,
-				42B23B5A24DC18B800578ED5 /* EncounterRATList.swift in Sources */,
-				42B23B3C24DC18B800578ED5 /* Editor.swift in Sources */,
-				42B23B2324DC18B700578ED5 /* ProfilePage.swift in Sources */,
-				42B23B7124DC18B800578ED5 /* EncounterPOIEdit.swift in Sources */,
-				42B23B4524DC18B800578ED5 /* AppsTime.swift in Sources */,
-				42B23B2C24DC18B700578ED5 /* NotesMain.swift in Sources */,
-				42B23B6024DC18B800578ED5 /* TrapContentCard.swift in Sources */,
-				42B23B4D24DC18B800578ED5 /* EncounterEnvironmentEdit.swift in Sources */,
-				42B23B6524DC18B800578ED5 /* EncounterMapsDetail.swift in Sources */,
-				42B23B7F24DC18B800578ED5 /* ListOfModules.swift in Sources */,
-				42B23B2524DC18B700578ED5 /* EditProfilePage.swift in Sources */,
-				42B23B2624DC18B700578ED5 /* MyModuleView.swift in Sources */,
-				42B23B5D24DC18B800578ED5 /* EncounterTraps.swift in Sources */,
-				42B23B5524DC18B800578ED5 /* TreasureEditForms.swift in Sources */,
-				42B23B3624DC18B800578ED5 /* MultilineTextField.swift in Sources */,
-				42B23B8F24DC18B800578ED5 /* ReadAloudText.swift in Sources */,
-				42B23B8024DC18B800578ED5 /* ModuleGenreCard.swift in Sources */,
-				42B23B6724DC18B800578ED5 /* EncounterNPCList.swift in Sources */,
-				42B23B4B24DC18B800578ED5 /* EncounterEnvironmentDetail.swift in Sources */,
-				42B23B7E24DC18B800578ED5 /* TestingCard.swift in Sources */,
-				42B23B2B24DC18B700578ED5 /* OverviewMain.swift in Sources */,
-				42B23BA324DC18B800578ED5 /* loginViewController.swift in Sources */,
-				42B23B4C24DC18B800578ED5 /* EncounterEnvironment.swift in Sources */,
-				42B23B9724DC18B800578ED5 /* EnvironmentModel.swift in Sources */,
-				42B23B9324DC18B800578ED5 /* NPC.swift in Sources */,
-				42B23B8A24DC18B800578ED5 /* NavigationModalTemplate.swift in Sources */,
-				42B23B6E24DC18B800578ED5 /* EncounterMonstersDetail.swift in Sources */,
-				42B23BA724DC18B800578ED5 /* SceneDelegate.swift in Sources */,
-				42B23B3D24DC18B800578ED5 /* PictureContentCard.swift in Sources */,
-				42B23B7524DC18B800578ED5 /* Underline.swift in Sources */,
-				42B23B5E24DC18B800578ED5 /* EncounterTrapsList.swift in Sources */,
-				42B23B9024DC18B800578ED5 /* Trap.swift in Sources */,
-				42B23B7824DC18B800578ED5 /* ApplicationActionButton.swift in Sources */,
-				42B23B3824DC18B800578ED5 /* BackgroundCard.swift in Sources */,
-				42B23B2724DC18B700578ED5 /* BrowseView.swift in Sources */,
-				42B23B7424DC18B800578ED5 /* EncounterPOI.swift in Sources */,
-				42B23B5924DC18B800578ED5 /* EncounterRAT.swift in Sources */,
-				42B23B1D24DC18B700578ED5 /* Color Presets.swift in Sources */,
-				42B23B6F24DC18B800578ED5 /* EncounterMonstersList.swift in Sources */,
-				42B23B2E24DC18B800578ED5 /* ModuleMain.swift in Sources */,
-				42B23B8124DC18B800578ED5 /* RecentCarousel.swift in Sources */,
-				42B23B3424DC18B800578ED5 /* ImagePickerEmbedExample.swift in Sources */,
-				42B23B8E24DC18B800578ED5 /* Treasure.swift in Sources */,
-				42B23B7B24DC18B800578ED5 /* CategoryIcon.swift in Sources */,
-				42B23B8924DC18B800578ED5 /* ModalCard.swift in Sources */,
-				42B23B3024DC18B800578ED5 /* ModuleSegment.swift in Sources */,
-				42B23B8B24DC18B800578ED5 /* ModalHeading.swift in Sources */,
-				42B23B3724DC18B800578ED5 /* DropdownPicker.swift in Sources */,
-				42B23B2D24DC18B700578ED5 /* DMScreenMain.swift in Sources */,
-				42B23B9E24DC18B800578ED5 /* ModuleInfo.swift in Sources */,
-				42B23B6B24DC18B800578ED5 /* EncounterExpanded.swift in Sources */,
-				42B23B1F24DC18B700578ED5 /* BrowseByGenre.swift in Sources */,
-				42B23B4124DC18B800578ED5 /* ExampleUI.swift in Sources */,
-				42B23B3F24DC18B800578ED5 /* ModuleRepository.swift in Sources */,
-				42B23B6A24DC18B800578ED5 /* EncounterNPC.swift in Sources */,
-				42B23B2024DC18B700578ED5 /* FeedBackPage.swift in Sources */,
-				42B23B8824DC18B800578ED5 /* FavouriteBase.swift in Sources */,
-				42B23B9C24DC18B800578ED5 /* ModuleModel.swift in Sources */,
-				42B23B9824DC18B800578ED5 /* Encounter.swift in Sources */,
-				42B23B2F24DC18B800578ED5 /* ModuleHeader.swift in Sources */,
-				42B23B9624DC18B800578ED5 /* Overview.swift in Sources */,
-				42B23B7924DC18B800578ED5 /* ProfileSection.swift in Sources */,
-				42B23B8624DC18B800578ED5 /* TimeText.swift in Sources */,
-				42B23B8424DC18B800578ED5 /* ModuleEmptyState.swift in Sources */,
-				42B23B7224DC18B800578ED5 /* EncounterPOIList.swift in Sources */,
-				42B23B6224DC18B800578ED5 /* EncounterHeader.swift in Sources */,
-				42B23B5224DC18B800578ED5 /* EncounterNotes.swift in Sources */,
-				42B23B6624DC18B800578ED5 /* EncounterMapsEdit.swift in Sources */,
+				426B366024DD504D00F7CC4A /* ProfilePicture.swift in Sources */,
+				426B365F24DD504100F7CC4A /* Underline.swift in Sources */,
+				426B35F424DD4EEB00F7CC4A /* BackButton.swift in Sources */,
+				426B359224DD4E6700F7CC4A /* Color Presets.swift in Sources */,
+				426B35FA24DD4F5B00F7CC4A /* OverviewDetail.swift in Sources */,
+				426B363724DD4FA200F7CC4A /* EncounterEnvironmentEdit.swift in Sources */,
+				426B359324DD4E6700F7CC4A /* AddModuleVM.swift in Sources */,
+				426B359424DD4E6700F7CC4A /* AddModule.swift in Sources */,
+				426B359524DD4E6700F7CC4A /* SearchModuleView.swift in Sources */,
+				426B359624DD4E6700F7CC4A /* BrowseByGenre.swift in Sources */,
+				426B359724DD4E6700F7CC4A /* FeedBackPage.swift in Sources */,
+				426B359824DD4E6700F7CC4A /* SocialMediaPage.swift in Sources */,
+				426B359924DD4E6700F7CC4A /* ProfileCardPage.swift in Sources */,
+				426B359A24DD4E6700F7CC4A /* ProfilePage.swift in Sources */,
+				426B35FC24DD4F5B00F7CC4A /* OverviewEdit.swift in Sources */,
+				426B359B24DD4E6700F7CC4A /* ChangePasswordPage.swift in Sources */,
+				426B365524DD4FA200F7CC4A /* EncounterExpanded.swift in Sources */,
+				426B359C24DD4E6700F7CC4A /* EditProfilePage.swift in Sources */,
+				426B364224DD4FA200F7CC4A /* EncounterTreasureEdit.swift in Sources */,
+				426B365024DD4FA200F7CC4A /* EncounterMapsEdit.swift in Sources */,
+				426B359D24DD4E6700F7CC4A /* MyModuleView.swift in Sources */,
+				426B364624DD4FA200F7CC4A /* EncounterRATEdit.swift in Sources */,
+				426B359E24DD4E6700F7CC4A /* BrowseView.swift in Sources */,
+				426B364924DD4FA200F7CC4A /* EncounterTrapsDetail.swift in Sources */,
+				426B364C24DD4FA200F7CC4A /* EncounterHeader.swift in Sources */,
+				426B363824DD4FA200F7CC4A /* EnvironmentOverviewCard.swift in Sources */,
+				426B359F24DD4E6700F7CC4A /* SavedModuleView.swift in Sources */,
+				426B35A024DD4E6700F7CC4A /* MainView.swift in Sources */,
+				426B365C24DD4FA200F7CC4A /* EncounterPOIList.swift in Sources */,
+				426B35A124DD4E6700F7CC4A /* ContentView.swift in Sources */,
+				426B35A224DD4E6700F7CC4A /* OverviewMain.swift in Sources */,
+				426B35A324DD4E6700F7CC4A /* NotesMain.swift in Sources */,
+				426B35A424DD4E6700F7CC4A /* DMScreenMain.swift in Sources */,
+				426B35A524DD4E6700F7CC4A /* ModuleMain.swift in Sources */,
+				426B35A624DD4E6700F7CC4A /* ModuleHeader.swift in Sources */,
+				426B365824DD4FA200F7CC4A /* EncounterMonstersDetail.swift in Sources */,
+				426B35A724DD4E6700F7CC4A /* ModuleSegment.swift in Sources */,
+				426B365B24DD4FA200F7CC4A /* EncounterPOIEdit.swift in Sources */,
+				426B35A824DD4E6700F7CC4A /* EncounterMain.swift in Sources */,
+				426B365724DD4FA200F7CC4A /* EncounterMonstersEdit.swift in Sources */,
+				426B35A924DD4E6700F7CC4A /* PageTransitionModifier.swift in Sources */,
+				426B363B24DD4FA200F7CC4A /* EncounterNotesEdit.swift in Sources */,
+				426B35AA24DD4E6700F7CC4A /* DropdownPickerExample.swift in Sources */,
+				426B363A24DD4FA200F7CC4A /* EncounterNotesDetail.swift in Sources */,
+				426B35AB24DD4E6700F7CC4A /* ImagePickerEmbedExample.swift in Sources */,
+				426B35AC24DD4E6700F7CC4A /* OverviewCard.swift in Sources */,
+				426B363F24DD4FA200F7CC4A /* TreasureEditForms.swift in Sources */,
+				426B35AD24DD4E6700F7CC4A /* UploadImage.swift in Sources */,
+				426B35AE24DD4E6700F7CC4A /* EditorButtons.swift in Sources */,
+				426B35AF24DD4E6700F7CC4A /* MultilineTextField.swift in Sources */,
+				426B35B024DD4E6700F7CC4A /* DropdownPicker.swift in Sources */,
+				426B35B124DD4E6700F7CC4A /* BackgroundCard.swift in Sources */,
+				426B35B224DD4E6700F7CC4A /* ImagePickerEmbed.swift in Sources */,
+				426B35B324DD4E6700F7CC4A /* DetailCard.swift in Sources */,
+				426B35B424DD4E6700F7CC4A /* ContentCard.swift in Sources */,
+				426B364B24DD4FA200F7CC4A /* EncounterTrapsEdit.swift in Sources */,
+				426B35B524DD4E6700F7CC4A /* Editor.swift in Sources */,
+				426B35B624DD4E6700F7CC4A /* PictureContentCard.swift in Sources */,
+				426B363E24DD4FA200F7CC4A /* EncounterTreasure.swift in Sources */,
+				426B35B824DD4E6700F7CC4A /* ModuleRepository.swift in Sources */,
+				426B365924DD4FA200F7CC4A /* EncounterMonstersList.swift in Sources */,
+				426B35B924DD4E6700F7CC4A /* AuthorRepository.swift in Sources */,
+				426B35BA24DD4E6700F7CC4A /* ExampleUI.swift in Sources */,
+				426B363C24DD4FA200F7CC4A /* EncounterNotes.swift in Sources */,
+				426B363424DD4FA200F7CC4A /* EnvironmentDetailCard.swift in Sources */,
+				426B35BB24DD4E6700F7CC4A /* File.swift in Sources */,
+				426B35BC24DD4E6700F7CC4A /* AuthorStub.swift in Sources */,
+				426B363D24DD4FA200F7CC4A /* EncounterTreasureDetail.swift in Sources */,
+				426B364824DD4FA200F7CC4A /* EncounterTrapsList.swift in Sources */,
+				426B35BD24DD4E6700F7CC4A /* ModulesStub.swift in Sources */,
+				426B35BE24DD4E6700F7CC4A /* AppsTime.swift in Sources */,
+				426B35BF24DD4E6700F7CC4A /* DataCenter.swift in Sources */,
+				426B364F24DD4FA200F7CC4A /* EncounterMapsDetail.swift in Sources */,
+				426B365D24DD4FA200F7CC4A /* EncounterPOIDetail.swift in Sources */,
+				426B35C524DD4E6700F7CC4A /* ApplicationActionButton.swift in Sources */,
+				426B35C624DD4E6700F7CC4A /* ProfileSection.swift in Sources */,
+				426B35C724DD4E6700F7CC4A /* HeaderName.swift in Sources */,
+				426B35C824DD4E6700F7CC4A /* CategoryIcon.swift in Sources */,
+				426B35C924DD4E6700F7CC4A /* searchBar.swift in Sources */,
+				426B35CA24DD4E6700F7CC4A /* PopularCarousel.swift in Sources */,
+				426B35CB24DD4E6700F7CC4A /* TestingCard.swift in Sources */,
+				426B364124DD4FA200F7CC4A /* EncounterTreasureList.swift in Sources */,
+				426B35CC24DD4E6700F7CC4A /* ListOfModules.swift in Sources */,
+				426B365624DD4FA200F7CC4A /* EncounterMonsters.swift in Sources */,
+				426B363624DD4FA200F7CC4A /* EncounterEnvironment.swift in Sources */,
+				426B35CD24DD4E6700F7CC4A /* ModuleGenreCard.swift in Sources */,
+				426B365E24DD4FA200F7CC4A /* EncounterPOI.swift in Sources */,
+				426B363924DD4FA200F7CC4A /* EncounterEnvironmentList.swift in Sources */,
+				426B35CE24DD4E6700F7CC4A /* RecentCarousel.swift in Sources */,
+				426B35CF24DD4E6700F7CC4A /* ModuleListScroll.swift in Sources */,
+				426B35D024DD4E6700F7CC4A /* GenreSection.swift in Sources */,
+				426B35D124DD4E6700F7CC4A /* ModuleEmptyState.swift in Sources */,
+				426B35D224DD4E6700F7CC4A /* ContentText.swift in Sources */,
+				426B365A24DD4FA200F7CC4A /* EncounterEdit.swift in Sources */,
+				426B35D324DD4E6700F7CC4A /* TimeText.swift in Sources */,
+				426B35D424DD4E6700F7CC4A /* TitleText.swift in Sources */,
+				426B35D524DD4E6700F7CC4A /* FavouriteBase.swift in Sources */,
+				426B365124DD4FA200F7CC4A /* EncounterNPCList.swift in Sources */,
+				426B364524DD4FA200F7CC4A /* EncounterRATDetail.swift in Sources */,
+				426B35D624DD4E6700F7CC4A /* ModalCard.swift in Sources */,
+				426B35D724DD4E6700F7CC4A /* NavigationModalTemplate.swift in Sources */,
+				426B35D824DD4E6700F7CC4A /* ModalHeading.swift in Sources */,
+				426B365324DD4FA200F7CC4A /* EncounterNPCDetail.swift in Sources */,
+				426B35D924DD4E6700F7CC4A /* BrowseBase.swift in Sources */,
+				426B364724DD4FA200F7CC4A /* EncounterTraps.swift in Sources */,
+				426B35DB24DD4E6700F7CC4A /* Monster.swift in Sources */,
+				426B35DC24DD4E6700F7CC4A /* Treasure.swift in Sources */,
+				426B35DD24DD4E6700F7CC4A /* ReadAloudText.swift in Sources */,
+				426B35DE24DD4E6700F7CC4A /* Trap.swift in Sources */,
+				426B35DF24DD4E6700F7CC4A /* Notes.swift in Sources */,
+				426B364324DD4FA200F7CC4A /* EncounterRAT.swift in Sources */,
+				426B35F924DD4F5B00F7CC4A /* NotesDetail.swift in Sources */,
+				426B35E024DD4E6700F7CC4A /* Maps.swift in Sources */,
+				426B364A24DD4FA200F7CC4A /* TrapContentCard.swift in Sources */,
+				426B35E124DD4E6700F7CC4A /* NPC.swift in Sources */,
+				426B35E224DD4E6700F7CC4A /* POI.swift in Sources */,
+				426B35E324DD4E6700F7CC4A /* ModuleContent.swift in Sources */,
+				426B364024DD4FA200F7CC4A /* TreasureDetailCard.swift in Sources */,
+				426B364424DD4FA200F7CC4A /* EncounterRATList.swift in Sources */,
+				426B35E424DD4E6700F7CC4A /* Overview.swift in Sources */,
+				426B35FB24DD4F5B00F7CC4A /* NotesEdit.swift in Sources */,
+				426B35E524DD4E6700F7CC4A /* EnvironmentModel.swift in Sources */,
+				426B35E624DD4E6700F7CC4A /* Encounter.swift in Sources */,
+				426B364E24DD4FA200F7CC4A /* EncounterMapsList.swift in Sources */,
+				426B35E724DD4E6700F7CC4A /* MainNotes.swift in Sources */,
+				426B35E824DD4E6700F7CC4A /* Model.swift in Sources */,
+				426B35E924DD4E6700F7CC4A /* AuthorModel.swift in Sources */,
+				426B35EA24DD4E6700F7CC4A /* ModuleModel.swift in Sources */,
+				426B363324DD4FA200F7CC4A /* EncounterSectionCard.swift in Sources */,
+				426B35EB24DD4E6800F7CC4A /* LoginPage.swift in Sources */,
+				426B35EC24DD4E6800F7CC4A /* ModuleInfo.swift in Sources */,
+				426B364D24DD4FA200F7CC4A /* EncounterMaps.swift in Sources */,
+				426B35ED24DD4E6800F7CC4A /* HostingController.swift in Sources */,
+				426B35F024DD4E6800F7CC4A /* loginViewController.swift in Sources */,
+				426B35F124DD4E6800F7CC4A /* TextFieldCustom.swift in Sources */,
+				426B365424DD4FA200F7CC4A /* EncounterNPC.swift in Sources */,
+				426B35F224DD4E6800F7CC4A /* registerViewController.swift in Sources */,
+				426B359124DD4E3E00F7CC4A /* SceneDelegate.swift in Sources */,
+				426B363524DD4FA200F7CC4A /* EncounterEnvironmentDetail.swift in Sources */,
+				426B359024DD4DF200F7CC4A /* AppDelegate.swift in Sources */,
+				426B365224DD4FA200F7CC4A /* EncounterNPCEdit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

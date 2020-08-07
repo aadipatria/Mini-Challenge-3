@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct UploadImage: View {
+struct UploadImageButton: View {
     //@Binding var image: Image?
     
     var body: some View {
@@ -36,6 +36,6 @@ struct UploadImage: View {
 
 struct UploadImage_Preview: PreviewProvider {
     static var previews: some View {
-        UploadImage()
+        UploadImageButton()
     }
 }
