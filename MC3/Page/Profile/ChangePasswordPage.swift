@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ChangePasswordPage: View {
     @Binding var isActive:Bool
-    @ObservedObject var dataCenter:DataCenter = DataCenter()
+    @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     @Binding var user:AuthorModel
     @State var oldPass:String = ""
     @State var newPass:String = ""

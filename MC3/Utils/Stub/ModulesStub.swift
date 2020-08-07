@@ -97,7 +97,8 @@ class ModulesStub {
             addDate: Date(timeIntervalSince1970: 999999),
             level: .normal,
             genre: .adventure,
-            content: ModulesStub.modulContent[4])
+            content:ModuleContent(overviews: [], encounters: [], notes: [])),
+        
     ]
     
     static func getModules()->[ModuleModel]{

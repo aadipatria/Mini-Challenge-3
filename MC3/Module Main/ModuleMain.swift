@@ -9,29 +9,37 @@
 import SwiftUI
 
 struct ModuleMain: View {
+    @Binding var isActive:Bool
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var moduleInfo: ModuleInfo
-    @ObservedObject var dataCenter = DataCenter()
+    @ObservedObject var dataCenter = DataCenter.getInstance()
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                ModuleHeader(action: {self.presentationMode.wrappedValue.dismiss()})
-                
-                ZStack {
-                    BackgroundCard()
-                    ModuleSegment()
+        ZStack{
+            
+            NavigationView {
+                VStack(spacing: 0) {
+                    ModuleHeader(action: {
+                        self.isActive = false
+                    })
+                    
+                    ZStack {
+
+                        BackgroundCard()
+                        ModuleSegment()
+                    }
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+            
         }
     }
 }
 
 struct ModuleMain_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleMain().environmentObject(ModuleInfo())
+        ModuleMain(isActive: .constant(true)).environmentObject(ModuleInfo())
     }
 }

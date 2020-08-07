@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct ListOfModules: View {
+    @Binding var showPreview:Bool
+    @EnvironmentObject var moduleInfo:ModuleInfo
     var modules:[ModuleModel]
-    init(modules:[ModuleModel]) {
+    init(modules:[ModuleModel], isPreview:Binding<Bool>) {
         self.modules = modules
+        self._showPreview = isPreview
     }
     var body: some View {
         ZStack{
@@ -21,7 +24,11 @@ struct ListOfModules: View {
             if modules.count > 0 {
                 ScrollView(.vertical){
                     ForEach(self.modules){ module in
-                        moduleRow(module: module, last: self.isLastModule(module: module))
+                        moduleRow(module: module, last: self.isLastModule(module: module)).onTapGesture(perform: {
+                            self.moduleInfo.currentModule = module
+                            self.showPreview = true
+                            
+                        })
                     }
                     Underline()
                 }
@@ -37,6 +44,6 @@ struct ListOfModules: View {
 
 struct ListOfModules_Previews: PreviewProvider {
     static var previews: some View {
-        ListOfModules(modules: [])
+        ListOfModules(modules: [], isPreview: .constant(false))
     }
 }

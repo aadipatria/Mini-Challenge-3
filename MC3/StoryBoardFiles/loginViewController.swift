@@ -11,7 +11,8 @@ import CloudKit
 
 class loginViewController: UIViewController {
     var accounts: [CKRecord] = []
-    var backFunc:((_ user:AuthorModel)->Void)? = nil
+    var saveFunc:((_ user:AuthorModel)->Void)? = nil
+    var backFunc:(()->Void)? = nil
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var label: UILabel!
@@ -44,7 +45,7 @@ class loginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         var count = 0
         let jumlah = accounts.count
-        if let action = backFunc {
+        if let action = saveFunc {
             action(AuthorModel(name: "", username: "", profileImage: "", password: "", email: "", phone: ""))
         }
         while count < jumlah {
@@ -71,14 +72,19 @@ class loginViewController: UIViewController {
         switch segue.identifier {
         case "toRegister":
             if let vc = segue.destination as? registerViewController {
-                vc.cbFunc = self.backFunc
+                vc.cbFunc = self.saveFunc
             }
         default:
             print("error")
         }
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+        if let back = backFunc {
+            back()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

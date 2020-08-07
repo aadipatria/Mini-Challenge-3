@@ -10,19 +10,35 @@ import SwiftUI
 
 struct SavedModuleView: View {
     @Binding var tabBarVisible:Bool
+    @State var myModule:[ModuleModel] = []
+    @State var isPreview:Bool = false
     @State var input:String = ""
+    @State var isAlert = false
+    @ObservedObject var dataCenter = DataCenter.getInstance()
     @State var modules:[ModuleModel] = ModulesStub.getModules()
     var body: some View {
-        FavouriteBase(title: "Saved Modules"){
-            searchBar(inputBinding: $input, withCancel: false, disabled: false)
-            Underline().padding(.top,20)
-            ListOfModules(modules:
-                self.input.count > 0 ?
-                self.filterModule(input: self.input, modules: self.modules) :
-                modules)
+        ZStack{
+            FavouriteBase(title: "Saved Modules"){
+                searchBar(inputBinding: $input, withCancel: false, disabled: false)
+                Underline().padding(.top,20)
+                if myModule.count < 1{
+                    ModuleEmptyState(title: "No Saved Modules", content: "There are no saved modules yet. Try exploring other modules you might be interested in!")
+                } else {
+                    ListOfModules(modules: self.filterModule(input: self.input, modules: self.dataCenter.getCurrentUserModule()), isPreview: $isPreview)
+                }
+            }.onAppear{
+                self.myModule = self.dataCenter.getCurrentUserModule()
+            }
+            
+        if isPreview {
+                ModuleMain(isActive: $isPreview)
+                .zIndex(3)
+            }
         }
+        
     }
     func filterModule(input:String, modules:[ModuleModel])->[ModuleModel]{
+        if input == "" { return modules }
         return modules.filter{ module in
             return
                 module.name.uppercased().contains(input.uppercased()) ||

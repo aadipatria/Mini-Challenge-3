@@ -12,6 +12,7 @@ import SwiftUI
 struct DropdownPicker: View {
     @Binding var showPicker:Bool
     @Binding var selectedIndexBinding:Int?
+    var pickerSize:CGFloat = UIScreen.main.bounds.width
     var array:[String]
     @State private var currIndex:Int = 0
     var body: some View {
@@ -33,7 +34,7 @@ struct DropdownPicker: View {
                         ForEach(array.indices){ index in
                             Text(self.array[index]).tag(index)
                         }
-                    }.frame(width:UIScreen.main.bounds.width)
+                    }.frame(width:pickerSize)
                     .background(Color.init(red: 238/255, green: 238/255, blue: 238/255))
                      .labelsHidden()
                 }

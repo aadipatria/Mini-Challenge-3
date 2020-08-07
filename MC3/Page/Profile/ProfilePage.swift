@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProfilePage: View {
     @State var isEditing:Bool = false
-    @ObservedObject var dataCenter:DataCenter = DataCenter()
+    @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
     @State var user:AuthorModel = AuthorStub.getPlainUser()
     @State var isChangePassword:Bool = false
     @State var isSocialMedia:Bool = false

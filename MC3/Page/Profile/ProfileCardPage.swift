@@ -11,10 +11,10 @@ import SwiftUI
 struct ProfileCardPage: View {
     var author:AuthorModel
     @State var secondModalPosition:CGFloat = 80
-    @State var modalLastPosition:CGFloat = 30
+    @State var modalLastPosition:CGFloat = 80
     @State var modules:[ModuleModel] = []
     @Binding var isActive:Bool
-    @ObservedObject var dataCenter = DataCenter()
+    @ObservedObject var dataCenter = DataCenter.getInstance()
     var body: some View {
         ZStack{
             Color.init(red: 20/255, green: 22/255, blue: 32/255)
@@ -32,7 +32,8 @@ struct ProfileCardPage: View {
                 }.padding(.top,40)
                 .padding(.bottom,25)
                 .onAppear{
-                    self.modules = self.dataCenter.getModuleWithUser(author: self.author)
+                    self.modules = []
+//                    self.dataCenter.getModuleWithUser(author: self.author)
                 }
                 ZStack(alignment: .top){
                     ProfileCardModal(bgColor: Color.init(red: 197/255, green: 211/255, blue: 220/255)){
@@ -53,7 +54,7 @@ struct ProfileCardPage: View {
                             .gesture(
                                 DragGesture()
                                     .onChanged { gesture in
-                                    if self.secondModalPosition + 30 >= 30 && self.secondModalPosition <= 530 {
+                                    if self.secondModalPosition + 80 >= 80 && self.secondModalPosition <= 530 {
                                         self.secondModalPosition = gesture.translation.height + self.modalLastPosition
                                     }
                                 }
@@ -61,7 +62,7 @@ struct ProfileCardPage: View {
                                     if pos.translation.height >= 530/2{
                                         self.secondModalPosition = 460
                                     } else {
-                                        self.secondModalPosition = 30
+                                        self.secondModalPosition = 80
                                     }
                                     self.modalLastPosition = self.secondModalPosition
                                 }
@@ -69,11 +70,15 @@ struct ProfileCardPage: View {
                             VStack(alignment: .center, spacing: 0){
                                 TitleText(content: " ", type: .h1).padding(30)
                                 Underline()
-                                ScrollView(.vertical){
-                                    if modules.count > 0 {
+                                if modules.count > 0 {
+                                    ScrollView(.vertical){
                                         ForEach(modules){ module in
                                             moduleRow(module: module, last: self.modules.count > 0 ? self.modules[self.modules.count - 1].id == module.id : false)
                                         }
+                                    }
+                                } else {
+                                    ScrollView(.vertical){
+                                        ModuleEmptyState(imageShow: false, title: "No Created Modules", content: "\(author.name) hasn’t created any modules to be shared yet :( \n\nFor the time being, let’s explore other great modules, shall we?")
                                     }
                                 }
                                 Spacer()
@@ -220,7 +225,9 @@ struct SocialMediaShow: View {
     }
     func renderSosmed(sos:[[SocialMediaType:String]])->AnyView {
         if sos.count == 0 {
-            return AnyView(Text("Not Available").frame(width:screen.width,alignment: .center))
+            return AnyView(
+                NoSosMed()
+            )
         } else if sos.count == 1 {
             return AnyView(
                 HStack(alignment: .center, spacing: 10){
@@ -268,6 +275,27 @@ struct SocialMediaShow: View {
             return value
         }
         return ""
+    }
+}
+
+struct NoSosMed: View {
+    var body: some View{
+        VStack(alignment: .center){
+            Image("noSosMed")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width:178,height:197)
+            Text("No known social media :(")
+                .font(.system(size: 27, weight: .semibold, design: .default))
+                .opacity(0.5)
+                .padding(.top,20)
+                .padding(.bottom,10)
+            Text("Sorry, there are no known social media of Real Brad. In the meantime, you can explore Real Brad’s modules :)")
+                .multilineTextAlignment(.center)
+                .font(.system(size: 14, weight: .regular, design: .default)).opacity(0.5)
+        }.frame(width:screen.width)
+            .padding(.top,20)
+        .scaleEffect(0.9)
     }
 }
 

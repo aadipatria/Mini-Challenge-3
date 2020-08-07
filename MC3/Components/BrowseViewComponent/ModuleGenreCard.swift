@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ModuleGenreCard: View {
     @State var module:ModuleModel
+    @ObservedObject var dataCenter:DataCenter
+    @Binding var isLogin:Bool
     var body: some View {
         VStack(alignment: .center, spacing: 30){
             VStack(alignment: .leading, spacing: 0){
@@ -33,7 +35,13 @@ struct ModuleGenreCard: View {
                         TimeText(date: module.addDate)
                     }.padding(.bottom,8)
                     Spacer()
-                    Button(action: {}) {
+                    Button(action: {
+                        if self.dataCenter.activeUser == nil {
+                            self.isLogin = true
+                        } else {
+                            // dave module
+                        }
+                    }) {
                         HStack(alignment: .center, spacing: 10){
                             Image(systemName: "bookmark")
                                 .font(.system(size: 13, weight: .semibold, design: .rounded))
@@ -63,6 +71,6 @@ struct ModuleGenreCard: View {
 
 struct ModuleGenreCard_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleGenreCard(module: ModulesStub.getModules()[0])
+        ModuleGenreCard(module: ModulesStub.getModules()[0], dataCenter: DataCenter(), isLogin: .constant(false))
     }
 }

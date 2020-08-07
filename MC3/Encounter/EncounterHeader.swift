@@ -24,6 +24,7 @@ struct EncounterHeader: View {
                 
                 Spacer()
                 VStack {
+
 //                    if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                     if true {
                         if isEditable {

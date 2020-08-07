@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="Vdz-nK-9gs">
             <objects>
-                <viewController storyboardIdentifier="login" id="gsj-QP-hQE" customClass="loginViewController" customModule="MC3ProgMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="gsj-QP-hQE" customClass="loginViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iK0-XB-NQp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,13 +35,13 @@
                                 <rect key="frame" x="7" y="254" width="414" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="Svo-nn-zWj" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="Svo-nn-zWj" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="286" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-4C-K12" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-4C-K12" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="356" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -109,6 +109,19 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-MC-Gjq">
+                                <rect key="frame" x="20" y="34" width="75" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="gsj-QP-hQE" eventType="touchUpInside" id="NSw-kT-ibO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.086274509799999996" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="aQI-QM-x78"/>
@@ -142,6 +155,7 @@
         <image name="Rectangle" width="882" height="135"/>
         <image name="Rectangle-1" width="294" height="45"/>
         <image name="Rectangle1" width="378" height="325"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="login_other" width="150" height="30"/>
     </resources>
 </document>

@@ -25,6 +25,7 @@ class ModuleInfo: ObservableObject {
     @Published var treasureIndex: Int
     @Published var noteIndex: Int
     
+    
     init() {
         self.currentModule = ModulesStub.modulModel.last ?? ModuleModel(
                     name: "Legacy of Blood",
