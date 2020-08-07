@@ -11,6 +11,8 @@ import SwiftUI
 struct SearchModuleView: View {
     @Binding var isActive:Bool
     @State var input:String = ""
+    @State var isPreview:Bool = false
+    @State var isAlert = false
     @State var modules:[ModuleModel] = ModulesStub.getModules()
     @ObservedObject var dataCenter = DataCenter.getInstance()
     @State var isLogin = false
@@ -20,14 +22,24 @@ struct SearchModuleView: View {
                 searchBar(inputBinding: $input, withCancel: true, cancelFunction: {
                     self.isActive = false
                 })
-                ModuleListScroll(modules: modules, dataCenter: self.dataCenter, isLogin: $isLogin)
+                ModuleListScroll(modules: modules, isPreview: $isPreview, dataCenter: self.dataCenter, isLogin: $isAlert)
+            }.alert(isPresented: $isAlert) {
+                Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Save Module"),
+                      primaryButton: .default(Text("Sign In"), action: {
+                        self.isLogin = true
+                      }),
+                      secondaryButton: .default(Text("Cancel")))
             }
             if isLogin {
                 LoginPage(isActive: self.$isLogin, dataCenter: self.dataCenter).zIndex(2)
+            } else if isPreview {
+                ModuleMain(isActive: $isPreview)
+                    .zIndex(3)
             }
         }
     }
 }
+
 
 struct SearchModuleView_Previews: PreviewProvider {
     static var previews: some View {

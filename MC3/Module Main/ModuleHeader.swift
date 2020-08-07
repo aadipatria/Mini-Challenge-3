@@ -17,35 +17,46 @@ struct ModuleHeader: View {
     var action: () -> ()
     
     var body: some View {
-        HStack(spacing: 0) {
-            ModuleBackButton(action: action)
-            Spacer()
-            
-            VStack(alignment: .trailing, spacing: 5) {
-                Text(name)
-                    .font(.system(size: 24, weight: .semibold))
-                    .foregroundColor(.white)
-                Text(author)
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.white)
-            }
-            .frame(minWidth: 200, alignment: .trailing)
-            .padding(.trailing, 20)
-            
-            Button(action: {print("none")}){
-                Image(image)
+        VStack(spacing:0){
+            Rectangle().frame(height: 44)
+            .foregroundColor(.black)
+            HStack(spacing: 0) {
+                ModuleBackButton(action: action)
+                Spacer()
+                
+                VStack(alignment: .trailing, spacing: 5) {
+                    Text(name)
+                        .font(.system(size: 24, weight: .semibold))
+                        .foregroundColor(.white)
+                    Text(author)
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                .frame(minWidth: 200, alignment: .trailing)
+                .padding(.trailing, 20)
+                
+                Button(action: {
+                    // profile page
+                }){
+                    Image("people")
                     .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                        .frame(width: 60, height: 60, alignment: .center)
+                    .clipShape(Circle())
+                        
+                }
             }
+            .frame(height: 100)
+            .padding(.horizontal, 30)
+            .background(Color.black)
+            
+            .onAppear(perform: {
+                self.name = self.moduleInfo.currentModule.name
+                self.author = self.moduleInfo.currentModule.author.name
+                self.image = self.moduleInfo.currentModule.author.profileImage
+            })
         }
-        .frame(height: 100)
-        .padding(.horizontal, 30)
-        .background(Color.black)
-        
-        .onAppear(perform: {
-            self.name = self.moduleInfo.currentModule.name
-            self.author = self.moduleInfo.currentModule.author.name
-            self.image = self.moduleInfo.currentModule.author.profileImage
-        })
     }
 }
 
@@ -91,7 +102,7 @@ struct ModuleSegmentHeader: View {
 
 struct ModuleHeader_Previews: PreviewProvider {
     static var previews: some View {
-        //ModuleHeader(module: "Legacy of Blood", author: "Real Brad", image: "RealBrad", action: {})
-        ModuleSegmentHeader(title: "Encounter", action: {})
+        ModuleHeader(action: {}).environmentObject(ModuleInfo())
+//        ModuleSegmentHeader(title: "Encounter", action: {})
     }
 }

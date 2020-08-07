@@ -10,6 +10,10 @@ import SwiftUI
 
 struct RecentCarousel: View {
     var modules:[ModuleModel]
+    @Binding var isLogin:Bool
+    @Binding var isPreview:Bool
+    @EnvironmentObject var modulInfo:ModuleInfo
+    @ObservedObject var dt = DataCenter()
     @State var recentOffset:CGFloat = 0
     @State var lastRecentOffset:CGFloat = 0
     var body: some View {
@@ -17,20 +21,30 @@ struct RecentCarousel: View {
             HStack(spacing: 0){
                 ForEach(modules){module in
                     GeometryReader { geometry in
-                        RecentCard(module: module)
-                            .animation(.easeInOut)
-                            .scaleEffect(self.scalingFromPosition(pos: geometry.frame(in: .global).minX))
+                        RecentCard(module: module, saveFunc: {
+                            if self.dt.getActiveUser() == nil {
+                                self.isLogin = true
+                            } else {
+                                // save module
+                            }
+                        }, preview: {
+                            self.isPreview = true
+                        }).animation(.easeInOut)
+                        .scaleEffect(self.scalingFromPosition(pos: geometry.frame(in: .global).minX))
                     }.frame(width: 354, height: 130)
                         .offset(x: self.recentOffset, y: 0)
                         .animation(.spring())
                         .gesture(DragGesture()
-                            .onChanged { gesture in self.onChangeHandler(gesture: gesture)}
-                            .onEnded{ pos in self.onEndedHandler(pos: pos) })
+                            .onChanged { gesture in
+                                print("TEsting")
+                                self.onChangeHandler(gesture: gesture)}
+                            .onEnded{ pos in self.onEndedHandler(pos: pos) }
+                        )
                 }
             }
             .padding(.leading, 30)
             if modules.count < 1 {
-                RecentCard(module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: "", addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true)
+                RecentCard(module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: "", addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true, saveFunc: {}, preview: {})
                 .padding(.leading, 30)
             }
         }
@@ -65,11 +79,18 @@ struct RecentCarousel: View {
 struct RecentCard: View {
     var module:ModuleModel
     var isSkeleton:Bool = false
+    var saveFunc:()->Void
+    var preview:()->Void
+    @EnvironmentObject var mi:ModuleInfo
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             RecentCardImage(image: Image( !isSkeleton ? module.coverImageName : "moduleCover"))
-            RecentCardImageOverlay()
-            saveButton()
+            RecentCardImageOverlay().onTapGesture(perform: {
+                self.mi.currentModule = self.module
+                self.preview()
+                
+            })
+            saveButton(action: saveFunc)
             if !isSkeleton{
                 RecentCardContent(module: module)
             }
@@ -82,7 +103,7 @@ struct RecentCard: View {
 
 struct RecentCarousel_Previews: PreviewProvider {
     static var previews: some View {
-        RecentCarousel(modules: ModulesStub.getModules())
+        RecentCarousel(modules: ModulesStub.getModules(),isLogin: .constant(true),isPreview: .constant(true))
     }
 }
 
@@ -138,9 +159,12 @@ struct RecentCardContent: View {
 
 
 struct saveButton: View {
+    var action:()->Void
     var body: some View {
         VStack(alignment: .trailing, spacing: 0){
-            Button(action: {}) {
+            Button(action: {
+                self.action()
+            }) {
                 HStack(alignment: .center, spacing: 10){
                     Image(systemName: "bookmark.fill")
                         .font(.system(size: 13, weight: .semibold, design: .rounded))

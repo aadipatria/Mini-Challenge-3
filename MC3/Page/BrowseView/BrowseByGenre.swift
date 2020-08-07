@@ -14,8 +14,10 @@ struct BrowseByGenre: View {
     @ObservedObject var dataCenter = DataCenter.getInstance()
     @State var isSearchView:Bool = false
     @State var isLogin = false
+    @State var isPreview = false
     @State var modules:[ModuleModel] = ModulesStub.getModules()
     @State var searchInput:String = ""
+    @State var isAlert = false
     var body: some View {
         ZStack{
             NavigationModalTemplate(title: "\(genre)".capitalized, modalColor: .calmBlue, backButtonFunc: {
@@ -26,7 +28,13 @@ struct BrowseByGenre: View {
                 }){
                     searchBar(inputBinding: $searchInput)
                 }.buttonStyle(PlainButtonStyle())
-                ModuleListScroll(modules: modules, dataCenter: dataCenter, isLogin: $isLogin)
+                ModuleListScroll(modules: modules, isPreview: $isPreview, dataCenter: dataCenter, isLogin: $isAlert)
+            }.alert(isPresented: $isAlert) {
+                Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Save Module"),
+                      primaryButton: .default(Text("Sign In"), action: {
+                        self.isLogin = true
+                      }),
+                      secondaryButton: .default(Text("Cancel")))
             }.zIndex(1)
             if isSearchView {
                 SearchModuleView(isActive: $isSearchView)
@@ -34,6 +42,10 @@ struct BrowseByGenre: View {
             }
             if isLogin {
                 LoginPage(isActive: self.$isLogin, dataCenter: self.dataCenter).zIndex(2)
+            }
+            if isPreview {
+                ModuleMain(isActive: $isPreview)
+                .zIndex(3)
             }
         }
     }

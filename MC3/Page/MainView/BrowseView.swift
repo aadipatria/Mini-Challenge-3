@@ -10,8 +10,7 @@ import SwiftUI
 
 struct BrowseView: View {
     @ObservedObject var dataCenter:DataCenter = DataCenter.getInstance()
-    @State var isLogin:Bool
-    @State var isLoginPage:Bool = false
+    @State var isLogin:Bool = false
     @Binding var tabBarVisible:Bool
     @State var isSearchView:Bool = false
     @State var isBrowseByGenre:Bool = false
@@ -19,17 +18,18 @@ struct BrowseView: View {
     @State var isRecentView:Bool = false
     @State var isModuleProfileView:Bool = false
     @State var selectedAuthor:AuthorModel = AuthorStub.getPlainUser()
+    @State var isAlert = false
     @State var isMyProfileView:Bool = false
     @State var author:String = ""
     @State var searchInput:String = ""
+    @State var previewModule:Bool = false
     var body: some View {
         ZStack{
             BrowseBase(onTapProfile:{
-                print(self.dataCenter.activeUser)
                 if (self.dataCenter.getActiveUser() != nil) {
                     self.isMyProfileView.toggle()
                 } else {
-                    self.isLoginPage.toggle()
+                    self.isLogin.toggle()
                 }
                 
             },title: "\(self.dataCenter.modules.count)", profile: "people") {
@@ -42,9 +42,15 @@ struct BrowseView: View {
                     GenreSection(isBrowseByGenre: $isBrowseByGenre,
                                  genre: $browseGenre)
                         .padding(.bottom, 10)
-                    RecentSection(modules: self.dataCenter.getAllModules())
+                    RecentSection(modules: self.dataCenter.getAllModules(),isLogin: $isAlert,isPreview: $previewModule)
                     PopularSection(authors: self.dataCenter.getAllAuthors(), selected: $selectedAuthor, changePage: $isModuleProfileView)
                 }
+            }.alert(isPresented: $isAlert) {
+                Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Add Module"),
+                      primaryButton: .default(Text("Sign In"), action: {
+                        self.isLogin = true
+                      }),
+                      secondaryButton: .default(Text("Cancel")))
             }.zIndex(1)
             .onAppear{
                 print(self.isLogin)
@@ -68,8 +74,14 @@ struct BrowseView: View {
             else if isRecentView {
                 // later recent view
             }
-            else if isLoginPage {
-                LoginPage(isActive: $isLoginPage, dataCenter: self.dataCenter)
+            else if previewModule {
+                ModuleMain(isActive: $previewModule)
+                .zIndex(3).modifier(PageTransitionModifier())
+                .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible))
+            }
+            
+            else if isLogin {
+                LoginPage(isActive: $isLogin, dataCenter: self.dataCenter)
                     .modifier(PageTransitionModifier())
                 .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible))
             }
@@ -106,10 +118,12 @@ struct BrowseView_Previews: PreviewProvider {
 
 struct RecentSection: View {
     var modules:[ModuleModel]
+    @Binding var isLogin:Bool
+    @Binding var isPreview:Bool
     var body: some View {
         VStack(alignment: .leading, spacing:0){
             ContentText(content: "Recent", size: .semiTitle).padding(.horizontal,30).padding(.bottom,10)
-            RecentCarousel(modules: modules)
+            RecentCarousel(modules: modules,isLogin: $isLogin, isPreview: $isPreview)
         }
     }
 }
