@@ -20,8 +20,6 @@ struct TrapContentCard: View {
     var actionDelete: () -> ()
     var actionEdit: () -> ()
     
-    var height: CGFloat = 364
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 15) {
@@ -29,8 +27,8 @@ struct TrapContentCard: View {
                     .font(.system(size: 21, weight: .medium, design: .rounded))
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
-                
                 EditButton(action: actionEdit)
             }
             .padding(.top, 25)
@@ -50,12 +48,13 @@ struct TrapContentCard: View {
                 .padding(.horizontal, 40)
             
             Spacer()
-            Rectangle()
-                .fill(Color.separator)
-                .frame(width: UIScreen.main.bounds.width, height: 1)
+//            Rectangle()
+//                .fill(Color.separator)
+//                .frame(width: UIScreen.main.bounds.width, height: 1)
         }
         .background(Color.white)
-        .frame(height: height)
+        .frame(height: 364)
+        .cornerRadius(10)
     }
     
     func getFields(_ parameter: String, content: String) -> AnyView {

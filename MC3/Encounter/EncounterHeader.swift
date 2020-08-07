@@ -24,7 +24,9 @@ struct EncounterHeader: View {
                 
                 Spacer()
                 VStack {
-                    if dataCenter.getActiveUser()?.name == moduleInfo.currentModule.author.name {
+
+//                    if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
+                    if true {
                         if isEditable {
                             AddButton(action: action)
                         } else {

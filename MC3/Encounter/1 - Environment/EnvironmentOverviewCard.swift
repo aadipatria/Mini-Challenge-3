@@ -27,9 +27,9 @@ struct EnvironmentOverviewCard: View {
                 
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
                     .padding(.trailing, 10)
-                
                 EditButton(action: actionEdit)
             }
             .padding(.top, 30)
@@ -51,6 +51,7 @@ struct EnvironmentOverviewCard: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
+                    .frame(maxHeight: 144)
                     .padding(.leading, 40)
             
                 Image(systemName: "chevron.right")
@@ -65,7 +66,7 @@ struct EnvironmentOverviewCard: View {
             
             Spacer()
             Rectangle()
-                .fill(Color.separator)
+                .fill(Color.clear)
                 .frame(width: UIScreen.main.bounds.width, height: 1)
         }
         .background(Color.white)

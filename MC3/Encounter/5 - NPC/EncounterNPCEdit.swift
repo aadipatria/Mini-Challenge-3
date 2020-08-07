@@ -14,6 +14,8 @@ struct EncounterNPCEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var npcName: String = ""
     @State var npcRace: String = ""
     @State var npcDescription: String = ""
@@ -57,7 +59,7 @@ struct EncounterNPCEdit: View {
                             )
                             
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $npcDescription
                             )
                                 .padding(.bottom, 10)
@@ -126,6 +128,10 @@ struct EncounterNPCEdit: View {
                     self.npcRace = npc.race
                     self.npcDescription = npc.desc
                     self.npcImage = npc.image
+                    
+                    if npc.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

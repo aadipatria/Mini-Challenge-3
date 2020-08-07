@@ -14,14 +14,16 @@ struct EncounterMonstersEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
+    
     @State var monsterName: String = ""
     @State var monsterImage: String = ""
-    @State var monsterSize: Int = 0
+    @State var monsterSize: String = ""
     @State var monsterType: String = ""
     @State var monsterAlignment: String = ""
     @State var monsterArmorClass: String = ""
-    @State var monsterHitPoints: Int = 0
-    @State var monsterSpeed: Int = 0
+    @State var monsterHitPoints: String = ""
+    @State var monsterSpeed: String = ""
     @State var monsterStrength: Int = 0
     @State var monsterConstitution: Int = 0
     @State var monsterWisdom: Int = 0
@@ -63,7 +65,7 @@ struct EncounterMonstersEdit: View {
                                             inputText: $monsterImage
                                         )
                                         
-                                        NumberField(
+                                        SingleLineField(
                                             description: "Size (ft.)",
                                             image: "TextfieldMonsterSize",
                                             inputText: $monsterSize
@@ -87,13 +89,13 @@ struct EncounterMonstersEdit: View {
                                             inputText: $monsterArmorClass
                                         )
                                         
-                                        NumberField(
+                                        SingleLineField(
                                             description: "Hit Points",
                                             image: "TextfieldMonsterHP",
                                             inputText: $monsterHitPoints
                                         ).padding(.horizontal, 30)
                                         
-                                        NumberField(
+                                        SingleLineField(
                                             description: "Speed",
                                             image: "TextfieldMonsterSpeed",
                                             inputText: $monsterSpeed
@@ -148,7 +150,7 @@ struct EncounterMonstersEdit: View {
                                 .padding(.bottom, 10)
                                 
                                 MultiLineField(
-                                    description: "Description",
+                                    description: descriptionPlaceholder,
                                     inputText: $monsterDescription
                                 ).padding(.bottom, 20)
 
@@ -250,6 +252,10 @@ struct EncounterMonstersEdit: View {
                     self.monsterIntelligence = monster.intelligence
                     self.monsterCharisma = monster.charisma
                     self.monsterDescription = monster.desc
+                    
+                    if monster.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

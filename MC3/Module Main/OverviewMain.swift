@@ -9,70 +9,103 @@
 import SwiftUI
 
 struct OverviewMain: View {
-    var body: some View {
-        VStack(spacing: 0) {
-            ModuleSegmentHeader(
-                title: "Overview",
-                action: {})
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 0) {
-                    OverviewCard()
-                    OverviewCard()
-                }
-            }
-        }
-    }
-}
-
-struct OverviewCard: View {
-    var title: String = "Overview Title"
-    var description: String = "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room."
-    var image: String = "OverviewSample"
-    var actionDelete: () -> () = {}
-    var actionEdit: () -> () = {}
+    @EnvironmentObject var moduleInfo : ModuleInfo
+    @ObservedObject var dataCenter = DataCenter()
+    
+    @State private var overviewName: String = ""
+    @State private var overviewImage: String = ""
+    @State private var overviewDescription: String = ""
+    
+    @State private var overviewID: Int?
+    @State private var overviewEditing: Bool = false
+    @State private var editMode: EditMode = .add
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Text(title)
-                    .font(.system(size: 23, weight: .medium, design: .rounded))
-                Spacer()
-                
-                DeleteButton(action: actionDelete)
-                
-                EditButton(action: actionEdit)
+            ModuleSegmentHeader(
+                title: "Add a new Map or Image",
+                action: {
+                    self.editMode = .add
+                    self.overviewName = ""
+                    self.overviewDescription = ""
+                    self.overviewEditing = true},
+                isEditable: !self.overviewEditing)
+            
+            if overviewEditing {
+                OverviewEdit(
+                    overviewName: $overviewName,
+                    overviewImage: $overviewImage,
+                    overviewDescription: $overviewDescription,
+                    editMode: .add,
+                    actionCancel: {self.overviewEditing = false},
+                    actionNext: {
+                        let index = self.moduleInfo.overviewIndex
+
+                        if self.editMode == .add {
+                            self.moduleInfo.currentModule.content.overviews.append(Overview(name: self.overviewName, image: self.overviewImage, desc: self.overviewDescription))
+                        } else if self.editMode == .edit {
+                            self.moduleInfo.currentModule.content.overviews[index].name = self.overviewName
+                            self.moduleInfo.currentModule.content.overviews[index].image = self.overviewImage
+                            self.moduleInfo.currentModule.content.overviews[index].desc = self.overviewDescription
+                        }
+
+                        self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                        self.overviewEditing = false
+                })
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 10) {
+                        ForEach(0..<moduleInfo.currentModule.content.overviews.count, id: \.self) { (index) in
+                            NavigationLink(
+                                destination: OverviewDetail(
+                                    overviewEditing: self.$overviewEditing),
+                                tag: index,
+                                selection: self.overviewBinding(index)
+                            ) {
+                                self.getOverviewCard(index)
+                            }.buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                }
             }
-            .padding(.top, 25)
-            .padding(.bottom, 15)
-            .padding(.horizontal, 30)
-            
-            HStack(alignment: .center) {
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
-                    .padding(.leading, 40)
-            
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 17, weight: .regular, design: .rounded))
-                    .foregroundColor(Color.chevronNext)
-                    .padding(.trailing, 17)
-            }
-            .padding(.bottom, 12)
-            
-            Text(description)
-                .font(.system(size: 15, weight: .regular, design: .rounded))
-                .padding(.horizontal, 40)
-                .frame(maxHeight: 54, alignment: .leading)
             
             Spacer()
-            Rectangle()
-                .fill(Color.separator)
-                .frame(width: UIScreen.main.bounds.width, height: 1)
         }
-        .background(Color.white)
-        .frame(width: UIScreen.main.bounds.width, height: 295)
+    }
+    
+    func overviewBinding(_ index: Int) -> Binding<Int?> {
+        let binding = Binding<Int?>(get: {
+            self.overviewID
+        }, set: {
+            self.moduleInfo.overviewIndex = index
+            self.overviewID = $0
+        })
+        return binding
+    }
+    
+    func getOverviewCard(_ index: Int) -> OverviewCard {
+        let overview = self.moduleInfo.currentModule.content.overviews[index]
+        return OverviewCard(
+            title: overview.name,
+            description: overview.desc,
+            image: overview.image,
+            actionDelete: {
+                self.moduleInfo.currentModule.content.overviews.remove(at: index)
+                self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                
+                if self.moduleInfo.currentModule.content.overviews.count < 1 {
+                    self.overviewEditing = true
+                }
+            },
+            actionEdit: {
+                self.moduleInfo.overviewIndex = index
+                self.overviewName = overview.name
+                self.overviewImage = overview.image
+                self.overviewDescription = overview.desc
+                self.editMode = .edit
+                self.overviewEditing = true
+            }
+        )
     }
 }
 

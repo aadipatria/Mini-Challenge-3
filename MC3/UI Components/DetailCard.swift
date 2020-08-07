@@ -18,7 +18,7 @@ struct DetailCard: View {
     var actionEdit: () -> ()
     
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 0) {
             HStack(alignment: .bottom, spacing: 5) {
                 Text(title)
                     .font(.system(size: 23, weight: .medium, design: .rounded))
@@ -28,9 +28,9 @@ struct DetailCard: View {
                 
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
                     .padding(.trailing, 10)
-                
                 EditButton(action: actionEdit)
             }
             .padding(.top, 20)
@@ -44,12 +44,16 @@ struct DetailCard: View {
                         .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
                         .frame(width: 150, height: 150)
+                        .padding(.top, 30)
                     } else {
                         Image(image!)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: UIScreen.main.bounds.width - 80)
+                            .padding(.top, 30)
                     }
+                } else {
+                    EmptyView()
                 }
             }
         
@@ -62,7 +66,7 @@ struct DetailCard: View {
                         .font(.system(size: 15, weight: .regular, design: .rounded))
                 }
             }
-            .padding(.bottom, 30)
+            .padding(.vertical, 30)
             .padding(.horizontal, 40)
             
             Spacer()

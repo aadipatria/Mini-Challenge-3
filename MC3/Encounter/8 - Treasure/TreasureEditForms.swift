@@ -17,13 +17,17 @@ struct EncounterTreasureEditArmor: View {
     @State private var armorType: String = ""
     @State private var armorMagicModifier: String = ""
     @State private var armorPrice: String = ""
-    @State private var armorWeight: Int = 0
+    @State private var armorWeight: String = ""
     @State private var armorArmorClass: String = ""
-    @State private var armorStealth: Int = 0
+    @State private var armorStealth: String = ""
     @State private var armorDescription: String = ""
+    @State private var armor: Armor = Armor(name: "", type: "", magicModifier: "", price: "", weight: "", armorClass: "", stealth: "", desc: "")
     
     var actionNext: () -> ()
-    var descriptionPlaceholder: String = "Description"
+    @State var descriptionPlaceholder: String = "Description"
+    
+    var initial: Bool
+    var editMode: EditMode
     
     var body: some View {
         ScrollView {
@@ -44,13 +48,13 @@ struct EncounterTreasureEditArmor: View {
                     SingleLineField(
                         description: "Type",
                         image: "TextfieldArmorType",
-                        inputText: $armorName
+                        inputText: $armorType
                     )
                     
                     SingleLineField(
                         description: "Magic Modifier",
-                        image: "TextfieldArmorMagicModifier",
-                        inputText: $armorName
+                        image: "TextfieldItemModifier",
+                        inputText: $armorMagicModifier
                     )
                     
                     SingleLineField(
@@ -59,7 +63,7 @@ struct EncounterTreasureEditArmor: View {
                         inputText: $armorPrice
                     )
                     
-                    NumberField(
+                    SingleLineField(
                         description: "Weight",
                         image: "TextfieldItemWeight",
                         inputText: $armorWeight
@@ -71,7 +75,7 @@ struct EncounterTreasureEditArmor: View {
                         inputText: $armorArmorClass
                     )
                     
-                    NumberField(
+                    SingleLineField(
                         description: "Stealth",
                         image: "TextfieldArmorStealth",
                         inputText: $armorStealth
@@ -83,7 +87,37 @@ struct EncounterTreasureEditArmor: View {
                     )
                         .padding(.bottom, 10)
 
-                    NextButton(action: actionNext)
+                    NextButton(action: {
+                        let encounterIndex = self.moduleInfo.encounterIndex
+                        let treasureIndex = self.moduleInfo.treasureIndex
+                        
+                        self.armor.name = self.armorName
+                        self.armor.type = self.armorType
+                        self.armor.magicModifier = self.armorMagicModifier
+                        self.armor.price = self.armorPrice
+                        self.armor.weight = self.armorWeight
+                        self.armor.armorClass = self.armorArmorClass
+                        self.armor.stealth = self.armorStealth
+                        self.armor.desc = self.armorDescription
+                        
+                        if self.editMode == .add {
+                            if self.initial {
+                                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
+                            }
+
+                            self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.armor)
+
+                        } else if self.editMode == .edit {
+                            if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
+                                    self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure![treasureIndex] = self.armor
+                            }
+                        }
+
+                        self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                        if !self.initial {
+                            self.actionNext()
+                        }
+                    })
                         .padding(.horizontal, 30)
                         .padding(.bottom, 20)
                 }
@@ -100,6 +134,10 @@ struct EncounterTreasureEditArmor: View {
                     self.armorArmorClass = armor.armorClass
                     self.armorStealth = armor.stealth
                     self.armorDescription = armor.desc
+                    
+                    if armor.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             })
         }
@@ -116,8 +154,11 @@ struct EncounterTreasureEditCoins: View {
     @State private var emerald: Int = 0
     @State private var silver: Int = 0
     @State private var copper: Int = 0
+    @State private var coin: Coin = Coin(platinum: 0, gold: 0, emerald: 0, silver: 0, copper: 0)
     
     var actionNext: () -> ()
+    var initial: Bool
+    var editMode: EditMode
     
     var body: some View {
         ZStack {
@@ -159,7 +200,34 @@ struct EncounterTreasureEditCoins: View {
                 )
                     .padding(.bottom, 10)
 
-                NextButton(action: actionNext)
+                NextButton(action: {
+                    let encounterIndex = self.moduleInfo.encounterIndex
+                    let treasureIndex = self.moduleInfo.treasureIndex
+                    
+                    self.coin.platinum = self.platinum
+                    self.coin.gold = self.gold
+                    self.coin.emerald = self.emerald
+                    self.coin.silver = self.silver
+                    self.coin.copper = self.copper
+                    
+                    if self.editMode == .add {
+                        if self.initial {
+                            self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
+                        }
+
+                        self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.coin)
+
+                    } else if self.editMode == .edit {
+                        if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
+                                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure![treasureIndex] = self.coin
+                        }
+                    }
+
+                    self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                    if !self.initial {
+                        self.actionNext()
+                    }
+                })
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
             }
@@ -184,13 +252,17 @@ struct EncounterTreasureEditItem: View {
     
     @Binding var treasure: Treasure
     @State private var itemName: String = ""
-    @State private var itemWeight: Int = 0
-    @State private var itemQuantity: Int = 0
+    @State private var itemWeight: String = ""
+    @State private var itemQuantity: String = ""
     @State private var itemCost: String = ""
     @State private var itemDescription: String = ""
+    @State private var item: Item = Item(name: "Item", weight: "", quantity: "", cost: "", desc: "")
     
     var actionNext: () -> ()
-    var descriptionPlaceholder: String = "Description"
+    @State var descriptionPlaceholder: String = "Description"
+    
+    var initial: Bool
+    var editMode: EditMode
     
     var body: some View {
         ZStack {
@@ -207,13 +279,13 @@ struct EncounterTreasureEditItem: View {
                 )
                     .padding(.top, 20)
                 
-                NumberField(
+                SingleLineField(
                     description: "Weight",
                     image: "TextfieldItemWeight",
                     inputText: $itemWeight
                 )
                 
-                NumberField(
+                SingleLineField(
                     description: "Quantity",
                     image: "TextfieldItemQuantity",
                     inputText: $itemQuantity
@@ -231,7 +303,34 @@ struct EncounterTreasureEditItem: View {
                 )
                     .padding(.bottom, 10)
 
-                NextButton(action: actionNext)
+                NextButton(action: {
+                    let encounterIndex = self.moduleInfo.encounterIndex
+                    let treasureIndex = self.moduleInfo.treasureIndex
+                    
+                    self.item.name = self.itemName
+                    self.item.weight = self.itemWeight
+                    self.item.quantity = self.itemQuantity
+                    self.item.cost = self.itemCost
+                    self.item.desc = self.itemDescription
+                    
+                    if self.editMode == .add {
+                        if self.initial {
+                            self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
+                        }
+
+                        self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.item)
+
+                    } else if self.editMode == .edit {
+                        if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
+                                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure![treasureIndex] = self.item
+                        }
+                    }
+
+                    self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                    if !self.initial {
+                        self.actionNext()
+                    }
+                })
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
             }
@@ -245,6 +344,10 @@ struct EncounterTreasureEditItem: View {
                 self.itemQuantity = item.quantity
                 self.itemCost = item.cost
                 self.itemDescription = item.desc
+                
+                if item.desc != "" {
+                    self.descriptionPlaceholder = ""
+                }
             }
         })
     }
@@ -258,12 +361,16 @@ struct EncounterTreasureEditMagic: View {
     @State private var magicName: String = ""
     @State private var magicType: String = ""
     @State private var magicRarity: String = ""
-    @State private var magicCharge: Int = 0
-    @State private var magicWeight: Int = 0
+    @State private var magicCharge: String = ""
+    @State private var magicWeight: String = ""
     @State private var magicDescription: String = ""
+    @State private var magic = Magic(name: "Magix", type: "", rarity: "", maxCharge: "", weight: "", desc: "")
     
     var actionNext: () -> ()
-    var descriptionPlaceholder: String = "Description"
+    @State var descriptionPlaceholder: String = "Description"
+    
+    var initial: Bool
+    var editMode: EditMode
     
     var body: some View {
         ZStack {
@@ -292,13 +399,13 @@ struct EncounterTreasureEditMagic: View {
                     inputText: $magicRarity
                 )
                 
-                NumberField(
+                SingleLineField(
                     description: "Max Charges",
                     image: "TextfieldMagicCharges",
                     inputText: $magicCharge
                 )
                 
-                NumberField(
+                SingleLineField(
                     description: "Weight",
                     image: "TextfieldItemWeight",
                     inputText: $magicWeight
@@ -310,7 +417,35 @@ struct EncounterTreasureEditMagic: View {
                 )
                     .padding(.bottom, 10)
 
-                NextButton(action: actionNext)
+                NextButton(action: {
+                    let encounterIndex = self.moduleInfo.encounterIndex
+                    let treasureIndex = self.moduleInfo.treasureIndex
+                    
+                    self.magic.name = self.magicName
+                    self.magic.type = self.magicType
+                    self.magic.rarity = self.magicRarity
+                    self.magic.maxCharge = self.magicCharge
+                    self.magic.weight = self.magicWeight
+                    self.magic.desc = self.magicDescription
+                    
+                    if self.editMode == .add {
+                        if self.initial {
+                            self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
+                        }
+
+                        self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.magic)
+
+                    } else if self.editMode == .edit {
+                        if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
+                                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure![treasureIndex] = self.magic
+                        }
+                    }
+
+                    self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                    if !self.initial {
+                        self.actionNext()
+                    }
+                })
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
             }
@@ -325,6 +460,10 @@ struct EncounterTreasureEditMagic: View {
                 self.magicCharge = magic.maxCharge
                 self.magicWeight = magic.weight
                 self.magicDescription = magic.desc
+                
+                if magic.desc != "" {
+                    self.descriptionPlaceholder = ""
+                }
             }
         })
     }
@@ -342,15 +481,19 @@ struct EncounterTreasureEditWeapon: View {
     @State private var weaponHandedness: String = ""
     @State private var weaponProficiency: String = ""
     @State private var weaponPrice: String = ""
-    @State private var weaponWeight: Int = 0
-    @State private var weaponRange: Int = 0
+    @State private var weaponWeight: String = ""
+    @State private var weaponRange: String = ""
     @State private var weaponDamageType: String = ""
     @State private var weaponProperty: String = ""
-    @State private var weaponQuantity: Int = 0
+    @State private var weaponQuantity: String = ""
     @State private var weaponDescription: String = ""
+    @State private var weapon: Weapon = Weapon(name: "", damage: "", magicModifier: "", type: "", handedness: "", proficiency: "", price: "", weight: "", range: "", damageType: "", property: "", quantity: "", desc: "")
     
     var actionNext: () -> ()
-    var descriptionPlaceholder: String = "Description"
+    @State var descriptionPlaceholder: String = "Description"
+    
+    var initial: Bool
+    var editMode: EditMode
     
     var body: some View {
         ScrollView {
@@ -377,7 +520,7 @@ struct EncounterTreasureEditWeapon: View {
                         
                         SingleLineField(
                             description: "Magical Modifier",
-                            image: "TextfieldWeaponMagicalModifier",
+                            image: "TextfieldItemModifier",
                             inputText: $weaponMagicModifier
                         )
                         
@@ -406,13 +549,13 @@ struct EncounterTreasureEditWeapon: View {
                         inputText: $weaponPrice
                     )
                     
-                    NumberField(
+                    SingleLineField(
                         description: "Weight",
                         image: "TextfieldItemWeight",
                         inputText: $weaponWeight
                     )
                     
-                    NumberField(
+                    SingleLineField(
                         description: "Range",
                         image: "TextfieldWeaponRange",
                         inputText: $weaponRange
@@ -430,7 +573,7 @@ struct EncounterTreasureEditWeapon: View {
                         inputText: $weaponProperty
                     )
                     
-                    NumberField(
+                    SingleLineField(
                         description: "Quantity",
                         image: "TextfieldItemQuantity",
                         inputText: $weaponQuantity
@@ -442,7 +585,42 @@ struct EncounterTreasureEditWeapon: View {
                     )
                         .padding(.bottom, 10)
 
-                    NextButton(action: actionNext)
+                    NextButton(action: {
+                        let encounterIndex = self.moduleInfo.encounterIndex
+                        let treasureIndex = self.moduleInfo.treasureIndex
+                        
+                        self.weapon.name = self.weaponName
+                        self.weapon.damage = self.weaponDamage
+                        self.weapon.magicModifier = self.weaponMagicModifier
+                        self.weapon.type = self.weaponType
+                        self.weapon.handedness = self.weaponHandedness
+                        self.weapon.proficiency = self.weaponProficiency
+                        self.weapon.price = self.weaponPrice
+                        self.weapon.weight = self.weaponWeight
+                        self.weapon.range = self.weaponRange
+                        self.weapon.type = self.weaponDamageType
+                        self.weapon.property = self.weaponProperty
+                        self.weapon.quantity = self.weaponQuantity
+                        self.weapon.desc = self.weaponDescription
+                        
+                        if self.editMode == .add {
+                            if self.initial {
+                                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
+                            }
+
+                            self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.weapon)
+
+                        } else if self.editMode == .edit {
+                            if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
+                                    self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure![treasureIndex] = self.weapon
+                            }
+                        }
+
+                        self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
+                        if !self.initial {
+                            self.actionNext()
+                        }
+                    })
                         .padding(.horizontal, 30)
                         .padding(.bottom, 20)
                 }
@@ -464,6 +642,10 @@ struct EncounterTreasureEditWeapon: View {
                     self.weaponProperty = weapon.property
                     self.weaponQuantity = weapon.quantity
                     self.weaponDescription = weapon.desc
+                    
+                    if weapon.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             })
         }
