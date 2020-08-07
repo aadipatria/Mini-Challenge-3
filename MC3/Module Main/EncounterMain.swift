@@ -76,9 +76,13 @@ struct EncounterMain: View {
                     }
                 }
             }
-            
             Spacer()
         }
+        .onAppear(perform: {
+            if self.moduleInfo.currentModule.content.encounters.count < 1 {
+                self.encounterEditing = true
+            }
+        })
     }
     
     func encounterBinding(_ index: Int) -> Binding<Int?> {
