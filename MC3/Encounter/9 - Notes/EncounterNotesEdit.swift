@@ -14,6 +14,7 @@ struct EncounterNotesEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
     @State var description: String = ""
     var editMode: EditMode
     
@@ -35,7 +36,7 @@ struct EncounterNotesEdit: View {
                         
                         VStack(spacing: 0) {
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $description
                             )
                                 .padding(.vertical, 20)
@@ -94,6 +95,10 @@ struct EncounterNotesEdit: View {
             if self.editMode == .edit {
                 if let note = self.moduleInfo.currentModule.content.encounters[encounterIndex].notes?[noteIndex] {
                     self.description = note.desc
+                    
+                    if note.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

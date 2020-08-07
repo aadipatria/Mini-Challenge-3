@@ -76,6 +76,7 @@ struct ModuleBackButton: View {
 struct ModuleSegmentHeader: View {
     var title: String
     var action: () -> ()
+    var isEditable: Bool = true
     
     var body: some View {
         VStack(spacing: 0) {
@@ -83,18 +84,21 @@ struct ModuleSegmentHeader: View {
                 Text(title)
                     .font(.system(size: 21, weight: .medium, design: .rounded))
                 Spacer()
-                Button(action: action) {
-                    Image(systemName: "plus")
-                        .foregroundColor(.black)
-                        .font(.system(size: 21, weight: .heavy, design: .rounded))
-                        .frame(width: 25, height: 25, alignment: .trailing)
+                
+                if isEditable {
+                    Button(action: action) {
+                        Image(systemName: "plus")
+                            .foregroundColor(.black)
+                            .font(.system(size: 21, weight: .heavy, design: .rounded))
+                            .frame(width: 25, height: 25, alignment: .trailing)
+                    }
                 }
             }
             .padding(.horizontal, 40)
             .padding(.bottom, 30)
             
             Rectangle()
-                .fill(Color.separator)
+                .fill(Color.clear)
                 .frame(width: UIScreen.main.bounds.width, height: 2)
         }
     }

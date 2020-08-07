@@ -13,7 +13,7 @@ struct EncounterTreasureDetail: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
     @ObservedObject var dataCenter = DataCenter()
     @State private var treasureEditing: Int?
-    @State var treasure: Treasure = Item(name: "", weight: 0, quantity: 0, cost: "", desc: "")
+    @State var treasure: Treasure = Item(name: "", weight: "", quantity: "", cost: "", desc: "")
     
     var body: some View {
         VStack(spacing: 0) {
@@ -57,6 +57,6 @@ struct EncounterTreasureDetail: View {
 
 struct EncounterTreasureDetail_Previews: PreviewProvider {
     static var previews: some View {
-        EncounterTreasureDetail(treasure: Magic(name: "Amulet of Health", type: "Wondrous Item", rarity: "Legendary", maxCharge: 1, weight: 1, desc: "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.")).environmentObject(ModuleInfo())
+        EncounterTreasureDetail(treasure: Magic(name: "Amulet of Health", type: "Wondrous Item", rarity: "Legendary", maxCharge: "", weight: "", desc: "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.")).environmentObject(ModuleInfo())
     }
 }

@@ -13,13 +13,13 @@ struct EncounterTreasureEdit: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
     @ObservedObject var dataCenter = DataCenter()
     
-    @State var treasureSegmentIndex = 0
-    @State var treasureSegment = ["Armor", "Coins", "Item", "Magic", "Weapon"]
+    @State private var treasureSegmentIndex = 0
+    @State private var treasureSegment = ["Armor", "Coins", "Item", "Magic", "Weapon"]
     
     @State var initial: Bool = false
     var editMode: EditMode
     
-    @State private var treasure: Treasure = Item(name: "", weight: 0, quantity: 0, cost: "", desc: "")
+    @State var treasure: Treasure = Item(name: "Treasure", weight: "", quantity: "", cost: "", desc: "")
     
     var body: some View {
         VStack(spacing: 0) {
@@ -72,66 +72,57 @@ struct EncounterTreasureEdit: View {
                 if let treasure = self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex] {
                     self.treasure = treasure
                 }
+                
+                switch self.treasure.treasureType {
+                case .armor:
+                    self.treasureSegmentIndex = 0
+                case .coin:
+                    self.treasureSegmentIndex = 1
+                case .item:
+                    self.treasureSegmentIndex = 2
+                case .magic:
+                    self.treasureSegmentIndex = 3
+                case .weapon:
+                    self.treasureSegmentIndex = 4
+                }
             }
         })
     }
     
     func getMainContent(index: Int) -> AnyView {
-        let encounterIndex = self.moduleInfo.encounterIndex
-        let treasureIndex = self.moduleInfo.treasureIndex
-        
-        var placeholder = "Description"
-        
-        let actionNext = {
-            if self.editMode == .add {
-                if self.initial {
-                    self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure = []
-                }
-
-                self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.append(self.treasure)
-
-            } else if self.editMode == .edit {
-                if (self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?[treasureIndex]) != nil {
-                        self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.remove(at: treasureIndex)
-                    self.moduleInfo.currentModule.content.encounters[encounterIndex].treasure?.insert(self.treasure, at: treasureIndex)
-                }
-            }
-
-            self.dataCenter.saveModule(module: self.moduleInfo.currentModule)
-            if !self.initial {
-                self.presentationMode.wrappedValue.dismiss()
-            }
-        }
+        let actionNext = {self.presentationMode.wrappedValue.dismiss()}
         
         switch index {
         case 0:
-            if editMode == .edit && treasure.treasureType == .armor {placeholder = ""}
             return AnyView(EncounterTreasureEditArmor(
                 treasure: $treasure,
                 actionNext: actionNext,
-                descriptionPlaceholder: placeholder))
+                initial: self.initial,
+                editMode: self.editMode))
         case 1:
             return AnyView(EncounterTreasureEditCoins(
                 treasure: $treasure,
-                actionNext: actionNext))
+                actionNext: actionNext,
+                initial: self.initial,
+                editMode: self.editMode))
         case 2:
-            if editMode == .edit && treasure.treasureType == .item {placeholder = ""}
             return AnyView(EncounterTreasureEditItem(
                 treasure: $treasure,
                 actionNext: actionNext,
-                descriptionPlaceholder: placeholder))
+                initial: self.initial,
+                editMode: self.editMode))
         case 3:
-            if editMode == .edit && treasure.treasureType == .magic {placeholder = ""}
             return AnyView(EncounterTreasureEditMagic(
                 treasure: $treasure,
                 actionNext: actionNext,
-                descriptionPlaceholder: placeholder))
+                initial: self.initial,
+                editMode: self.editMode))
         case 4:
-            if editMode == .edit && treasure.treasureType == .weapon {placeholder = ""}
             return AnyView(EncounterTreasureEditWeapon(
                 treasure: $treasure,
                 actionNext: actionNext,
-                descriptionPlaceholder: placeholder))
+                initial: self.initial,
+                editMode: self.editMode))
         default:
             return AnyView(EmptyView())
         }

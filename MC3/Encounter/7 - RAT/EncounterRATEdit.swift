@@ -14,6 +14,7 @@ struct EncounterRATEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State var initial: Bool = false
+    @State var descriptionPlaceholder: String = "Description"
     @State var ratName: String = ""
     @State var ratDescription: String = ""
     var editMode: EditMode
@@ -43,7 +44,7 @@ struct EncounterRATEdit: View {
                                 .padding(.top, 20)
 
                             MultiLineField(
-                                description: "Description",
+                                description: descriptionPlaceholder,
                                 inputText: $ratDescription
                             )
                                 .padding(.bottom, 10)
@@ -106,6 +107,10 @@ struct EncounterRATEdit: View {
                 if let rat = self.moduleInfo.currentModule.content.encounters[encounterIndex].readAloudText?[ratIndex] {
                     self.ratName = rat.name
                     self.ratDescription = rat.desc
+                    
+                    if rat.desc != "" {
+                        self.descriptionPlaceholder = ""
+                    }
                 }
             }
         })

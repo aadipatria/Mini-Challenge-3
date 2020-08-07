@@ -10,10 +10,9 @@ import SwiftUI
 
 struct ModuleSegment: View {
     @EnvironmentObject var moduleInfo: ModuleInfo
-    @State var showPicker = false
-    var option = ["honda","suzuki","yamaha"]
-    @State var selectedIndex:Int? = nil
-    @State var moduleSegmentIndex = 1
+//    @State var showPicker = false
+//    @State var selectedIndex:Int? = nil
+    @State var moduleSegmentIndex = 0
     @State var moduleSegment = ["Overview", "Encounters", "Screen", "Notes"]
     
     var body: some View {
@@ -35,6 +34,8 @@ struct ModuleSegment: View {
             return AnyView(OverviewMain())
         case 1:
             return AnyView(EncounterMain())
+        case 2:
+            return AnyView(DMScreenMain())
         case 3:
             return AnyView(NotesMain())
         default:

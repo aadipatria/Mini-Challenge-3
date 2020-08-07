@@ -148,6 +148,12 @@
 		42B23BAA24DC26B100578ED5 /* AddModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23BA924DC26B100578ED5 /* AddModule.swift */; };
 		42B5312624DCC6E6002C7F46 /* AddModuleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */; };
 		42E54FF524DB1600008D0E0B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E54FF424DB1600008D0E0B /* CloudKit.framework */; };
+		BCF536A124DC286400B156F8 /* NotesEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A024DC286400B156F8 /* NotesEdit.swift */; };
+		BCF536A324DC2CAD00B156F8 /* NotesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A224DC2CAD00B156F8 /* NotesDetail.swift */; };
+		BCF536A524DC31D700B156F8 /* OverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A424DC31D700B156F8 /* OverviewCard.swift */; };
+		BCF536A724DC350600B156F8 /* OverviewEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A624DC350600B156F8 /* OverviewEdit.swift */; };
+		BCF536A924DC37A500B156F8 /* OverviewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A824DC37A500B156F8 /* OverviewDetail.swift */; };
+		BCF536AB24DC453A00B156F8 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536AA24DC453A00B156F8 /* UploadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -295,6 +301,12 @@
 		42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModuleVM.swift; sourceTree = "<group>"; };
 		42E54FF424DB1600008D0E0B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BCB36AD324D01FB70088321A /* MC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF536A024DC286400B156F8 /* NotesEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesEdit.swift; sourceTree = "<group>"; };
+		BCF536A224DC2CAD00B156F8 /* NotesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetail.swift; sourceTree = "<group>"; };
+		BCF536A424DC31D700B156F8 /* OverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCard.swift; sourceTree = "<group>"; };
+		BCF536A624DC350600B156F8 /* OverviewEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewEdit.swift; sourceTree = "<group>"; };
+		BCF536A824DC37A500B156F8 /* OverviewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewDetail.swift; sourceTree = "<group>"; };
+		BCF536AA24DC453A00B156F8 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +352,7 @@
 		42B23A6F24DC18B700578ED5 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+
 				42B23BA824DC26A400578ED5 /* Module */,
 				42B23A7024DC18B700578ED5 /* BrowseView */,
 				42B23A7324DC18B700578ED5 /* Profile */,
@@ -416,6 +429,18 @@
 		42B23A8D24DC18B700578ED5 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				42E54EC624DB063B008D0E0B /* BackgroundCard.swift */,
+				42E54EC524DB063B008D0E0B /* DropdownPicker.swift */,
+				42E54EC724DB063B008D0E0B /* ImagePickerEmbed.swift */,
+				42E54EC824DB063B008D0E0B /* DetailCard.swift */,
+				42E54EC924DB063B008D0E0B /* ContentCard.swift */,
+				BCF536A424DC31D700B156F8 /* OverviewCard.swift */,
+				42E54ECB24DB063B008D0E0B /* PictureContentCard.swift */,
+				42E54ECA24DB063B008D0E0B /* Editor.swift */,
+				42E54EC324DB063B008D0E0B /* EditorButtons.swift */,
+				42E54EC424DB063B008D0E0B /* MultilineTextField.swift */,
+				BCF536AA24DC453A00B156F8 /* UploadImage.swift */,
+
 				42B23A8E24DC18B700578ED5 /* EditorButtons.swift */,
 				42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */,
 				42B23A9024DC18B700578ED5 /* DropdownPicker.swift */,
@@ -471,19 +496,20 @@
 		42B23AA724DC18B700578ED5 /* Encounter */ = {
 			isa = PBXGroup;
 			children = (
-				42B23AA824DC18B700578ED5 /* EncounterSectionCard.swift */,
-				42B23AA924DC18B700578ED5 /* 1 - Environment */,
-				42B23AB024DC18B700578ED5 /* 9 - Notes */,
-				42B23AB424DC18B700578ED5 /* 8 - Treasure */,
-				42B23ABB24DC18B700578ED5 /* 7 - RAT */,
-				42B23AC024DC18B700578ED5 /* 2 - Traps */,
-				42B23AC624DC18B700578ED5 /* EncounterHeader.swift */,
-				42B23AC724DC18B700578ED5 /* 3 - Maps */,
-				42B23ACC24DC18B700578ED5 /* 5 - NPC */,
-				42B23AD124DC18B700578ED5 /* EncounterExpanded.swift */,
-				42B23AD224DC18B700578ED5 /* 6 - Monsters */,
-				42B23AD724DC18B700578ED5 /* EncounterEdit.swift */,
-				42B23AD824DC18B700578ED5 /* 4 - POI */,
+
+				42E54EF924DB063B008D0E0B /* EncounterHeader.swift */,
+				42E54F0424DB063B008D0E0B /* EncounterExpanded.swift */,
+				42E54F0A24DB063B008D0E0B /* EncounterEdit.swift */,
+				42E54EDB24DB063B008D0E0B /* EncounterSectionCard.swift */,
+				42E54EDC24DB063B008D0E0B /* 1 - Environment */,
+				42E54EF324DB063B008D0E0B /* 2 - Traps */,
+				42E54EFA24DB063B008D0E0B /* 3 - Maps */,
+				42E54F0B24DB063B008D0E0B /* 4 - POI */,
+				42E54EFF24DB063B008D0E0B /* 5 - NPC */,
+				42E54F0524DB063B008D0E0B /* 6 - Monsters */,
+				42E54EEE24DB063B008D0E0B /* 7 - RAT */,
+				42E54EE724DB063B008D0E0B /* 8 - Treasure */,
+				42E54EE324DB063B008D0E0B /* 9 - Notes */
 			);
 			path = Encounter;
 			sourceTree = "<group>";
@@ -514,12 +540,13 @@
 		42B23AB424DC18B700578ED5 /* 8 - Treasure */ = {
 			isa = PBXGroup;
 			children = (
-				42B23AB524DC18B700578ED5 /* EncounterTreasureDetail.swift */,
-				42B23AB624DC18B700578ED5 /* EncounterTreasure.swift */,
-				42B23AB724DC18B700578ED5 /* TreasureEditForms.swift */,
-				42B23AB824DC18B700578ED5 /* TreasureDetailCard.swift */,
-				42B23AB924DC18B700578ED5 /* EncounterTreasureList.swift */,
-				42B23ABA24DC18B700578ED5 /* EncounterTreasureEdit.swift */,
+
+				42E54EE824DB063B008D0E0B /* EncounterTreasureDetail.swift */,
+				42E54EE924DB063B008D0E0B /* EncounterTreasure.swift */,
+				42E54EEB24DB063B008D0E0B /* TreasureDetailCard.swift */,
+				42E54EEC24DB063B008D0E0B /* EncounterTreasureList.swift */,
+				42E54EED24DB063B008D0E0B /* EncounterTreasureEdit.swift */,
+				42E54EEA24DB063B008D0E0B /* TreasureEditForms.swift */,
 			);
 			path = "8 - Treasure";
 			sourceTree = "<group>";
@@ -538,11 +565,12 @@
 		42B23AC024DC18B700578ED5 /* 2 - Traps */ = {
 			isa = PBXGroup;
 			children = (
-				42B23AC124DC18B700578ED5 /* EncounterTraps.swift */,
-				42B23AC224DC18B700578ED5 /* EncounterTrapsList.swift */,
-				42B23AC324DC18B700578ED5 /* EncounterTrapsDetail.swift */,
-				42B23AC424DC18B700578ED5 /* TrapContentCard.swift */,
-				42B23AC524DC18B700578ED5 /* EncounterTrapsEdit.swift */,
+
+				42E54EF424DB063B008D0E0B /* EncounterTraps.swift */,
+				42E54EF524DB063B008D0E0B /* EncounterTrapsList.swift */,
+				42E54EF624DB063B008D0E0B /* EncounterTrapsDetail.swift */,
+				42E54EF824DB063B008D0E0B /* EncounterTrapsEdit.swift */,
+				42E54EF724DB063B008D0E0B /* TrapContentCard.swift */,
 			);
 			path = "2 - Traps";
 			sourceTree = "<group>";

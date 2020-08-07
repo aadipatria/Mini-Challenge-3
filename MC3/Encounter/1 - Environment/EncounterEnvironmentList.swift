@@ -35,11 +35,11 @@ struct EncounterEnvironmentList: View {
                         isEditable: false,
                         action: {self.environmentEditing = -1})
                     
-                    ScrollView {
+//                    ScrollView {
                         VStack(spacing: 0) {
-                            Rectangle()
-                                .fill(Color.separator)
-                                .frame(width: UIScreen.main.bounds.width, height: 1)
+//                            Rectangle()
+//                                .fill(Color.separator)
+//                                .frame(width: UIScreen.main.bounds.width, height: 1)
                             
                             ForEach(0..<(self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex].environment?.count ?? 1), id: \.self) { (index) in
                                 NavigationLink(
@@ -52,7 +52,7 @@ struct EncounterEnvironmentList: View {
                                 .foregroundColor(Color.black)
                             }
                         }
-                    }
+//                    }
                 }
             }
         }

@@ -31,11 +31,11 @@ struct Weapon: Treasure {
     var handedness:String
     var proficiency:String
     var price:String
-    var weight:Int
-    var range:Int
+    var weight:String
+    var range:String
     var damageType:String
     var property:String
-    var quantity:Int
+    var quantity:String
     var desc:String
 }
 
@@ -45,8 +45,8 @@ struct Magic: Treasure {
     var name:String
     var type:String
     var rarity:String
-    var maxCharge:Int
-    var weight:Int
+    var maxCharge:String
+    var weight:String
     var desc:String
 }
 
@@ -54,8 +54,8 @@ struct Item: Treasure {
     var id: UUID = UUID.init()
     var treasureType: TreasureType = .item
     var name: String
-    var weight: Int
-    var quantity: Int
+    var weight: String
+    var quantity: String
     var cost: String
     var desc: String    
 }
@@ -77,8 +77,8 @@ struct Armor: Treasure {
     var type :String
     var magicModifier :String
     var price :String
-    var weight :Int
+    var weight :String
     var armorClass :String
-    var stealth :Int
+    var stealth :String
     var desc :String
 }

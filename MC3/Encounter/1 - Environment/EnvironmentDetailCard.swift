@@ -27,9 +27,9 @@ struct EnvironmentDetailCard: View {
                 
                 Spacer()
                 
+                //if dataCenter.getActiveUser()?.id == moduleInfo.currentModule.author.id {
                 DeleteButton(action: actionDelete)
                     .padding(.trailing, 10)
-                
                 EditButton(action: actionEdit)
             }
             .padding(.top, 30)

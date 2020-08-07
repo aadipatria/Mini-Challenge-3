@@ -12,12 +12,12 @@ struct Monster: Model {
     var id:UUID = UUID.init()
     var name:String
     var image:String
-    var size:Int
+    var size:String
     var type:String
     var alignment:String
     var armorclass:String
-    var hitpoints:Int
-    var speed:Int
+    var hitpoints:String
+    var speed:String
     var strength:Int
     var dexterity:Int
     var constitution:Int
