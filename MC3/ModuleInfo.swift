@@ -26,6 +26,7 @@ class ModuleInfo: ObservableObject {
     @Published var ratIndex: Int
     @Published var treasureIndex: Int
     @Published var noteIndex: Int
+    @Published var isLogin:Bool = false
     
     
     init() {
