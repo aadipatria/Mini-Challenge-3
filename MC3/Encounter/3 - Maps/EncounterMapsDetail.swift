@@ -15,7 +15,7 @@ struct EncounterMapsDetail: View {
     @State private var mapsEditing: Int?
     @State private var title: String = ""
     @State private var description: String = ""
-    @State private var image: String = ""
+    @State private var image: UIImage = UIImage(named: "OverviewSample")!
     
     var body: some View {
         VStack(spacing: 0) {

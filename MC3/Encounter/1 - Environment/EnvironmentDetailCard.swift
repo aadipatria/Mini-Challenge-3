@@ -12,7 +12,7 @@ struct EnvironmentDetailCard: View {
     var weather: String
     var terrain: String
     var description: String
-    var image: String?
+    var image: UIImage?
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     
@@ -49,8 +49,8 @@ struct EnvironmentDetailCard: View {
             .padding(.horizontal, 30)
             
             HStack {
-                if getImage() != "" {
-                    Image(image!)
+                if image != nil {
+                    Image(uiImage: image!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: UIScreen.main.bounds.width - 80)
@@ -60,7 +60,7 @@ struct EnvironmentDetailCard: View {
             }
         
             HStack {
-                if getImage() != "" {
+                if image != nil {
                     Text(description)
                         .font(.system(size: 13, weight: .regular, design: .rounded))
                 } else {
@@ -76,17 +76,17 @@ struct EnvironmentDetailCard: View {
         .background(Color.white)
     }
     
-    func getImage() -> String {
-        if let imageName = image {
-            return imageName
-        } else {
-            return ""
-        }
-    }
+//    func getImage() -> String {
+//        if let imageName = image {
+//            return imageName
+//        } else {
+//            return ""
+//        }
+//    }
 }
 
 struct EnvironmentDetailCard_Preview: PreviewProvider {
     static var previews: some View {
-        EnvironmentDetailCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: "OverviewLarge")
+        EnvironmentDetailCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: UIImage(named: "OverviewLarge")!)
     }
 }

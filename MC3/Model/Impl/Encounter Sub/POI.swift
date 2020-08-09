@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct POI: Model {
     var id: UUID = UUID.init()
     var name:String
     var desc:String
-    var image:String
+    var image:UIImage
 }

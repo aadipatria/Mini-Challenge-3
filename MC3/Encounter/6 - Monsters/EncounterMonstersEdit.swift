@@ -17,7 +17,7 @@ struct EncounterMonstersEdit: View {
     @State var descriptionPlaceholder: String = "Description"
     
     @State var monsterName: String = ""
-    @State var monsterImage: String = ""
+    @State var monsterImage: UIImage = UIImage(named: "SampleOval")!
     @State var monsterSize: String = ""
     @State var monsterType: String = ""
     @State var monsterAlignment: String = ""
@@ -59,11 +59,7 @@ struct EncounterMonstersEdit: View {
                                             inputText: $monsterName
                                         )
                                         
-                                        SingleLineField(
-                                            description: "Image",
-                                            image: "UploadImage",
-                                            inputText: $monsterImage
-                                        )
+                                        UploadImageButton(image: $monsterImage)
                                         
                                         SingleLineField(
                                             description: "Size (ft.)",

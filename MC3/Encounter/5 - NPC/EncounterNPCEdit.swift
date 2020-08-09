@@ -19,7 +19,7 @@ struct EncounterNPCEdit: View {
     @State var npcName: String = ""
     @State var npcRace: String = ""
     @State var npcDescription: String = ""
-    @State var npcImage: String = ""
+    @State var npcImage: UIImage = UIImage(named: "SampleOval")!
     var editMode: EditMode
     
     var body: some View {
@@ -52,11 +52,7 @@ struct EncounterNPCEdit: View {
                                 inputText: $npcRace
                             )
                             
-                            SingleLineField(
-                                description: "Image",
-                                image: "UploadImage",
-                                inputText: $npcImage
-                            )
+                            UploadImageButton(image: $npcImage)
                             
                             MultiLineField(
                                 description: descriptionPlaceholder,

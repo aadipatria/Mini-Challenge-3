@@ -18,7 +18,7 @@ struct EncounterMapsEdit: View {
     
     @State var mapsName: String = ""
     @State var mapsDescription: String = ""
-    @State var mapsImage: String = ""
+    @State var mapsImage: UIImage = UIImage(named: "SampleRectangle")!
     var editMode: EditMode
     
     var body: some View {
@@ -45,11 +45,7 @@ struct EncounterMapsEdit: View {
                             )
                                 .padding(.top, 20)
 
-                            SingleLineField(
-                                description: "Image",
-                                image: "UploadImage",
-                                inputText: $mapsImage
-                            )
+                            UploadImageButton(image: $mapsImage)
                             
                             MultiLineField(
                                 description: descriptionPlaceholder,

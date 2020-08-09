@@ -23,7 +23,9 @@ struct ModuleSegment: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .padding(.all, 30)
+            .padding(.top, 30)
+            .padding(.bottom, 25)
+            .padding(.horizontal, 30)
             getMainContent(index: moduleSegmentIndex)
         }
     }

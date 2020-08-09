@@ -9,18 +9,20 @@
 import SwiftUI
 
 struct UploadImageButton: View {
-    //@Binding var image: Image?
+    @Binding var image: UIImage
     
     var body: some View {
-        //ImagePickerEmbed(imageBinding: $image) {
+        UIImagePickerEmbed(imageBinding: $image) {
             HStack(spacing: 0) {
                 Image("UploadImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width:19, height: 15, alignment: .center)
+                    .foregroundColor(Color.black)
                     .padding(.leading, 25)
                 
                 Text("Image")
+                    .foregroundColor(Color.black)
                     .font(.system(size: 13, weight: .regular, design: .rounded))
                     .padding(.horizontal, 14)
             }
@@ -31,11 +33,11 @@ struct UploadImageButton: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.black, lineWidth: 1))
         }
-    //}
-}
-
-struct UploadImage_Preview: PreviewProvider {
-    static var previews: some View {
-        UploadImageButton()
     }
 }
+
+//struct UploadImageButton_Preview: PreviewProvider {
+//    static var previews: some View {
+//        UploadImageButton()
+//    }
+//}

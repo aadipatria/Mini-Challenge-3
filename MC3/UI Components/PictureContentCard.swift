@@ -12,7 +12,7 @@ struct PictureContentCard: View {
     var title: String
     var subtitle: String = ""
     var description: String
-    var image: String
+    var image: UIImage = UIImage(named: "RealBrad")!
     var actionDelete: () -> ()
     var actionEdit: () -> ()
     
@@ -37,7 +37,7 @@ struct PictureContentCard: View {
             .padding(.horizontal, 30)
             
             HStack(alignment: .center) {
-                Image(image)
+                Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())
@@ -67,6 +67,6 @@ struct PictureContentCard: View {
 
 struct PictureContentCard_Preview: PreviewProvider {
     static var previews: some View {
-        PictureContentCard(title: "Title", description: "Description Description Description Description Description Description Description Description Description", image: "EncounterMaps", actionDelete: {}, actionEdit: {})
+        PictureContentCard(title: "Title", description: "Description Description Description Description Description Description Description Description Description", image: UIImage(named: "EncounterMaps")!, actionDelete: {}, actionEdit: {})
     }
 }

@@ -15,7 +15,7 @@ struct OverviewDetail: View {
     
     @Binding var overviewEditing: Bool
     @State private var overviewName: String = ""
-    @State private var overviewImage: String = ""
+    @State private var overviewImage: UIImage = UIImage(named: "OverviewLarge")!
     @State private var overviewDescription: String = ""
     
     var body: some View {

@@ -103,7 +103,7 @@ struct EncounterNPCList: View {
                 }
             )
         } else {
-            return PictureContentCard(title: "Name", subtitle: "", description: "Description", image: "RealBrad", actionDelete: {}, actionEdit: {})
+            return PictureContentCard(title: "Name", subtitle: "", description: "Description", image: UIImage(named: "RealBrad")!, actionDelete: {}, actionEdit: {})
         }
     }
 }

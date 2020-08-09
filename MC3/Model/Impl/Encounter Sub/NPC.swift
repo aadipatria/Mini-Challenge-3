@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct NPC :Model {
     var id: UUID = UUID.init()
     var name:String
     var race:String
-    var image:String
+    var image:UIImage
     var desc:String
 }

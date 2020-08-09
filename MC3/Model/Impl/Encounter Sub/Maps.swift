@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Maps: Model {
     var id: UUID = UUID.init()
     var name:String
     var desc:String
-    var image:String
+    var image:UIImage
 }
 

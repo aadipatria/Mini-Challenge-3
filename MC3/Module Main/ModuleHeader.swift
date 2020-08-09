@@ -86,14 +86,10 @@ struct ModuleSegmentHeader: View {
                 Spacer()
                 
                 if isEditable {
-                    Button(action: action) {
-                        Image(systemName: "plus")
-                            .foregroundColor(.black)
-                            .font(.system(size: 21, weight: .heavy, design: .rounded))
-                            .frame(width: 25, height: 25, alignment: .trailing)
-                    }
+                    AddButton(action: action)
                 }
             }
+            .frame(height: 30)
             .padding(.horizontal, 40)
             .padding(.bottom, 30)
             

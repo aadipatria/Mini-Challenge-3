@@ -34,10 +34,11 @@ struct EncounterHeader: View {
                         }
                     }
                 }
+                .frame(height: 30)
                 
             }
             //.frame(width: UIScreen.main.bounds.width, height: 21, alignment: .leading)
-            .padding(.top, 30)
+            .padding(.top, 25)
             .padding(.bottom, 9)
             .padding(.horizontal, 40)
             

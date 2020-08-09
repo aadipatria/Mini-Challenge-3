@@ -13,7 +13,7 @@ struct OverviewMain: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State private var overviewName: String = ""
-    @State private var overviewImage: String = ""
+    @State private var overviewImage: UIImage = UIImage(named: "SampleRectangle")!
     @State private var overviewDescription: String = ""
     
     @State private var overviewID: Int?
@@ -37,7 +37,10 @@ struct OverviewMain: View {
                     overviewImage: $overviewImage,
                     overviewDescription: $overviewDescription,
                     editMode: .add,
-                    actionCancel: {self.overviewEditing = false},
+                    actionCancel: {
+                        self.editMode = .add
+                        self.overviewEditing = false
+                    },
                     actionNext: {
                         let index = self.moduleInfo.overviewIndex
 
@@ -71,6 +74,11 @@ struct OverviewMain: View {
             
             Spacer()
         }
+        .onAppear(perform: {
+            if self.moduleInfo.currentModule.content.overviews.count < 1 {
+                self.overviewEditing = true
+            }
+        })
     }
     
     func overviewBinding(_ index: Int) -> Binding<Int?> {

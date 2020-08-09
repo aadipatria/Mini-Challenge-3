@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DMScreenMain: View {
     @State var travelPaceExpand:Bool = false
-    @State var coverExpand:Bool = true
+    @State var coverExpand:Bool = false
     @State var lightExpand:Bool = false
     @State var typicalDifficultyClassesExpand:Bool = false
     @State var exhaustionExpand:Bool = false

@@ -19,7 +19,7 @@ struct EncounterEnvironmentEdit: View {
     @State var environmentWeather: String = ""
     @State var environmentTerrain: String = ""
     @State var environmentDescription: String = ""
-    @State var environmentImage: String = ""
+    @State var environmentImage: UIImage = UIImage(named: "SampleRectangle")!
     var editMode: EditMode
     
     var body: some View {
@@ -46,11 +46,7 @@ struct EncounterEnvironmentEdit: View {
                             )
                                 .padding(.top, 20)
 
-                            SingleLineField(
-                                description: "Image",
-                                image: "UploadImage",
-                                inputText: $environmentImage
-                            )
+                            UploadImageButton(image: $environmentImage)
                             
                             SingleLineField(
                                 description: "Terrain",

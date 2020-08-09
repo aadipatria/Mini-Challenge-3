@@ -15,7 +15,7 @@ struct EncounterMonstersDetail: View {
     @State private var monstersEditing: Int?
     @State private var name: String = ""
     @State private var description: String = ""
-    @State private var image: String = ""
+    @State private var image: UIImage = UIImage(named: "RealBrad")!
     
     var body: some View {
         VStack(spacing: 0) {

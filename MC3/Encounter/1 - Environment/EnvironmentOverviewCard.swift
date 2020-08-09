@@ -12,7 +12,7 @@ struct EnvironmentOverviewCard: View {
     var weather: String
     var terrain: String
     var description: String
-    var image: String
+    var image: UIImage?
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     
@@ -47,12 +47,14 @@ struct EnvironmentOverviewCard: View {
             .padding(.horizontal, 30)
             
             HStack(alignment: .center) {
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
-                    .frame(maxHeight: 144)
-                    .padding(.leading, 40)
+                if image != nil {
+                    Image(uiImage: image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
+                        .frame(maxHeight: 144)
+                        .padding(.leading, 40)
+                }
             
                 Image(systemName: "chevron.right")
                     .font(.system(size: 17, weight: .regular, design: .rounded))
@@ -77,6 +79,6 @@ struct EnvironmentOverviewCard: View {
 
 struct EnvironmentOverviewCard_Preview: PreviewProvider {
     static var previews: some View {
-        EnvironmentOverviewCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: "OverviewSample")
+        EnvironmentOverviewCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: UIImage(named: "OverviewSample")!)
     }
 }

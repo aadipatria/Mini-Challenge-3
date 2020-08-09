@@ -16,7 +16,7 @@ struct EncounterNPCDetail: View {
     @State private var name: String = ""
     @State private var race: String = ""
     @State private var description: String = ""
-    @State private var image: String = ""
+    @State private var image: UIImage = UIImage(named: "RealBrad")!
     
     var body: some View {
         VStack(spacing: 0) {
@@ -34,7 +34,7 @@ struct EncounterNPCDetail: View {
                 ScrollView {
                     DetailCard(
                         title: name,
-                        subtitle: "(\(race))",
+                        subtitle: race,
                         description: description,
                         image: image,
                         isClipped: true,
@@ -57,9 +57,13 @@ struct EncounterNPCDetail: View {
             let encounter = self.moduleInfo.currentModule.content.encounters[self.moduleInfo.encounterIndex]
             if let npc = encounter.npcs?[self.moduleInfo.npcIndex] {
                 self.name = npc.name
-                self.race = npc.race
+//                self.race = npc.race
                 self.description = npc.desc
                 self.image = npc.image
+                
+                if npc.race != "" {
+                    self.race = "(\(npc.race))"
+                }
             }
         })
     }

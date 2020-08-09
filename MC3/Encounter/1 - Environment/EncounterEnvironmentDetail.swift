@@ -15,7 +15,7 @@ struct EncounterEnvironmentDetail: View {
     @State private var environmentEditing: Int?
     @State private var weather: String = ""
     @State private var terrain: String = ""
-    @State private var image: String = ""
+    @State private var image: UIImage = UIImage(named: "OverviewLarge")!
     @State private var description: String = ""
     
     var body: some View {
