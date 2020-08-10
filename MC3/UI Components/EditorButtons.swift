@@ -82,7 +82,7 @@ struct AddButton: View {
                     .foregroundColor(Color.black)
                     .font(.system(size: 21, weight: .heavy, design: .rounded))
                 )
-                .frame(width: 25, height: 25)
+                .frame(width: 45, height: 30)
         }
     }
 }
@@ -100,6 +100,6 @@ struct AddButtonDisabled: View {
 struct EditorButtons_Preview: PreviewProvider {
     static var previews: some View {
         //CancelButton(action: {})
-        DeleteButton(action: {})
+        AddButton(action: {})
     }
 }

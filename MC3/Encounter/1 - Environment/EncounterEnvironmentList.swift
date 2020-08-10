@@ -52,6 +52,8 @@ struct EncounterEnvironmentList: View {
                                 .foregroundColor(Color.black)
                             }
                         }
+                    
+                    Spacer()
 //                    }
                 }
             }
@@ -90,7 +92,7 @@ struct EncounterEnvironmentList: View {
                 }
             )
         } else {
-            return EnvironmentOverviewCard(weather: "Weather", terrain: "Terrain", description: "Description", image: "OverviewSample")
+            return EnvironmentOverviewCard(weather: "Weather", terrain: "Terrain", description: "Description", image: UIImage(named: "OverviewSample")!)
         }
     }
 }

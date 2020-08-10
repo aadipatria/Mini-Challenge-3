@@ -35,7 +35,10 @@ struct EncounterMain: View {
                     encounterName: $encounterName,
                     encounterLocation: $encounterLocation,
                     editMode: .add,
-                    actionCancel: {self.encounterEditing = false},
+                    actionCancel: {
+                        self.editMode = .add
+                        self.encounterEditing = false
+                    },
                     actionNext: {
                         let index = self.moduleInfo.encounterIndex
 
@@ -76,9 +79,13 @@ struct EncounterMain: View {
                     }
                 }
             }
-            
             Spacer()
         }
+        .onAppear(perform: {
+            if self.moduleInfo.currentModule.content.encounters.count < 1 {
+                self.encounterEditing = true
+            }
+        })
     }
     
     func encounterBinding(_ index: Int) -> Binding<Int?> {

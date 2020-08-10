@@ -35,7 +35,10 @@ struct NotesMain: View {
                     notesName: $notesName,
                     notesDescription: $notesDescription,
                     editMode: .add,
-                    actionCancel: {self.notesEditing = false},
+                    actionCancel: {
+                        self.editMode = .add
+                        self.notesEditing = false
+                    },
                     actionNext: {
                         let index = self.moduleInfo.mainNoteIndex
 
@@ -81,6 +84,11 @@ struct NotesMain: View {
             
             Spacer()
         }
+        .onAppear(perform: {
+            if self.moduleInfo.currentModule.content.notes.count < 1 {
+                self.notesEditing = true
+            }
+        })
     }
     
     func noteBinding(_ index: Int) -> Binding<Int?> {

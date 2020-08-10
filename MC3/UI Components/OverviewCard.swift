@@ -11,7 +11,7 @@ import SwiftUI
 struct OverviewCard: View {
     var title: String = "Title"
     var description: String = ""
-    var image: String = "OverviewSample"
+    var image: UIImage = UIImage(named: "OverviewSample")!
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     
@@ -31,7 +31,7 @@ struct OverviewCard: View {
             .padding(.horizontal, 30)
             
             HStack(alignment: .center) {
-                Image(image)
+                Image(uiImage: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)

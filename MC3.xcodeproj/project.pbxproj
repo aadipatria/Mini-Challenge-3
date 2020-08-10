@@ -36,7 +36,7 @@
 		426B35AA24DD4E6700F7CC4A /* DropdownPickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8B24DC18B700578ED5 /* DropdownPickerExample.swift */; };
 		426B35AB24DD4E6700F7CC4A /* ImagePickerEmbedExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8C24DC18B700578ED5 /* ImagePickerEmbedExample.swift */; };
 		426B35AC24DD4E6700F7CC4A /* OverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536A424DC31D700B156F8 /* OverviewCard.swift */; };
-		426B35AD24DD4E6700F7CC4A /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536AA24DC453A00B156F8 /* UploadImage.swift */; };
+		426B35AD24DD4E6700F7CC4A /* UploadImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF536AA24DC453A00B156F8 /* UploadImageButton.swift */; };
 		426B35AE24DD4E6700F7CC4A /* EditorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8E24DC18B700578ED5 /* EditorButtons.swift */; };
 		426B35AF24DD4E6700F7CC4A /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */; };
 		426B35B024DD4E6700F7CC4A /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B23A9024DC18B700578ED5 /* DropdownPicker.swift */; };
@@ -154,6 +154,7 @@
 		42B23BA124DC18B800578ED5 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B23B1624DC18B700578ED5 /* Register.storyboard */; };
 		42B23BA224DC18B800578ED5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B23B1724DC18B700578ED5 /* Login.storyboard */; };
 		42E54FF524DB1600008D0E0B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E54FF424DB1600008D0E0B /* CloudKit.framework */; };
+		BCD02F2524E02F0D00559238 /* UIImagePickerEmbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD02F2424E02F0D00559238 /* UIImagePickerEmbed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -349,8 +350,9 @@
 		42B5312524DCC6E6002C7F46 /* AddModuleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModuleVM.swift; sourceTree = "<group>"; };
 		42E54FF424DB1600008D0E0B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BCB36AD324D01FB70088321A /* MC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD02F2424E02F0D00559238 /* UIImagePickerEmbed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerEmbed.swift; sourceTree = "<group>"; };
 		BCF536A424DC31D700B156F8 /* OverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCard.swift; sourceTree = "<group>"; };
-		BCF536AA24DC453A00B156F8 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		BCF536AA24DC453A00B156F8 /* UploadImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,17 +422,17 @@
 			isa = PBXGroup;
 			children = (
 				426B35FE24DD4FA200F7CC4A /* EncounterSectionCard.swift */,
+				426B362724DD4FA200F7CC4A /* EncounterExpanded.swift */,
+				426B361C24DD4FA200F7CC4A /* EncounterHeader.swift */,
+				426B362D24DD4FA200F7CC4A /* EncounterEdit.swift */,
 				426B35FF24DD4FA200F7CC4A /* 1 - Environment */,
 				426B360624DD4FA200F7CC4A /* 9 - Notes */,
 				426B360A24DD4FA200F7CC4A /* 8 - Treasure */,
 				426B361124DD4FA200F7CC4A /* 7 - RAT */,
 				426B361624DD4FA200F7CC4A /* 2 - Traps */,
-				426B361C24DD4FA200F7CC4A /* EncounterHeader.swift */,
 				426B361D24DD4FA200F7CC4A /* 3 - Maps */,
 				426B362224DD4FA200F7CC4A /* 5 - NPC */,
-				426B362724DD4FA200F7CC4A /* EncounterExpanded.swift */,
 				426B362824DD4FA200F7CC4A /* 6 - Monsters */,
-				426B362D24DD4FA200F7CC4A /* EncounterEdit.swift */,
 				426B362E24DD4FA200F7CC4A /* 4 - POI */,
 			);
 			path = Encounter;
@@ -651,12 +653,13 @@
 			isa = PBXGroup;
 			children = (
 				BCF536A424DC31D700B156F8 /* OverviewCard.swift */,
-				BCF536AA24DC453A00B156F8 /* UploadImage.swift */,
+				BCF536AA24DC453A00B156F8 /* UploadImageButton.swift */,
 				42B23A8E24DC18B700578ED5 /* EditorButtons.swift */,
 				42B23A8F24DC18B700578ED5 /* MultilineTextField.swift */,
 				42B23A9024DC18B700578ED5 /* DropdownPicker.swift */,
 				42B23A9124DC18B700578ED5 /* BackgroundCard.swift */,
 				42B23A9224DC18B700578ED5 /* ImagePickerEmbed.swift */,
+				BCD02F2424E02F0D00559238 /* UIImagePickerEmbed.swift */,
 				42B23A9324DC18B700578ED5 /* DetailCard.swift */,
 				42B23A9424DC18B700578ED5 /* ContentCard.swift */,
 				42B23A9524DC18B700578ED5 /* Editor.swift */,
@@ -987,6 +990,7 @@
 				426B359F24DD4E6700F7CC4A /* SavedModuleView.swift in Sources */,
 				426B35A024DD4E6700F7CC4A /* MainView.swift in Sources */,
 				426B365C24DD4FA200F7CC4A /* EncounterPOIList.swift in Sources */,
+				BCD02F2524E02F0D00559238 /* UIImagePickerEmbed.swift in Sources */,
 				426B35A124DD4E6700F7CC4A /* ContentView.swift in Sources */,
 				426B35A224DD4E6700F7CC4A /* OverviewMain.swift in Sources */,
 				426B35A324DD4E6700F7CC4A /* NotesMain.swift in Sources */,
@@ -1005,7 +1009,7 @@
 				426B35AB24DD4E6700F7CC4A /* ImagePickerEmbedExample.swift in Sources */,
 				426B35AC24DD4E6700F7CC4A /* OverviewCard.swift in Sources */,
 				426B363F24DD4FA200F7CC4A /* TreasureEditForms.swift in Sources */,
-				426B35AD24DD4E6700F7CC4A /* UploadImage.swift in Sources */,
+				426B35AD24DD4E6700F7CC4A /* UploadImageButton.swift in Sources */,
 				426B35AE24DD4E6700F7CC4A /* EditorButtons.swift in Sources */,
 				426B35AF24DD4E6700F7CC4A /* MultilineTextField.swift in Sources */,
 				426B35B024DD4E6700F7CC4A /* DropdownPicker.swift in Sources */,

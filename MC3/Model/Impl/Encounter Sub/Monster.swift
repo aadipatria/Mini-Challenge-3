@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Monster: Model {
     var id:UUID = UUID.init()
     var name:String
-    var image:String
+    var image:UIImage
     var size:String
     var type:String
     var alignment:String
