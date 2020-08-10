@@ -18,16 +18,23 @@ struct SavedModuleView: View {
     @State var modules:[ModuleModel] = ModulesStub.getModules()
     var body: some View {
         ZStack{
-            FavouriteBase(title: "Saved Modules"){
+            FavouriteBase(title: "Saved Module"){
                 searchBar(inputBinding: $input, withCancel: false, disabled: false)
                 Underline().padding(.top,20)
                 if myModule.count < 1{
                     ModuleEmptyState(title: "No Saved Modules", content: "There are no saved modules yet. Try exploring other modules you might be interested in!")
                 } else {
-                    ListOfModules(modules: self.filterModule(input: self.input, modules: self.dataCenter.getCurrentUserModule()), isPreview: $isPreview)
+                    ListOfModules(modules: self.filterModule(input: self.input, modules: self.myModule), isPreview: $isPreview)
                 }
+                Spacer().padding(.bottom,50)
             }.onAppear{
-                self.myModule = self.dataCenter.getCurrentUserModule()
+                self.myModule = self.dataCenter.getCurrentUserModule().filter{ module in
+                    if self.dataCenter.isSavedModule(id: module.id) {
+                        print(module)
+                        return true
+                    }
+                    return false
+                }
             }
             
         if isPreview {

@@ -54,13 +54,13 @@ struct ProfileCardPage: View {
                             .gesture(
                                 DragGesture()
                                     .onChanged { gesture in
-                                    if self.secondModalPosition + 80 >= 80 && self.secondModalPosition <= 530 {
+                                    if self.secondModalPosition + 80 >= 80 && self.secondModalPosition <= 480 {
                                         self.secondModalPosition = gesture.translation.height + self.modalLastPosition
                                     }
                                 }
                                 .onEnded{ pos in
-                                    if pos.translation.height >= 530/2{
-                                        self.secondModalPosition = 460
+                                    if pos.translation.height >= 150{
+                                        self.secondModalPosition = 480
                                     } else {
                                         self.secondModalPosition = 80
                                     }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AddModule: View {
     @Binding var isActive:Bool
+    @Binding var tabBar:Bool
     @Binding var previewModule:Bool
     @State var VM = AddModuleVM()
     @ObservedObject var dataCenter = DataCenter.getInstance()
@@ -18,6 +19,7 @@ struct AddModule: View {
     var body: some View {
         NavigationModalTemplate(title: "Add Module", backButtonFunc: {
             self.isActive = false
+            self.tabBar = true
         }) {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0) {
@@ -32,6 +34,7 @@ struct AddModule: View {
                 VStack(spacing:9){
                     VStack(alignment: .trailing, spacing: 0) {
                         Button(action: {
+                            ModuleInfo.endEditing()
                             self.VM.isLevel.toggle()
                             self.VM.isGenre = false
                         }){
@@ -54,6 +57,7 @@ struct AddModule: View {
                     }
                     VStack(alignment: .trailing, spacing: 0) {
                         Button(action: {
+                            ModuleInfo.endEditing()
                             self.VM.isGenre.toggle()
                             self.VM.isLevel = false
                         }){
@@ -100,7 +104,9 @@ struct AddModule: View {
                     self.dataCenter.addModules(module: newModule)
                     self.moduleInfo.currentModule = newModule
                     self.isActive = false
+                    self.tabBar = false
                     self.previewModule = true
+                    
                 })
             }
         }.onAppear{
@@ -138,7 +144,7 @@ struct AddModule: View {
 
 struct AddModule_Previews: PreviewProvider {
     static var previews: some View {
-        AddModule(isActive: .constant(true), previewModule: .constant(true))
+        AddModule(isActive: .constant(true), tabBar: .constant(true), previewModule: .constant(true))
     }
 }
 
@@ -252,7 +258,8 @@ struct AddModulePicker:View {
             Spacer()
             Image(systemName: pickState ? "arrowtriangle.up.fill": "arrowtriangle.down.fill")
             .foregroundColor(Color.gray)
-            .padding(.trailing, 12)        }
+            .padding(.trailing, 12)
+        }
         .background(Color.white)
         .frame(idealWidth: UIScreen.main.bounds.width - 60, maxWidth: UIScreen.main.bounds.width - 60, minHeight: fieldHeight, maxHeight: fieldHeight)
         .cornerRadius(20)

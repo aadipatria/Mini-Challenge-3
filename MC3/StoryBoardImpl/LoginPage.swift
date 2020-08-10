@@ -12,12 +12,15 @@ struct LoginPage: View {
     @Binding var isActive:Bool
     var dataCenter:DataCenter
     var body: some View {
-        ZStack{
+        ZStack(alignment: .topLeading){
             Color.nightSky.edgesIgnoringSafeArea(.all)
             LoginViewControllerUI(saveFunction: {user in
                 self.dataCenter.userLogin(user: user)
                 self.isActive = false
             }, backFunc: {
+                self.isActive = false
+            })
+            BackButton(clickFunc: {
                 self.isActive = false
             })
         }

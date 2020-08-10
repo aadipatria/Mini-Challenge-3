@@ -28,7 +28,7 @@ struct BrowseByGenre: View {
                 }){
                     searchBar(inputBinding: $searchInput)
                 }.buttonStyle(PlainButtonStyle())
-                ModuleListScroll(modules: modules, isPreview: $isPreview, dataCenter: dataCenter, isLogin: $isAlert)
+                ModuleListScroll(modules: filterModule(genre: self.genre, modules: modules), isPreview: $isPreview, dataCenter: dataCenter, isLogin: $isAlert)
             }.alert(isPresented: $isAlert) {
                 Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Save Module"),
                       primaryButton: .default(Text("Sign In"), action: {
@@ -37,7 +37,7 @@ struct BrowseByGenre: View {
                       secondaryButton: .default(Text("Cancel")))
             }.zIndex(1)
             if isSearchView {
-                SearchModuleView(isActive: $isSearchView)
+                SearchModuleView(isActive: $isSearchView, modules: self.filterModule(genre: self.genre, modules: modules))
                 .modifier(PageTransitionModifier())
             }
             if isLogin {
@@ -47,6 +47,11 @@ struct BrowseByGenre: View {
                 ModuleMain(isActive: $isPreview)
                 .zIndex(3)
             }
+        }
+    }
+    func filterModule(genre:Genre, modules:[ModuleModel])->[ModuleModel]{
+        return modules.filter{ module in
+            return module.genre == genre
         }
     }
 }

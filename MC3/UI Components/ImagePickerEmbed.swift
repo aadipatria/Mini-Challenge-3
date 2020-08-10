@@ -11,7 +11,7 @@ import SwiftUI
 import AVFoundation
 
 struct ImagePickerEmbed<Content: View>:View {
-    @Binding var image : Image?
+    @Binding var image : URL?
     let content:Content
     
     @State private var showImagePicker : Bool = false
@@ -19,7 +19,7 @@ struct ImagePickerEmbed<Content: View>:View {
     @State private var showingActionSheet: Bool = false
     @State private var sourceType:UIImagePickerController.SourceType = .photoLibrary
     
-    init(imageBinding:Binding<Image?>, @ViewBuilder content: () -> Content) {
+    init(imageBinding:Binding<URL?>, @ViewBuilder content: () -> Content) {
         self.content = content()
         self._image = imageBinding
     }
@@ -27,6 +27,7 @@ struct ImagePickerEmbed<Content: View>:View {
     var body: some View {
         VStack {
             Button( action: {
+                ModuleInfo.endEditing()
                 self.showingActionSheet = true
             }){
                 self.content
@@ -83,7 +84,7 @@ struct ImagePick_Previews: PreviewProvider {
 
 struct ImagePicker : UIViewControllerRepresentable {
     @Binding var isShown    : Bool
-    @Binding var image      : Image?
+    @Binding var image      : URL?
     var sourceType : UIImagePickerController.SourceType
         
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
@@ -106,18 +107,18 @@ struct ImagePicker : UIViewControllerRepresentable {
 class ImagePickerCordinator : NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @Binding var isShown    : Bool
-    @Binding var image      : Image?
+    @Binding var image      : URL?
     
-    init(isShown : Binding<Bool>, image: Binding<Image?>) {
+    init(isShown : Binding<Bool>, image: Binding<URL?>) {
         _isShown = isShown
         _image   = image
     }
     
     //Selected Image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-//        let url = info[UIImagePickerController.InfoKey.imageURL] as? URL
-        image = Image(uiImage: uiImage)
+//        let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        let url = info[UIImagePickerController.InfoKey.imageURL] as? URL
+        image = url
         isShown = false
     }
     
