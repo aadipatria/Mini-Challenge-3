@@ -27,7 +27,7 @@ struct ModuleListScroll: View {
                 ScrollView(.vertical, showsIndicators: false){
                         VStack(alignment: .center, spacing: 30) {
                             ForEach(modules){ module in
-                                ModuleGenreCard(module: module, dataCenter: self.dataCenter, isLogin: self.$isLogin).onTapGesture(perform: {
+                                ModuleGenreCard(module: module, isSaved: self.dataCenter.isSavedModule(id: module.id), dataCenter: self.dataCenter, isLogin: self.$isLogin).onTapGesture(perform: {
                                     self.moduleInfo.currentModule = module
                                     self.isPreview = true
                                 })

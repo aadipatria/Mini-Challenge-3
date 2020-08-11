@@ -29,7 +29,7 @@ struct AddModule: View {
                     AddModuleHeading(content: "Get Started")
                     AddModuleSubHeading(content: "Get started creating your modules")
                     AddModuleInput(description: "Module Name", image: "book.fill", inputText: $VM.moduleName).padding(.bottom,9)
-                    UploadImage(iconName: "icloud.and.arrow.down", desc: "Image", image: $VM.image)
+                    UploadImage(iconName: "icloud.and.arrow.down", desc: VM.image == nil ? "Image" : "\(String(describing: VM.image!.lastPathComponent))", image: $VM.image)
                 }.padding(.horizontal,30)
                 VStack(spacing:9){
                     VStack(alignment: .trailing, spacing: 0) {
@@ -99,7 +99,7 @@ struct AddModule: View {
                         self.VM.indexlevel != nil &&
                         self.VM.indexGenre != nil
                 }, action: {
-                    let newModule = ModuleModel(name: self.VM.moduleName, author: self.user!, coverImageName: "people", addDate: Date.init(), level: self.getLevelFromIndex(idx: self.VM.indexlevel!)!,
+                    let newModule = ModuleModel(name: self.VM.moduleName, author: self.user!, coverImageName: self.VM.image!, addDate: Date.init(), level: self.getLevelFromIndex(idx: self.VM.indexlevel!)!,
                         genre:self.getGenreFromIndex(idx: self.VM.indexGenre!)!, content: ModuleContent(overviews: [], encounters: [], notes: []))
                     self.dataCenter.addModules(module: newModule)
                     self.moduleInfo.currentModule = newModule
@@ -151,13 +151,16 @@ struct AddModule_Previews: PreviewProvider {
 struct UploadImage: View {
     var iconName:String
     var desc:String
-    @Binding var image:Image?
+    @Binding var image:URL?
     var body: some View {
         ImagePickerEmbed(imageBinding: $image){
             HStack(alignment: .center, spacing: 10){
                 Image(systemName: iconName)
                     .padding(.leading,20)
                 Text(desc)
+                .lineLimit(1)
+                .padding(.trailing,20)
+                
             }.foregroundColor(.black)
                 .font(.system(size: 13, weight: .regular, design: .rounded))
                 .frame(width: 354, height: 44, alignment: .leading)

@@ -121,7 +121,7 @@ struct moduleRow: View {
     var last:Bool
     var body: some View {
         HStack(alignment:.center, spacing:0){
-            Image(module.coverImageName)
+            Image(uiImage: ImageConverter.convURLtoData(url: module.coverImageName))
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 80, height: 80)

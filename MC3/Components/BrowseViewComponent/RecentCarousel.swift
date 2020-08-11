@@ -46,7 +46,7 @@ struct RecentCarousel: View {
             }
             .padding(.leading, 30)
             if modules.count < 1 {
-                RecentCard(isSaved: false, module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: "", addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true, saveFunc: {_ in }, preview: {})
+                RecentCard(isSaved: false, module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true, saveFunc: {_ in }, preview: {})
                 .padding(.leading, 30)
             }
         }
@@ -89,7 +89,7 @@ struct RecentCard: View {
     @EnvironmentObject var mi:ModuleInfo
     var body: some View {
         ZStack(alignment: .bottomTrailing){
-            RecentCardImage(image: Image( !isSkeleton ? module.coverImageName : "moduleCover"))
+            RecentCardImage(image: !isSkeleton ? Image( uiImage:  ImageConverter.convURLtoData(url: module.coverImageName)) : Image("moduleCover"))
             Button(action: {
                 self.mi.currentModule = self.module
                 self.preview()

@@ -29,7 +29,7 @@ struct ModuleModel:Identifiable{
     let id = UUID.init()
     var name:String
     var author:AuthorModel
-    var coverImageName:String
+    var coverImageName:URL
     var addDate:Date
     var level:ModuleLevel
     var genre:Genre
