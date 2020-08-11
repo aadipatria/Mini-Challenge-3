@@ -27,6 +27,7 @@ struct ImagePickerEmbed<Content: View>:View {
     var body: some View {
         VStack {
             Button( action: {
+                ModuleInfo.endEditing()
                 self.showingActionSheet = true
             }){
                 self.content

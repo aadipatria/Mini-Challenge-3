@@ -32,7 +32,7 @@ struct BrowseView: View {
                     self.isLogin.toggle()
                 }
                 
-            },title: "\(self.dataCenter.modules.count)", profile: "people") {
+            },title: "Browse", profile: "people") {
                 ScrollView(.vertical){
                     Button(action: {
                         self.isSearchView.toggle()
@@ -44,9 +44,10 @@ struct BrowseView: View {
                         .padding(.bottom, 10)
                     RecentSection(modules: self.dataCenter.getAllModules(),isLogin: $isAlert,isPreview: $previewModule)
                     PopularSection(authors: self.dataCenter.getAllAuthors(), selected: $selectedAuthor, changePage: $isModuleProfileView)
+                    Spacer().padding(.bottom,100)
                 }
             }.alert(isPresented: $isAlert) {
-                Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Add Module"),
+                Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Saved Module"),
                       primaryButton: .default(Text("Sign In"), action: {
                         self.isLogin = true
                       }),
@@ -109,7 +110,7 @@ struct TabBarHandler: ViewModifier {
 
 struct BrowseView_Previews: PreviewProvider {
     static var previews: some View {
-        BrowseView( isLogin: true, tabBarVisible: .constant(true))
+        BrowseView( isLogin: false, tabBarVisible: .constant(true))
     }
 }
 

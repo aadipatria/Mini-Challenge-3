@@ -36,7 +36,7 @@ class ModuleInfo: ObservableObject {
                         password: "",
                         email: "",
                         phone: ""),
-                    coverImageName: "RealBrad",
+                    coverImageName: URL(fileURLWithPath: ""),
                     addDate: Date(timeIntervalSince1970: 999999),
                     level: .normal,
                     genre: .adventure,

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ModuleGenreCard: View {
     @State var module:ModuleModel
+    @State var isSaved:Bool = false
     @ObservedObject var dataCenter:DataCenter
     @Binding var isLogin:Bool
     var body: some View {
@@ -39,13 +40,14 @@ struct ModuleGenreCard: View {
                         if self.dataCenter.activeUser == nil {
                             self.isLogin = true
                         } else {
-                            // dave module
+                            self.isSaved.toggle()
+                            self.dataCenter.savedModule(id: self.module.id)
                         }
                     }) {
                         HStack(alignment: .center, spacing: 10){
-                            Image(systemName: "bookmark")
+                            Image(systemName: isSaved ? "bookmark" : "bookmark.fill")
                                 .font(.system(size: 13, weight: .semibold, design: .rounded))
-                            ContentText(content: "Save", size: .normal)
+                            ContentText(content: isSaved ? "Save" : "Saved", size: .normal)
                         }
                     }.buttonStyle(PlainButtonStyle())
                         .padding(.vertical, 5)
@@ -61,7 +63,7 @@ struct ModuleGenreCard: View {
             .background(
                 ZStack{
                     Color.nightSky
-                    Image(module.coverImageName).resizable().aspectRatio(contentMode: .fill).opacity(0.5)
+                    Image(uiImage: ImageConverter.convURLtoData(url: module.coverImageName)).resizable().aspectRatio(contentMode: .fill).opacity(0.5)
                 }
             )
                 .cornerRadius(10)
@@ -71,6 +73,6 @@ struct ModuleGenreCard: View {
 
 struct ModuleGenreCard_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleGenreCard(module: ModulesStub.getModules()[0], dataCenter: DataCenter(), isLogin: .constant(false))
+        ModuleGenreCard(module: ModulesStub.getModules()[0], isSaved: false, dataCenter: DataCenter(), isLogin: .constant(false))
     }
 }

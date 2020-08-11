@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AddModule: View {
     @Binding var isActive:Bool
+    @Binding var tabBar:Bool
     @Binding var previewModule:Bool
     @State var VM = AddModuleVM()
     @ObservedObject var dataCenter = DataCenter.getInstance()
@@ -18,6 +19,7 @@ struct AddModule: View {
     var body: some View {
         NavigationModalTemplate(title: "Add Module", backButtonFunc: {
             self.isActive = false
+            self.tabBar = true
         }) {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0) {
@@ -27,11 +29,12 @@ struct AddModule: View {
                     AddModuleHeading(content: "Get Started")
                     AddModuleSubHeading(content: "Get started creating your modules")
                     AddModuleInput(description: "Module Name", image: "book.fill", inputText: $VM.moduleName).padding(.bottom,9)
-                    UploadImage(iconName: "icloud.and.arrow.down", desc: "Image", image: $VM.image)
+                    UploadImage(iconName: "icloud.and.arrow.down", desc: VM.image == nil ? "Image" : "\(String(describing: VM.image!.lastPathComponent))", image: $VM.image)
                 }.padding(.horizontal,30)
                 VStack(spacing:9){
                     VStack(alignment: .trailing, spacing: 0) {
                         Button(action: {
+                            ModuleInfo.endEditing()
                             self.VM.isLevel.toggle()
                             self.VM.isGenre = false
                         }){
@@ -54,6 +57,7 @@ struct AddModule: View {
                     }
                     VStack(alignment: .trailing, spacing: 0) {
                         Button(action: {
+                            ModuleInfo.endEditing()
                             self.VM.isGenre.toggle()
                             self.VM.isLevel = false
                         }){
@@ -95,12 +99,14 @@ struct AddModule: View {
                         self.VM.indexlevel != nil &&
                         self.VM.indexGenre != nil
                 }, action: {
-                    let newModule = ModuleModel(name: self.VM.moduleName, author: self.user!, coverImageName: "people", addDate: Date.init(), level: self.getLevelFromIndex(idx: self.VM.indexlevel!)!,
+                    let newModule = ModuleModel(name: self.VM.moduleName, author: self.user!, coverImageName: self.VM.image!, addDate: Date.init(), level: self.getLevelFromIndex(idx: self.VM.indexlevel!)!,
                         genre:self.getGenreFromIndex(idx: self.VM.indexGenre!)!, content: ModuleContent(overviews: [], encounters: [], notes: []))
                     self.dataCenter.addModules(module: newModule)
                     self.moduleInfo.currentModule = newModule
                     self.isActive = false
+                    self.tabBar = false
                     self.previewModule = true
+                    
                 })
             }
         }.onAppear{
@@ -138,20 +144,23 @@ struct AddModule: View {
 
 struct AddModule_Previews: PreviewProvider {
     static var previews: some View {
-        AddModule(isActive: .constant(true), previewModule: .constant(true))
+        AddModule(isActive: .constant(true), tabBar: .constant(true), previewModule: .constant(true))
     }
 }
 
 struct UploadImage: View {
     var iconName:String
     var desc:String
-    @Binding var image:Image?
+    @Binding var image:URL?
     var body: some View {
         ImagePickerEmbed(imageBinding: $image){
             HStack(alignment: .center, spacing: 10){
                 Image(systemName: iconName)
                     .padding(.leading,20)
                 Text(desc)
+                .lineLimit(1)
+                .padding(.trailing,20)
+                
             }.foregroundColor(.black)
                 .font(.system(size: 13, weight: .regular, design: .rounded))
                 .frame(width: 354, height: 44, alignment: .leading)
@@ -252,7 +261,8 @@ struct AddModulePicker:View {
             Spacer()
             Image(systemName: pickState ? "arrowtriangle.up.fill": "arrowtriangle.down.fill")
             .foregroundColor(Color.gray)
-            .padding(.trailing, 12)        }
+            .padding(.trailing, 12)
+        }
         .background(Color.white)
         .frame(idealWidth: UIScreen.main.bounds.width - 60, maxWidth: UIScreen.main.bounds.width - 60, minHeight: fieldHeight, maxHeight: fieldHeight)
         .cornerRadius(20)

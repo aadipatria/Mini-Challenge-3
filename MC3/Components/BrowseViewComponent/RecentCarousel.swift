@@ -13,7 +13,7 @@ struct RecentCarousel: View {
     @Binding var isLogin:Bool
     @Binding var isPreview:Bool
     @EnvironmentObject var modulInfo:ModuleInfo
-    @ObservedObject var dt = DataCenter()
+    @ObservedObject var dt = DataCenter.getInstance()
     @State var recentOffset:CGFloat = 0
     @State var lastRecentOffset:CGFloat = 0
     var body: some View {
@@ -21,11 +21,13 @@ struct RecentCarousel: View {
             HStack(spacing: 0){
                 ForEach(modules){module in
                     GeometryReader { geometry in
-                        RecentCard(module: module, saveFunc: {
+                        RecentCard(module: module, saveFunc: {cb in
                             if self.dt.getActiveUser() == nil {
                                 self.isLogin = true
                             } else {
                                 // save module
+                                self.dt.savedModule(id: module.id)
+                                (cb ?? {})()
                             }
                         }, preview: {
                             self.isPreview = true
@@ -44,7 +46,7 @@ struct RecentCarousel: View {
             }
             .padding(.leading, 30)
             if modules.count < 1 {
-                RecentCard(module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: "", addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true, saveFunc: {}, preview: {})
+                RecentCard(isSaved: false, module:ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(), level: .normal, genre: .action, content: ModulesStub.modulContent[0]), isSkeleton: true, saveFunc: {_ in }, preview: {})
                 .padding(.leading, 30)
             }
         }
@@ -76,24 +78,30 @@ struct RecentCarousel: View {
     }
 }
 
+
 struct RecentCard: View {
+    @State var isSaved:Bool = false
     var module:ModuleModel
     var isSkeleton:Bool = false
-    var saveFunc:()->Void
+    @ObservedObject var dt = DataCenter.getInstance()
+    var saveFunc:(_ cb:(()->Void)?)->Void
     var preview:()->Void
     @EnvironmentObject var mi:ModuleInfo
     var body: some View {
         ZStack(alignment: .bottomTrailing){
-            RecentCardImage(image: Image( !isSkeleton ? module.coverImageName : "moduleCover"))
-            RecentCardImageOverlay().onTapGesture(perform: {
+            RecentCardImage(image: !isSkeleton ? Image( uiImage:  ImageConverter.convURLtoData(url: module.coverImageName)) : Image("moduleCover"))
+            Button(action: {
                 self.mi.currentModule = self.module
                 self.preview()
-                
-            })
-            saveButton(action: saveFunc)
+            }) {
+                RecentCardImageOverlay()
+            }.buttonStyle(PlainButtonStyle())
+            saveButton(isSaved: $isSaved, action: saveFunc)
             if !isSkeleton{
                 RecentCardContent(module: module)
             }
+        }.onAppear{
+            self.isSaved = self.dt.isSavedModule(id: self.module.id)
         }
         .foregroundColor(.white)
         .frame(width: 354, height: 130, alignment: .bottomTrailing)
@@ -101,9 +109,10 @@ struct RecentCard: View {
     }
 }
 
+
 struct RecentCarousel_Previews: PreviewProvider {
     static var previews: some View {
-        RecentCarousel(modules: ModulesStub.getModules(),isLogin: .constant(true),isPreview: .constant(true))
+            RecentCarousel(modules: ModulesStub.getModules(),isLogin: .constant(true),isPreview: .constant(true))
     }
 }
 
@@ -159,20 +168,23 @@ struct RecentCardContent: View {
 
 
 struct saveButton: View {
-    var action:()->Void
+    @Binding var isSaved:Bool
+    var action:(_ cb:(()->Void)?)->Void
     var body: some View {
         VStack(alignment: .trailing, spacing: 0){
             Button(action: {
-                self.action()
+                self.action({
+                    self.isSaved.toggle()
+                })
             }) {
-                HStack(alignment: .center, spacing: 10){
-                    Image(systemName: "bookmark.fill")
+                HStack(alignment: .center, spacing: 20){
+                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                         .font(.system(size: 13, weight: .semibold, design: .rounded))
-                    ContentText(content: "Saved", size: .normal)
+                    ContentText(content: isSaved ? "Saved" : "Save", size: .normal)
                 }.foregroundColor(.black)
             }.buttonStyle(PlainButtonStyle())
-                .padding(.vertical, 5)
-                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 30)
                 .background(Color.gold)
                 .cornerRadius(5)
                 .padding(.trailing,15)

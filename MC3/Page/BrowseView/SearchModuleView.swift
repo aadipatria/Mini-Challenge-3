@@ -22,7 +22,7 @@ struct SearchModuleView: View {
                 searchBar(inputBinding: $input, withCancel: true, cancelFunction: {
                     self.isActive = false
                 })
-                ModuleListScroll(modules: modules, isPreview: $isPreview, dataCenter: self.dataCenter, isLogin: $isAlert)
+                ModuleListScroll(modules: self.filterModule(input: self.input, modules: modules), isPreview: $isPreview, dataCenter: self.dataCenter, isLogin: $isAlert)
             }.alert(isPresented: $isAlert) {
                 Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Save Module"),
                       primaryButton: .default(Text("Sign In"), action: {
@@ -38,6 +38,15 @@ struct SearchModuleView: View {
             }
         }
     }
+    func filterModule(input:String, modules:[ModuleModel])->[ModuleModel]{
+        return modules.filter{ module in
+            return
+                module.name.uppercased().contains(input.uppercased()) ||
+                module.author.name.uppercased().contains(input.uppercased()) ||
+                "\(module.level)".uppercased().contains(input.uppercased()) ||
+                "\(module.genre)".uppercased().contains(input.uppercased())
+            }
+        }
 }
 
 

@@ -9,20 +9,30 @@
 import SwiftUI
 
 struct ImagePickerEmbedExample: View {
-    @State var image:URL? = URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!)
+    @State var image:URL? = nil
     var body: some View {
         VStack(spacing:15){
-            //placeholder 
-            //Image(uiImage: UIImage(data: NSData(contentsOf: image!) as Data)!)
-            Image("RealBrad")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width:100,height:100)
-                .clipShape(Circle())
+            if image != nil {
+                
+                
+            }
+            
             ImagePickerEmbed(imageBinding: $image) {
                 Text("click to change profile")
             }
         }
+    }
+    func getImage(url:URL) -> Image {
+        if let data = try? Data(contentsOf: url)
+        {
+          return Image(uiImage: UIImage(data: data)!
+//          .resizable()
+//          .aspectRatio(contentMode: .fill)
+//          .frame(width:100,height:100)
+//          .clipShape(Circle())
+            )
+        }
+        return Image("people")
     }
 }
 

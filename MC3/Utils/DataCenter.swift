@@ -15,11 +15,20 @@ class DataCenter : ObservableObject {
     @Published var modules:[ModuleModel] = []
     @Published var authors:[AuthorModel] = []
     @Published var activeUser:AuthorModel?
+    static var savedModule:[UUID:Bool] = [:]
     
     init() {
         modules = moduleRepo.getModule()
         authors = authorRepo.getAuthor()
         activeUser = authorRepo.getActiveuser()
+    }
+    
+    func savedModule(id:UUID)->Void {
+        DataCenter.savedModule[id] = true
+    }
+    
+    func isSavedModule(id:UUID)->Bool {
+        return DataCenter.savedModule[id] ?? false
     }
     
     static func getInstance()->DataCenter {

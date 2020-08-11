@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
 class ModulesStub {
     
@@ -77,15 +78,16 @@ class ModulesStub {
                 MainNotes(name: "No Spells", desc: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.")])
     ]
     
+    
     static var modulModel = [
+        ModuleModel(name: "Dummy", author: AuthorStub.getActiveUser(), coverImageName: URL(fileURLWithPath: "")
+            , addDate: Date.init(), level: .hard, genre: .action, content: ModulesStub.modulContent[0]),
         ModuleModel(name: "Dummy", author: AuthorStub.getActiveUser()
-            , coverImageName: "moduleCover", addDate: Date.init(), level: .hard, genre: .action, content: ModulesStub.modulContent[0]),
-        ModuleModel(name: "Dummy", author: AuthorStub.getActiveUser()
-        , coverImageName: "moduleCover", addDate: Date.init(), level: .hard, genre: .medieval, content: ModulesStub.modulContent[1]),
+        , coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(), level: .hard, genre: .medieval, content: ModulesStub.modulContent[1]),
         ModuleModel(name: "Dragons' Champion", author: AuthorStub.getActiveUser()
-        , coverImageName: "people", addDate: Date.init(), level: .easy, genre: .strategy, content: ModulesStub.modulContent[2]),
+        , coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(), level: .easy, genre: .strategy, content: ModulesStub.modulContent[2]),
         ModuleModel(name: "Modelina View", author: AuthorStub.getActiveUser()
-        , coverImageName: "archer", addDate: Date.init(),level: .normal, genre: .horror, content: ModulesStub.modulContent[3]),
+        , coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(),level: .normal, genre: .horror, content: ModulesStub.modulContent[3]),
         ModuleModel(
             name: "Legacy of Blood",
             author: AuthorModel(
@@ -94,7 +96,7 @@ class ModulesStub {
                 password: "",
                 email: "",
                 phone: ""),
-            coverImageName: "RealBrad",
+            coverImageName: URL(fileURLWithPath: ""),
             addDate: Date(timeIntervalSince1970: 999999),
             level: .normal,
             genre: .adventure,
@@ -117,6 +119,9 @@ class ModulesStub {
     
     
     static func getPlainModule()->ModuleModel {
-        return ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: "", addDate: Date.init(),level: .normal, genre: .horror, content: ModulesStub.modulContent[0])
+        return ModuleModel(name: "", author: AuthorStub.getActiveUser(), coverImageName: URL(fileURLWithPath: ""), addDate: Date.init(),level: .normal, genre: .horror, content: ModulesStub.modulContent[0])
     }
 }
+
+
+

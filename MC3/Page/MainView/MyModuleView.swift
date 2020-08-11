@@ -34,7 +34,9 @@ struct MyModuleView: View {
                 } else {
                     ListOfModules(modules: self.filterModule(input: self.input, modules: self.dataCenter.getCurrentUserModule()), isPreview: $isPreview)
                 }
-            }.alert(isPresented: $isAlert) {
+                Spacer().padding(.bottom,50)
+            }
+            .alert(isPresented: $isAlert) {
                 Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Add Module"),
                       primaryButton: .default(Text("Sign In"), action: {
                         self.isLogin = true
@@ -49,9 +51,8 @@ struct MyModuleView: View {
                 .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible))
             }
             if isAddModuleView{
-                AddModule(isActive: $isAddModuleView, previewModule: $isPreview)
-                    .zIndex(2).modifier(PageTransitionModifier())
-                    .modifier(TabBarHandler(tabBarVisible: self.$tabBarVisible))
+                AddModule(isActive: $isAddModuleView, tabBar: $tabBarVisible, previewModule: $isPreview)
+                    .zIndex(2)
             } else if isPreview {
                 ModuleMain(isActive: $isPreview)
                 .zIndex(3).modifier(PageTransitionModifier())

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct AddModuleVM {
-    var image:Image? = nil
+    var image:URL? = nil
     var moduleName:String = ""
     var indexlevel:Int? = nil
     var indexGenre:Int? = nil
