@@ -1,0 +1,165 @@
+2020-08-07 09:50:36 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f9942824200; archive(resolved)='<IDEArchive: 0x7f99554779a0>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	Chain (12, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f9942824200; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7f9942857050; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9941dfb3f0; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9941a5dcf0; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9942f053c0; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9942a250b0; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9942944aa0; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f994290d980; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f9942a61880; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f994a97d3b0; teamID='87WHDY7XDH', teamName='Peter Andrew', teamType='Individual', username='peter.andrew987@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f994291b040; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='(null)'>
+	<IDEDistributionContext: 0x7f9941d63540; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7f9941dd23f0>', team='(null)'>
+	<IDEDistributionContext: 0x7f9942f0d510; archive = '<IDEArchive: 0x7f99554779a0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7f9942824200>
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCreateDestRootStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCopyItemStep
+2020-08-07 09:50:36 +0000  Running /usr/bin/ditto '-V' '/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/Payload/MC3.app'
+2020-08-07 09:50:36 +0000  >>> Copying /Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app 
+2020-08-07 09:50:36 +0000  copying file ./_CodeSignature/CodeResources ... 
+2020-08-07 09:50:36 +0000  5817 bytes for ./_CodeSignature/CodeResources
+2020-08-07 09:50:36 +0000  copying file ./Register.storyboardc/XTt-4a-bHO-view-ymC-7g-kHY.nib ... 
+2020-08-07 09:50:36 +0000  6453 bytes for ./Register.storyboardc/XTt-4a-bHO-view-ymC-7g-kHY.nib
+copying file ./Register.storyboardc/register.nib ... 
+2020-08-07 09:50:36 +0000  1315 bytes for ./Register.storyboardc/register.nib
+copying file ./Register.storyboardc/UIViewController-E97-lh-g8g.nib ... 
+2020-08-07 09:50:36 +0000  816 bytes for ./Register.storyboardc/UIViewController-E97-lh-g8g.nib
+copying file ./Register.storyboardc/Info.plist ... 
+2020-08-07 09:50:36 +0000  451 bytes for ./Register.storyboardc/Info.plist
+2020-08-07 09:50:36 +0000  copying file ./AppIcon60x60@2x.png ... 
+2020-08-07 09:50:36 +0000  25794 bytes for ./AppIcon60x60@2x.png
+2020-08-07 09:50:36 +0000  copying file ./MC3 ... 
+2020-08-07 09:50:36 +0000  17732128 bytes for ./MC3
+2020-08-07 09:50:36 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+1197 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Assets.car ... 
+2020-08-07 09:50:36 +0000  6302376 bytes for ./Assets.car
+copying file ./AppIcon76x76@2x~ipad.png ... 
+2020-08-07 09:50:36 +0000  34738 bytes for ./AppIcon76x76@2x~ipad.png
+copying file ./embedded.mobileprovision ... 
+8000 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1699 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2020-08-07 09:50:36 +0000  8 bytes for ./PkgInfo
+2020-08-07 09:50:36 +0000  copying file ./Login.storyboardc/UIViewController-NVJ-T9-omK.nib ... 
+2020-08-07 09:50:36 +0000  816 bytes for ./Login.storyboardc/UIViewController-NVJ-T9-omK.nib
+copying file ./Login.storyboardc/login.nib ... 
+2020-08-07 09:50:36 +0000  1262 bytes for ./Login.storyboardc/login.nib
+copying file ./Login.storyboardc/gsj-QP-hQE-view-iK0-XB-NQp.nib ... 
+2020-08-07 09:50:36 +0000  7547 bytes for ./Login.storyboardc/gsj-QP-hQE-view-iK0-XB-NQp.nib
+copying file ./Login.storyboardc/Info.plist ... 
+2020-08-07 09:50:36 +0000  451 bytes for ./Login.storyboardc/Info.plist
+2020-08-07 09:50:36 +0000  /usr/bin/ditto exited with 0
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionEmbedProfileStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionInfoPlistStep
+2020-08-07 09:50:36 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionItemRemovalStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2020-08-07 09:50:36 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2020-08-07 09:50:36 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2020-08-07 09:50:36 +0000  Running /usr/bin/ditto '-V' '/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/BCSymbolMaps/FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/BCSymbolMaps/FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap'
+2020-08-07 09:50:36 +0000  >>> Copying /Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/BCSymbolMaps/FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap 
+2020-08-07 09:50:36 +0000  copying file ./FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap ... 
+2020-08-07 09:50:36 +0000  3904999 bytes for ./FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap
+2020-08-07 09:50:36 +0000  /usr/bin/ditto exited with 0
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionSymbolsStep
+2020-08-07 09:50:36 +0000  Excluding symbols for MC3.app
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionAppThinningStep
+2020-08-07 09:50:36 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionArchThinningStep
+2020-08-07 09:50:36 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/Payload/MC3.app/MC3' '-verify_arch' 'arm64e'
+2020-08-07 09:50:36 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-08-07 09:50:36 +0000  Skipping architecture thinning for item "MC3" because arch "arm64e" wasn't found
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionODRStep
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionStripXattrsStep
+2020-08-07 09:50:36 +0000  Running /usr/bin/xattr '-crs' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/Payload/MC3.app'
+2020-08-07 09:50:36 +0000  /usr/bin/xattr exited with 0
+2020-08-07 09:50:36 +0000  Processing step: IDEDistributionCodesignStep
+2020-08-07 09:50:36 +0000  Entitlements for <IDEDistributionItem: 0x7f993ce4b8c0; bundleID='com.aadipatria.peter1234.MC3', path='<DVTFilePath:0x7f9941fbd790:'/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9942cd9df0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9942f584a0; name='Apple Development: peter.andrew987@gmail.com (QP28QQRJ24)', hash='75C28523D31166C9F4C0D2B5E1B08A84CF6B3B22', serialNumber='58EC8B13F85AA9ED', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-03-09 06:41:30 +0000''>', entitlements='{
+    "application-identifier" = "87WHDY7XDH.com.aadipatria.peter1234.MC3";
+    "aps-environment" = development;
+    "com.apple.developer.team-identifier" = 87WHDY7XDH;
+    "get-task-allow" = 1;
+}', teamID='87WHDY7XDH', identifier='com.aadipatria.peter1234.MC3', executablePath='<DVTFilePath:0x7f9940c43940:'/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app/MC3'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "87WHDY7XDH.com.aadipatria.peter1234.MC3";
+    "aps-environment" = production;
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 87WHDY7XDH;
+    "get-task-allow" = 0;
+}
+2020-08-07 09:50:36 +0000  Writing entitlements for <IDEDistributionItem: 0x7f993ce4b8c0; bundleID='com.aadipatria.peter1234.MC3', path='<DVTFilePath:0x7f9941fbd790:'/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9942cd9df0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9942fcbd70; name='Apple Development: peter.andrew987@gmail.com (QP28QQRJ24)', hash='75C28523D31166C9F4C0D2B5E1B08A84CF6B3B22', serialNumber='58EC8B13F85AA9ED', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-03-09 06:41:30 +0000''>', entitlements='{
+    "application-identifier" = "87WHDY7XDH.com.aadipatria.peter1234.MC3";
+    "aps-environment" = development;
+    "com.apple.developer.team-identifier" = 87WHDY7XDH;
+    "get-task-allow" = 1;
+}', teamID='87WHDY7XDH', identifier='com.aadipatria.peter1234.MC3', executablePath='<DVTFilePath:0x7f9940c43940:'/Users/peterandrew/Library/Developer/Xcode/Archives/2020-08-07/MC3 07-08-20 16.49.xcarchive/Products/Applications/MC3.app/MC3'>', hardenedRuntime='0'>'> to: /var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/entitlements~~~7WWqTg
+2020-08-07 09:50:36 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '58987830FF3198DF8D1C1191268173EC899EDC27' '--entitlements' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/entitlements~~~7WWqTg' '--preserve-metadata=identifier,flags,runtime' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/Payload/MC3.app'
+2020-08-07 09:50:39 +0000  /var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root/Payload/MC3.app: signed app bundle with Mach-O thin (arm64) [com.aadipatria.peter1234.MC3]
+2020-08-07 09:50:39 +0000  /usr/bin/codesign exited with 0
+2020-08-07 09:50:39 +0000  Processing step: IDEDistributionZipODRItemStep
+2020-08-07 09:50:39 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-08-07 09:50:39 +0000  Processing step: IDEDistributionCreateIPAStep
+2020-08-07 09:50:39 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root' '/var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Packages/MC3.ipa'
+2020-08-07 09:50:39 +0000  >>> Copying /var/folders/76/y3l570d94qz3hv1p4zjqpy_h0000gn/T/XcodeDistPipeline.~~~sI802M/Root 
+2020-08-07 09:50:39 +0000  copying file ./BCSymbolMaps/FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap ... 
+2020-08-07 09:50:39 +0000  3904999 bytes for ./BCSymbolMaps/FE0A92B4-9F7F-3093-B239-71C65CEE8E97.bcsymbolmap
+2020-08-07 09:50:39 +0000  copying file ./Payload/MC3.app/_CodeSignature/CodeResources ... 
+2020-08-07 09:50:39 +0000  5817 bytes for ./Payload/MC3.app/_CodeSignature/CodeResources
+copying file ./Payload/MC3.app/Register.storyboardc/XTt-4a-bHO-view-ymC-7g-kHY.nib ... 
+2020-08-07 09:50:39 +0000  6453 bytes for ./Payload/MC3.app/Register.storyboardc/XTt-4a-bHO-view-ymC-7g-kHY.nib
+copying file ./Payload/MC3.app/Register.storyboardc/register.nib ... 
+2020-08-07 09:50:39 +0000  1315 bytes for ./Payload/MC3.app/Register.storyboardc/register.nib
+copying file ./Payload/MC3.app/Register.storyboardc/UIViewController-E97-lh-g8g.nib ... 
+2020-08-07 09:50:39 +0000  816 bytes for ./Payload/MC3.app/Register.storyboardc/UIViewController-E97-lh-g8g.nib
+copying file ./Payload/MC3.app/Register.storyboardc/Info.plist ... 
+451 bytes for ./Payload/MC3.app/Register.storyboardc/Info.plist
+copying file ./Payload/MC3.app/AppIcon60x60@2x.png ... 
+2020-08-07 09:50:39 +0000  25794 bytes for ./Payload/MC3.app/AppIcon60x60@2x.png
+copying file ./Payload/MC3.app/MC3 ... 
+2020-08-07 09:50:39 +0000  14921600 bytes for ./Payload/MC3.app/MC3
+2020-08-07 09:50:39 +0000  copying file ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+1197 bytes for ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+896 bytes for ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/MC3.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/MC3.app/Assets.car ... 
+2020-08-07 09:50:39 +0000  6302376 bytes for ./Payload/MC3.app/Assets.car
+copying file ./Payload/MC3.app/AppIcon76x76@2x~ipad.png ... 
+2020-08-07 09:50:39 +0000  34738 bytes for ./Payload/MC3.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/MC3.app/embedded.mobileprovision ... 
+2020-08-07 09:50:39 +0000  7938 bytes for ./Payload/MC3.app/embedded.mobileprovision
+copying file ./Payload/MC3.app/Info.plist ... 
+2020-08-07 09:50:39 +0000  1699 bytes for ./Payload/MC3.app/Info.plist
+copying file ./Payload/MC3.app/PkgInfo ... 
+8 bytes for ./Payload/MC3.app/PkgInfo
+2020-08-07 09:50:39 +0000  copying file ./Payload/MC3.app/Login.storyboardc/UIViewController-NVJ-T9-omK.nib ... 
+816 bytes for ./Payload/MC3.app/Login.storyboardc/UIViewController-NVJ-T9-omK.nib
+copying file ./Payload/MC3.app/Login.storyboardc/login.nib ... 
+2020-08-07 09:50:39 +0000  1262 bytes for ./Payload/MC3.app/Login.storyboardc/login.nib
+copying file ./Payload/MC3.app/Login.storyboardc/gsj-QP-hQE-view-iK0-XB-NQp.nib ... 
+2020-08-07 09:50:39 +0000  7547 bytes for ./Payload/MC3.app/Login.storyboardc/gsj-QP-hQE-view-iK0-XB-NQp.nib
+copying file ./Payload/MC3.app/Login.storyboardc/Info.plist ... 
+2020-08-07 09:50:39 +0000  451 bytes for ./Payload/MC3.app/Login.storyboardc/Info.plist
+2020-08-07 09:50:39 +0000  /usr/bin/ditto exited with 0
+2020-08-07 09:50:39 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2020-08-07 09:50:39 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2020-08-07 09:50:39 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2020-08-07 09:50:39 +0000  Processing step: IDEDistributionCreateManifestStep
+2020-08-07 09:50:39 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
