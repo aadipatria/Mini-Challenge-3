@@ -13,7 +13,7 @@ struct OverviewEdit: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @Binding var overviewName: String
-    @Binding var overviewImage: UIImage
+    @Binding var overviewImage: URL
     @Binding var overviewDescription: String
     @State var editMode: EditMode
     @State var descriptionPlaceholder: String = "Description"
@@ -37,7 +37,7 @@ struct OverviewEdit: View {
                         inputText: $overviewName)
                         .padding(.top, 20)
                     
-                    UploadImageButton(image: $overviewImage)
+//                    UploadImageButton(image: $overviewImage)
                     
                     MultiLineField(
                         description: descriptionPlaceholder,

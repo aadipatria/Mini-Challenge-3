@@ -13,6 +13,6 @@ struct NPC :Model {
     var id: UUID = UUID.init()
     var name:String
     var race:String
-    var image:UIImage
+    var image:URL
     var desc:String
 }

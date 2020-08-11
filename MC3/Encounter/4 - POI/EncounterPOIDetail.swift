@@ -15,7 +15,7 @@ struct EncounterPOIDetail: View {
     @State private var poiEditing: Int?
     @State private var title: String = ""
     @State private var description: String = ""
-    @State private var image: UIImage = UIImage(named: "OverviewSample")!
+    @State private var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)
     
     var body: some View {
         VStack(spacing: 0) {

@@ -13,6 +13,6 @@ struct EnvironmentModel: Model {
     var id: UUID = UUID.init()
     var weather:String
     var terrain:String
-    var image:UIImage
+    var image:URL
     var desc:String
 }

@@ -13,5 +13,5 @@ struct POI: Model {
     var id: UUID = UUID.init()
     var name:String
     var desc:String
-    var image:UIImage
+    var image:URL
 }

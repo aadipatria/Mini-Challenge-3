@@ -18,7 +18,7 @@ struct EncounterPOIEdit: View {
     
     @State var poiName: String = ""
     @State var poiDescription: String = ""
-    @State var poiImage: UIImage = UIImage(named: "SampleRectangle")!
+    @State var poiImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleRectangle", ofType: "png")!)
     var editMode: EditMode
     
     var body: some View {
@@ -45,7 +45,7 @@ struct EncounterPOIEdit: View {
                             )
                                 .padding(.top, 20)
 
-                            UploadImageButton(image: $poiImage)
+//                            UploadImageButton(image: $poiImage)
                             
                             MultiLineField(
                                 description: descriptionPlaceholder,

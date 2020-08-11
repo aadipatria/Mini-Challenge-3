@@ -11,7 +11,7 @@ import SwiftUI
 struct OverviewCard: View {
     var title: String = "Title"
     var description: String = ""
-    var image: UIImage = UIImage(named: "OverviewSample")!
+    var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     
@@ -31,7 +31,7 @@ struct OverviewCard: View {
             .padding(.horizontal, 30)
             
             HStack(alignment: .center) {
-                Image(uiImage: image)
+                getImageFromURL(url: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
@@ -57,5 +57,16 @@ struct OverviewCard: View {
         .background(Color.white)
         .frame(width: UIScreen.main.bounds.width, height: 295)
         .cornerRadius(10)
+    }
+    
+    func getImageFromURL(url: URL) -> Image {
+        do {
+            let imageData = try Data(contentsOf: url)
+            return(Image(uiImage: UIImage(data: imageData) ?? UIImage()))
+        } catch {
+//            print("Unable to load data: \(error)")
+        }
+        
+        return Image("OverviewSample")
     }
 }

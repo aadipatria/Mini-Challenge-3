@@ -12,7 +12,7 @@ struct EnvironmentOverviewCard: View {
     var weather: String
     var terrain: String
     var description: String
-    var image: UIImage?
+    var image: URL?
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     
@@ -48,7 +48,7 @@ struct EnvironmentOverviewCard: View {
             
             HStack(alignment: .center) {
                 if image != nil {
-                    Image(uiImage: image!)
+                    getImageFromURL(url: image!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(minWidth: UIScreen.main.bounds.width - 80, maxHeight: 144)
@@ -75,10 +75,19 @@ struct EnvironmentOverviewCard: View {
         .frame(width: UIScreen.main.bounds.width, height: 385)
         .cornerRadius(10)
     }
-}
-
-struct EnvironmentOverviewCard_Preview: PreviewProvider {
-    static var previews: some View {
-        EnvironmentOverviewCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: UIImage(named: "OverviewSample")!)
+    
+    func getImageFromURL(url: URL) -> Image {
+        do {
+            let imageData = try Data(contentsOf: url)
+            return(Image(uiImage: UIImage(data: imageData) ?? UIImage()))
+        } catch {}
+        
+        return Image("OverviewSample")
     }
 }
+
+//struct EnvironmentOverviewCard_Preview: PreviewProvider {
+//    static var previews: some View {
+//        EnvironmentOverviewCard(weather: "Cloudy", terrain: "Terraria", description: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.", image: UIImage(named: "OverviewSample")!)
+//    }
+//}
