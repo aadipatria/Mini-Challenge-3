@@ -12,7 +12,7 @@ import SwiftUI
 struct Overview:Model {
     var id: UUID = UUID.init()
     var name:String
-    var image:UIImage
+    var image:URL
     var desc:String
 }
  

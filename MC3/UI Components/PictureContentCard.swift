@@ -12,7 +12,7 @@ struct PictureContentCard: View {
     var title: String
     var subtitle: String = ""
     var description: String
-    var image: UIImage = UIImage(named: "RealBrad")!
+    var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!)
     var actionDelete: () -> ()
     var actionEdit: () -> ()
     
@@ -37,7 +37,7 @@ struct PictureContentCard: View {
             .padding(.horizontal, 30)
             
             HStack(alignment: .center) {
-                Image(uiImage: image)
+                getImageFromURL(url: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())
@@ -63,10 +63,19 @@ struct PictureContentCard: View {
         .background(Color.white)
         .frame(width: UIScreen.main.bounds.width, height: 124)
     }
-}
-
-struct PictureContentCard_Preview: PreviewProvider {
-    static var previews: some View {
-        PictureContentCard(title: "Title", description: "Description Description Description Description Description Description Description Description Description", image: UIImage(named: "EncounterMaps")!, actionDelete: {}, actionEdit: {})
+    
+    func getImageFromURL(url: URL) -> Image {
+        do {
+            let imageData = try Data(contentsOf: url)
+            return(Image(uiImage: UIImage(data: imageData) ?? UIImage()))
+        } catch {}
+        
+        return Image("OverviewSample")
     }
 }
+
+//struct PictureContentCard_Preview: PreviewProvider {
+//    static var previews: some View {
+//        PictureContentCard(title: "Title", description: "Description Description Description Description Description Description Description Description Description", image: UIImage(named: "EncounterMaps")!, actionDelete: {}, actionEdit: {})
+//    }
+//}

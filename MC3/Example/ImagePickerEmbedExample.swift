@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct ImagePickerEmbedExample: View {
-    @State var image:Image? = Image("RealBrad")
+    @State var image:URL? = URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!)
     var body: some View {
         VStack(spacing:15){
-            image!
+            //placeholder 
+            //Image(uiImage: UIImage(data: NSData(contentsOf: image!) as Data)!)
+            Image("RealBrad")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width:100,height:100)

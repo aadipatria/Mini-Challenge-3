@@ -12,7 +12,7 @@ import SwiftUI
 struct Monster: Model {
     var id:UUID = UUID.init()
     var name:String
-    var image:UIImage
+    var image:URL
     var size:String
     var type:String
     var alignment:String

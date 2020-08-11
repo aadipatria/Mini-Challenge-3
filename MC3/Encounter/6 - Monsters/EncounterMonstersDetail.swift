@@ -15,7 +15,7 @@ struct EncounterMonstersDetail: View {
     @State private var monstersEditing: Int?
     @State private var name: String = ""
     @State private var description: String = ""
-    @State private var image: UIImage = UIImage(named: "RealBrad")!
+    @State private var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!)
     
     var body: some View {
         VStack(spacing: 0) {
