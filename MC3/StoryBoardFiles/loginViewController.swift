@@ -21,6 +21,15 @@ class loginViewController: UIViewController {
         super.viewDidLoad()
         label.isHidden = true
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +93,21 @@ class loginViewController: UIViewController {
             back()
         }
     }
+    private func changeVisibility(_ button:UIButton, _ input:UITextField)->Void{
+        input.clearsOnBeginEditing = false
+        if input.isSecureTextEntry {
+            input.isSecureTextEntry = false
+            button.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+            
+        } else {
+            input.isSecureTextEntry = true
+            button.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+        }
+    }
     
+    @IBAction func passEye(_ sender: UIButton) {
+        self.changeVisibility(sender, password)
+    }
     /*
     // MARK: - Navigation
 

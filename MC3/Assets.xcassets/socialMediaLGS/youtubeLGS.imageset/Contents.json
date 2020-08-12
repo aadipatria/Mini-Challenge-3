@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "youtube remade.png",
+      "filename" : "yt.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "youtube remade@2x.png",
+      "filename" : "yt@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "youtube remade@3x.png",
+      "filename" : "yt@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

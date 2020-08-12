@@ -22,8 +22,11 @@ class registerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         text.isHidden = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         //view1.layer.cornerRadius = 50
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func saveToCloudKit() {
@@ -47,7 +50,6 @@ class registerViewController: UIViewController {
             if let err = error {
             print(err.localizedDescription)
             }
-            print(record)
             if let action = self.cbFunc {
                 action(AuthorModel(name: "", username: "", profileImage: "", password: "", email: "", phone: ""))
             }
@@ -60,6 +62,30 @@ class registerViewController: UIViewController {
        
     }
 
+    @IBAction func passEye(_ sender: UIButton) {
+        self.changeVisibility(sender, password)
+    }
+    
+    
+    @IBAction func confirmPassEye(_ sender: UIButton) {
+        self.changeVisibility(sender, repassword)
+    }
+    
+    private func changeVisibility(_ button:UIButton, _ input:UITextField)->Void{
+        input.clearsOnBeginEditing = false
+        if input.isSecureTextEntry {
+            input.isSecureTextEntry = false
+            button.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+            
+        } else {
+            input.isSecureTextEntry = true
+            button.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     @IBAction func backToLogin(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

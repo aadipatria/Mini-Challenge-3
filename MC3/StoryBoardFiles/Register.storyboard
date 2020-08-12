@@ -10,7 +10,7 @@
         <!--Register View Controller-->
         <scene sceneID="BF0-70-IEU">
             <objects>
-                <viewController storyboardIdentifier="register" id="XTt-4a-bHO" customClass="registerViewController" customModule="MC3ProgMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" id="XTt-4a-bHO" customClass="registerViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ymC-7g-kHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,25 +67,25 @@
                                     <segue destination="E97-lh-g8g" kind="show" id="IpQ-5b-E82"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confrim Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-Vt-68z" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-Vt-68z" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="522" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="4d4-Kz-NLj" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="4d4-Kz-NLj" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="452" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-Ba-uyV" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="a1L-Ba-uyV" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="382" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-1d-9sB" customClass="TextFieldCustom" customModule="MC3ProgMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-1d-9sB" customClass="TextFieldCustom" customModule="MC3" customModuleProvider="target">
                                 <rect key="frame" x="60" y="312" width="294" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -115,6 +115,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jD-Vr-HD4">
+                                <rect key="frame" x="308" y="463" width="27" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="eye.fill" catalog="system">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="passEye:" destination="XTt-4a-bHO" eventType="touchUpInside" id="0e3-DV-PnJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWz-ca-5Ea">
+                                <rect key="frame" x="308" y="533" width="27" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="eye.fill" catalog="system">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmPassEye:" destination="XTt-4a-bHO" eventType="touchUpInside" id="SPJ-DO-uxk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.086274509803921567" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Qd2-0y-Rkp"/>
@@ -148,6 +170,7 @@
         <image name="Oval Copy 6" width="30" height="30"/>
         <image name="Rectangle" width="882" height="135"/>
         <image name="Rectangle-1" width="294" height="45"/>
+        <image name="eye.fill" catalog="system" width="128" height="78"/>
         <image name="login_other" width="150" height="30"/>
         <image name="reg" width="1134" height="1266"/>
     </resources>

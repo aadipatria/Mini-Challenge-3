@@ -25,9 +25,19 @@ class ModuleInfo: ObservableObject {
     @Published var treasureIndex: Int
     @Published var noteIndex: Int
     @Published var isLogin:Bool = false
+    @Published var currentPage: String
+
     
     
     init() {
+        if UserDefaults.standard.bool(forKey: "didLaunchBefore"){
+            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+            currentPage = "onboardingView"
+        }
+        else
+        {
+            currentPage = "onboardingView"
+        }
         self.currentModule = ModulesStub.modulModel.last ?? ModuleModel(
                     name: "Legacy of Blood",
                     author: AuthorModel(

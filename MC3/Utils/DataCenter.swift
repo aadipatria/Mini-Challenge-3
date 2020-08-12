@@ -24,7 +24,12 @@ class DataCenter : ObservableObject {
     }
     
     func savedModule(id:UUID)->Void {
-        DataCenter.savedModule[id] = true
+        if (DataCenter.savedModule[id] ?? false) {
+            DataCenter.savedModule[id] = false
+        } else {
+            DataCenter.savedModule[id] = true
+        }
+        
     }
     
     func isSavedModule(id:UUID)->Bool {
