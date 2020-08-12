@@ -34,7 +34,6 @@ struct MyModuleView: View {
                 } else {
                     ListOfModules(modules: self.filterModule(input: self.input, modules: self.dataCenter.getCurrentUserModule()), isPreview: $isPreview)
                 }
-                Spacer().padding(.bottom,50)
             }
             .alert(isPresented: $isAlert) {
                 Alert(title: Text("Login Required"), message: Text("Sign Up or Login to Add Module"),

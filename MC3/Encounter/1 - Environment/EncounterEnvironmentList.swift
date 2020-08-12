@@ -92,7 +92,7 @@ struct EncounterEnvironmentList: View {
                 }
             )
         } else {
-            return EnvironmentOverviewCard(weather: "Weather", terrain: "Terrain", description: "Description", image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!))
+            return EnvironmentOverviewCard(weather: "Weather", terrain: "Terrain", description: "Description", image: URL(fileURLWithPath:""))
         }
     }
 }

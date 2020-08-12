@@ -20,27 +20,27 @@ class ModulesStub {
         ModuleContent(
             overviews: [Overview(
                 name: "The Legacy",
-                image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!),
+                image: URL(fileURLWithPath:""),
                 desc: "Most conventional modern houses in Western cultures will contain one or more bedrooms and bathrooms, a kitchen or cooking area, and a living room. A house may have a separate dining room, or the eating area may be integrated into another room. Some large houses in North America have a recreation room.")],
             encounters: [
                 Encounter(
                     name: "Red Blanket",
                     location: "Imperial Sanctuary",
-                    environment: [EnvironmentModel(weather: "Cloudy", terrain: "Terraria", image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!), desc: "Most conventional modern houses")],
+                    environment: [EnvironmentModel(weather: "Cloudy", terrain: "Terraria", image: URL(fileURLWithPath:""), desc: "Most conventional modern houses")],
     //                traps: <#T##[Trap]?#>,
                     //maps: [
                         //Maps(name: "The Legacy", desc: "Most conventional modern houses", image: UIImage(named: "OverviewSample"))
                     //],
                     pois: [
-                        POI(name: "The Legacy", desc: "Most conventional modern houses", image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)),
-                        POI(name: "The Legacy2", desc: "something something", image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)),
-                        POI(name: "The Legacy3", desc: "Mostly sample text modern houses", image: URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!))
+                        POI(name: "The Legacy", desc: "Most conventional modern houses", image: URL(fileURLWithPath:"")),
+                        POI(name: "The Legacy2", desc: "something something", image: URL(fileURLWithPath:"")),
+                        POI(name: "The Legacy3", desc: "Mostly sample text modern houses", image: URL(fileURLWithPath:""))
                     ],
                     npcs: [
-                        NPC(name: "Bobby", race: "Hill Dwarf", image: URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!), desc: "Most conventional modern houses in Western cultures will contain one or more")
+                        NPC(name: "Bobby", race: "Hill Dwarf", image: URL(fileURLWithPath:""), desc: "Most conventional modern houses in Western cultures will contain one or more")
                     ],
                     monsters: [
-                        Monster(name: "Adult Blue Dracholic", image: URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!), size: "200", type: "Dragon", alignment: "Lawful Good", armorclass: "19", hitpoints: "225", speed: "40", strength: 25, dexterity: 10, constitution: 23, intelligence: 16, wisdom: 15, charisma: 19, desc: "Legendary Resistance (3/Day). If the dracolich fails a saving throw, it can choose to succeed instead. \nMagic Resistance. The dracolich has advantage on saving throws against spells and other magical effects.")
+                        Monster(name: "Adult Blue Dracholic", image: URL(fileURLWithPath:""), size: "200", type: "Dragon", alignment: "Lawful Good", armorclass: "19", hitpoints: "225", speed: "40", strength: 25, dexterity: 10, constitution: 23, intelligence: 16, wisdom: 15, charisma: 19, desc: "Legendary Resistance (3/Day). If the dracolich fails a saving throw, it can choose to succeed instead. \nMagic Resistance. The dracolich has advantage on saving throws against spells and other magical effects.")
                     ],
                     readAloudText: [
                         ReadAloudText(name: "No Rules", desc: "desc1"),
@@ -55,14 +55,14 @@ class ModulesStub {
                 Encounter(
                     name: "Spicy Potato",
                     location: "Emporium Side Lane",
-                    environment: [EnvironmentModel(weather: "Cloudy", terrain: "Terraria", image:  URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewLarge", ofType: "png")!), desc: "in Western cultures will contain")],
+                    environment: [EnvironmentModel(weather: "Cloudy", terrain: "Terraria", image:  URL(fileURLWithPath:""), desc: "in Western cultures will contain")],
     //                traps: <#T##[Trap]?#>,
                     maps: [
-                        Maps(name: "The Legacy", desc: "Most conventional modern houses", image:  URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)),
-                        Maps(name: "The Legacy 2", desc: "Unconventional modern houses", image:  URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!))
+                        Maps(name: "The Legacy", desc: "Most conventional modern houses", image:  URL(fileURLWithPath:"")),
+                        Maps(name: "The Legacy 2", desc: "Unconventional modern houses", image:  URL(fileURLWithPath:""))
                     ],
                     pois: [
-                        POI(name: "The Legacy", desc: "Most conventional modern houses", image:  URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!))
+                        POI(name: "The Legacy", desc: "Most conventional modern houses", image:  URL(fileURLWithPath:""))
                     ],
     //                npcs: <#T##[NPC]?#>,
     //                monsters: <#T##[Monster]?#>,

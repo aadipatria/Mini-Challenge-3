@@ -13,7 +13,7 @@ struct OverviewMain: View {
     @ObservedObject var dataCenter = DataCenter()
     
     @State private var overviewName: String = ""
-    @State private var overviewImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleRectangle", ofType: "png")!)
+    @State private var overviewImage: URL = URL(fileURLWithPath:"")
     @State private var overviewDescription: String = ""
     
     @State private var overviewID: Int?

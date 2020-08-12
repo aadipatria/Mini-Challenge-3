@@ -19,7 +19,7 @@ struct EncounterNPCEdit: View {
     @State var npcName: String = ""
     @State var npcRace: String = ""
     @State var npcDescription: String = ""
-    @State var npcImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleOval", ofType: "png")!)
+    @State var npcImage: URL = URL(fileURLWithPath:"")
     var editMode: EditMode
     
     var body: some View {

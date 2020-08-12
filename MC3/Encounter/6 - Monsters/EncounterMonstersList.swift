@@ -97,7 +97,7 @@ struct EncounterMonstersList: View {
                 }
             )
         } else {
-            return PictureContentCard(title: "Name", subtitle: "", description: "Description", image: URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!), actionDelete: {}, actionEdit: {})
+            return PictureContentCard(title: "Name", subtitle: "", description: "Description", image: URL(fileURLWithPath:""), actionDelete: {}, actionEdit: {})
         }
     }
 }

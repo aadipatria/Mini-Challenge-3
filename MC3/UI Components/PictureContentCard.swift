@@ -12,7 +12,7 @@ struct PictureContentCard: View {
     var title: String
     var subtitle: String = ""
     var description: String
-    var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "RealBrad", ofType: "png")!)
+    var image: URL = URL(fileURLWithPath:"")
     var actionDelete: () -> ()
     var actionEdit: () -> ()
     

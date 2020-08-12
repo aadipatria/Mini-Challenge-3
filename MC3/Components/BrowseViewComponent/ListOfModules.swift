@@ -30,7 +30,7 @@ struct ListOfModules: View {
                             
                         })
                     }
-                    Underline()
+                    Underline().padding(.bottom,100)
                 }
             }
         }

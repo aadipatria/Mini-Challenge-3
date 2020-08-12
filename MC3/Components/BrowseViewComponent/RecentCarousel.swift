@@ -16,6 +16,7 @@ struct RecentCarousel: View {
     @ObservedObject var dt = DataCenter.getInstance()
     @State var recentOffset:CGFloat = 0
     @State var lastRecentOffset:CGFloat = 0
+    var tapGesture:TapGesture = TapGesture(count: 1)
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 0){
@@ -36,11 +37,13 @@ struct RecentCarousel: View {
                     }.frame(width: 354, height: 130)
                         .offset(x: self.recentOffset, y: 0)
                         .animation(.spring())
-                        .gesture(DragGesture()
+                        .gesture(
+                            DragGesture()
                             .onChanged { gesture in
-                                print("TEsting")
                                 self.onChangeHandler(gesture: gesture)}
-                            .onEnded{ pos in self.onEndedHandler(pos: pos) }
+                            .onEnded{ pos in
+                                self.onEndedHandler(pos: pos)}
+                            .exclusively(before: TapGesture())
                         )
                 }
             }
@@ -87,15 +90,17 @@ struct RecentCard: View {
     var saveFunc:(_ cb:(()->Void)?)->Void
     var preview:()->Void
     @EnvironmentObject var mi:ModuleInfo
+    
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             RecentCardImage(image: !isSkeleton ? Image( uiImage:  ImageConverter.convURLtoData(url: module.coverImageName)) : Image("moduleCover"))
-            Button(action: {
-                self.mi.currentModule = self.module
-                self.preview()
-            }) {
-                RecentCardImageOverlay()
-            }.buttonStyle(PlainButtonStyle())
+            
+                RecentCardImageOverlay().onTapGesture {
+                    self.mi.currentModule = self.module
+                    self.preview()
+                }
+           
             saveButton(isSaved: $isSaved, action: saveFunc)
             if !isSkeleton{
                 RecentCardContent(module: module)

@@ -18,7 +18,7 @@ struct EncounterMapsEdit: View {
     
     @State var mapsName: String = ""
     @State var mapsDescription: String = ""
-    @State var mapsImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleRectangle", ofType: "png")!)
+    @State var mapsImage: URL = URL(fileURLWithPath:"")
     var editMode: EditMode
     
     var body: some View {

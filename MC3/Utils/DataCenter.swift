@@ -55,7 +55,9 @@ class DataCenter : ObservableObject {
     
     func getCurrentUserModule()->[ModuleModel] {
         if let user = activeUser {
-            return moduleRepo.getModuleByAuthor(authorID: user.id)
+            return modules.filter{ module in
+                return module.author.id == user.id
+            }
         }
         return []
     }

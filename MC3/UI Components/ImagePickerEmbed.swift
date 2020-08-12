@@ -50,7 +50,7 @@ struct ImagePickerEmbed<Content: View>:View {
         }.alert(isPresented: $notAllowAcces) {
             Alert(title: Text("Camera access"), message: Text("We cannot access your camera, please grant access through settings"), dismissButton: .default(Text("ok")))
         }.sheet(isPresented: self.$showImagePicker){
-            ImagePicker(isShown: self.$showImagePicker, image: self.$image, sourceType: self.sourceType)
+            ImagePicker(isShown: self.$showImagePicker, image: self.$image, sourceType: self.$sourceType)
         }
     }
     
@@ -85,7 +85,7 @@ struct ImagePick_Previews: PreviewProvider {
 struct ImagePicker : UIViewControllerRepresentable {
     @Binding var isShown    : Bool
     @Binding var image      : URL?
-    var sourceType : UIImagePickerController.SourceType
+    @Binding var sourceType : UIImagePickerController.SourceType
         
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
         
@@ -116,12 +116,30 @@ class ImagePickerCordinator : NSObject, UINavigationControllerDelegate, UIImageP
     
     //Selected Image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+    
         let url = info[UIImagePickerController.InfoKey.imageURL] as? URL
         image = url
+        
+        if image == nil {
+            let pickImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            image = savedImageURL(image: pickImage)
+        }
+        
         isShown = false
     }
     
+    func savedImageURL(image:UIImage)->URL {
+        if let data = image.jpegData(compressionQuality: 1) {
+            let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
+            try? data.write(to: filename)
+            return filename
+        }
+        return URL(fileURLWithPath: "")
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
     //Image selection got cancel
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         isShown = false

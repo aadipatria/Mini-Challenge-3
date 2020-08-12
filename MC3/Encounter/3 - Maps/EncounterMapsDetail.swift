@@ -15,7 +15,7 @@ struct EncounterMapsDetail: View {
     @State private var mapsEditing: Int?
     @State private var title: String = ""
     @State private var description: String = ""
-    @State private var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)
+    @State private var image: URL = URL(fileURLWithPath:"")
     
     var body: some View {
         VStack(spacing: 0) {

@@ -17,7 +17,7 @@ struct EncounterMonstersEdit: View {
     @State var descriptionPlaceholder: String = "Description"
     
     @State var monsterName: String = ""
-    @State var monsterImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleOval", ofType: "png")!)
+    @State var monsterImage: URL = URL(fileURLWithPath:"")
     @State var monsterSize: String = ""
     @State var monsterType: String = ""
     @State var monsterAlignment: String = ""

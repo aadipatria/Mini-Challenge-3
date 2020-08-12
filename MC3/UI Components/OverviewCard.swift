@@ -11,7 +11,7 @@ import SwiftUI
 struct OverviewCard: View {
     var title: String = "Title"
     var description: String = ""
-    var image: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "OverviewSample", ofType: "png")!)
+    var image: URL = URL(fileURLWithPath:"")
     var actionDelete: () -> () = {}
     var actionEdit: () -> () = {}
     

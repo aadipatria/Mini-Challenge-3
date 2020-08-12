@@ -19,7 +19,7 @@ struct EncounterEnvironmentEdit: View {
     @State var environmentWeather: String = ""
     @State var environmentTerrain: String = ""
     @State var environmentDescription: String = ""
-    @State var environmentImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleRectangle", ofType: "png")!)
+    @State var environmentImage: URL = URL(fileURLWithPath:"")
     var editMode: EditMode
     
     var body: some View {

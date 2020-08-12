@@ -26,7 +26,6 @@ struct SavedModuleView: View {
                 } else {
                     ListOfModules(modules: self.filterModule(input: self.input, modules: self.myModule), isPreview: $isPreview)
                 }
-                Spacer().padding(.bottom,50)
             }.onAppear{
                 self.myModule = self.dataCenter.getCurrentUserModule().filter{ module in
                     if self.dataCenter.isSavedModule(id: module.id) {

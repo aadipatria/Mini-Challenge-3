@@ -18,7 +18,7 @@ struct EncounterPOIEdit: View {
     
     @State var poiName: String = ""
     @State var poiDescription: String = ""
-    @State var poiImage: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "SampleRectangle", ofType: "png")!)
+    @State var poiImage: URL = URL(fileURLWithPath:"")
     var editMode: EditMode
     
     var body: some View {
